@@ -1,0 +1,142 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato:ital,wght@1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato:ital,wght@1,900&display=swap");
+
+/* Webfont: ../fonts/Yekan-Font-3.0/Yekan.eot */
+@font-face {
+  font-family: "Tanha";
+  src: url("../fonts/Tanha.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/Tanha.woff2") format("woff2"),
+    /* Modern Browsers */ url("../fonts/Tanha.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/Tanha.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  font-display: auto;
+}
+/* --------------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 10px;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/wallpaperflare.com_wallpaper.jpg);
+}
+
+.container2 {
+  width: calc(100vw - 9.6rem);
+  margin: 0 auto;
+  /* background-color: bisque; */
+}
+
+.teams-search {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: calc(100% - 4rem);
+  margin: 0 auto;
+}
+
+.teams-search-dropdown {
+  margin-right: 4rem;
+}
+
+/* --------------------- */
+.dropdown-check-list {
+  display: inline-block;
+}
+
+.dropdown-check-list .anchor {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 50px 5px 10px;
+}
+
+.dropdown-check-list .anchor:after {
+  position: absolute;
+  content: "";
+  border-left: 2px solid #fff;
+  border-top: 2px solid #fff;
+  padding: 5px;
+  right: 10px;
+  top: 20%;
+  -moz-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+.dropdown-check-list ul.items {
+  padding: 0.2rem;
+  display: none;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.dropdown-check-list span {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.dropdown-check-list ul.items li {
+  list-style: none;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.dropdown-check-list.visible .anchor {
+  color: #66fcf1;
+}
+
+.dropdown-check-list.visible .items {
+  display: block;
+}
+
+/* Cards */
+.team-card {
+    margin: 3rem 2rem;
+  display: grid;
+  grid-gap: 5rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+
+.team-card-box {
+  background-image: url(../images/teamcard.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* min-width: 200px; */
+  height: 20rem;
+}
+
+.team-card-box span {
+  color: #fff;
+}
+
+.team-card-box h1 {
+  color: #fff;
+}

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="img/shortcut icon.png" />
+
+    <!-- Site Icon -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Css Links -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/site.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+
+    <title>SirVana</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Navbar -->
+      <div class="navbar" dir="ltr">
+        <div class="navbar__leftbox">
+          <div class="navbar__leftbox--logo">
+            <a href="site.html" class="navbar__leftbox--logo white-one">Sir</a>
+            <a href="site.html" class="navbar__leftbox--logo blue-one">Vana</a>
+          </div>
+          <div class="navbar__leftbox--search" id="show" dir="rtl">
+            <i class="bx bx-search-alt"></i>
+            <input
+              dir="rtl"
+              type="search"
+              placeholder="جستجوی تیم ، بازیکن ، تورنومنت ..."
+            />
+          </div>
+        </div>
+        <div class="navbar__rightbox">
+          <div class="navbar__rightbox--link">
+            <div id="hide" class="navbar__leftbox--search" dir="rtl">
+              <i id="hideI" class="bx bx-search-alt"></i>
+              <input
+                id="hideInp"
+                dir="rtl"
+                type="search"
+                placeholder="جستجوی تیم ، بازیکن ، تورنومنت .."
+              />
+            </div>
+          </div>
+          <div class="navbar__rightbox--link">
+            <div class="nav-text">
+              <a href="teams.html">هوش مصنوعی (رحیمی)</a>
+            </div>
+            <div class="navbar__rightbox icon">
+              <a href="#">
+                <i id="first-icon" class="bx bxs-user-account"></i>
+              </a>
+            </div>
+          </div>
+          <div class="navbar__rightbox--link">
+            <div class="nav-text">
+              <a href="teams.html">تیم ها</a>
+            </div>
+            <div class="navbar__rightbox icon">
+              <a href="#">
+                <i id="first-icon" class="bx bxs-user-account"></i>
+              </a>
+            </div>
+          </div>
+          <div class="navbar__rightbox--link">
+            <div class="nav-text">
+              <a href="tournoment.html">تورنومنت ها</a>
+            </div>
+            <div class="navbar__rightbox icon">
+              <a href="#">
+                <i class="bx bxs-award"></i>
+              </a>
+            </div>
+          </div>
+          <div class="navbar__rightbox--link">
+            <div class="nav-text">
+              <a href="signup.html">ورود | ثبت نام</a>
+            </div>
+            <div class="navbar__rightbox icon">
+              <a href="signup.html">
+                <i class="bx bxs-log-in-circle"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+
+      <!-- slider2 -->
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img src="img/slider-pic1.jpg" />
+          <div class="shadowbox">
+            <!-- <div class="numbertext">3 / 1</div> -->
+            <div class="text">
+              اعلام تاریخ پخش فصل سوم انیمیشن Dragon’s Blood 
+            </div>
+          </div>
+        </div>
+
+        <div class="mySlides fade">
+          <img src="img/slider-pic2.webp" />
+          <div class="shadowbox">
+            <!-- <div class="numbertext">3 / 2</div> -->
+            <div class="text">
+              مسابقات The International 10 با قهرمانی Team Spirit پایان یافت 
+            </div>
+          </div>
+        </div>
+        <div class="mySlides fade">
+          <img src="img/slider-pic3.jpg" />
+          <div class="shadowbox">
+            <!-- <div class="numbertext">3 / 3</div> -->
+            <div class="text">
+              تغییر زمان و مکان برگزاری مسابقات The International 10 
+            </div>
+          </div>
+        </div>
+        <br />
+      </div>
+    </div>
+
+
+    <!-- Cards -->
+    <div class="cards" id="section09">
+      <div class="card">
+        <img src="img/tournoment-creat.webp" class="card-img" alt="" />
+        <div class="card-body">
+          <h1 class="card-title">تورنومنت برگزار کنید</h1>
+          <button class="card-btn">ایجاد تورنومنت</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="img/coachcreat.webp" class="card-img" alt="" />
+        <div class="card-body">
+          <h1 class="card-title">در رنک خود مربی شوید</h1>
+          <button class="card-btn">مربی شدن</button>
+        </div>
+      </div>
+      <div class="card" id="thirdcard">
+        <img src="img/teamcreat.webp" class="card-img" alt="" />
+        <div class="card-body">
+          <h1 class="card-title">تیم خود را داشته باشید</h1>
+          <button class="card-btn">تشکیل تیم</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footerContainer">
+        <div class="socialIcons">
+          <a href="#"><i class="bx bxl-facebook-circle"></i></a>
+          <a href="#"><i class="bx bxl-instagram"></i></a>
+          <a href="#"><i class="bx bxl-twitter"></i></a>
+          <a href="#"><i class="bx bxl-telegram"></i></a>
+          <a href="#"><i class="bx bxl-youtube"></i></a>
+        </div>
+        <div class="footerNav">
+          <ul>
+            <li><a href="#">درباره ما</a></li>
+            <li><a href="#news">اخبار</a></li>
+            <li><a href="#">درباره ما</a></li>
+            <li><a href="#">تماس با ما</a></li>
+            <li><a href="#">تیم ما</a></li>
+          </ul>
+        </div>
+        <div class="footerBottom">
+          <p>
+            &copy;1402 ; تمامی حقوق برای
+            <span class="designer">تیم نوب سگان</span> محفوظ است. کپی به هرشکل
+            غیرمجاز و غیرقانونی است.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScipt -->
+    <script src="js/slider.js"></script>
+    <script src="js/burger.js"></script>
+    <script src="js/slider2.js"></script>
+    <script src="js/scroll.js"></script>
+  </body>
+</html>

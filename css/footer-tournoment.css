@@ -1,0 +1,189 @@
+/* header Css :*/
+
+/* Webfont: ../fonts/Yekan-Font-3.0/Yekan.eot */
+@font-face {
+    font-family: "Tanha";
+    src: url("../fonts/Tanha.eot"); /* IE9 Compat Modes */
+    src: url("../fonts/?#iefix") format("embedded-opentype"),
+      /* IE6-IE8 */ url("../fonts/Tanha.woff2") format("woff2"),
+      /* Modern Browsers */ url("../fonts/Tanha.woff") format("woff"),
+      /* Modern Browsers */ url("../fonts/Tanha.ttf") format("truetype"); /* Safari, Android, iOS */
+    font-weight: normal;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    font-display: auto;
+  }
+  /* Google Fonts */
+  @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato:ital,wght@1,900&display=swap");
+  
+  @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato:ital,wght@1,900&display=swap");
+  
+  /* Footer */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  html {
+    font-size: 10px;
+  }
+  
+  footer {
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0.4rem 3rem rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
+    border: 0.1rem solid rgba(255, 255, 255, 0.15);
+    border-left: 0;
+    border-right: 0;
+    /* margin-top: 8rem; */
+    position: relative;
+    top: 50%;
+    width: 100%;
+  }
+  
+  .footerContainer {
+    width: 100%;
+    padding-top: 2rem;
+  }
+  
+  .socialIcons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .socialIcons a {
+    padding: 1rem;
+    background-color: #fff;
+    margin: 1rem;
+    border-radius: 50%;
+  }
+  
+  .socialIcons a i {
+    font-size: 2rem;
+    color: #000;
+    opacity: 0.9;
+    margin: 0 auto;
+  }
+  
+  /* Hover Effects on social media icons */
+  .socialIcons a:hover {
+    background: none;
+    transition: 0.3s;
+  }
+  
+  .socialIcons a:hover i {
+    color: #fff;
+    transition: 0.3s;
+  }
+  
+  .footerNav {
+    margin: 3rem 0;
+  }
+  
+  .footerNav ul {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footerNav ul li {
+    list-style: none;
+  }
+  
+  .footerNav ul li a {
+    color: #fff;
+    margin: 2rem;
+    font-size: 1.3rem;
+    opacity: 0.7;
+    transition: 0.3s;
+    font-family: "Tanha";
+  }
+  
+  .footerNav ul li a:hover {
+    opacity: 1;
+  }
+  
+  .footerBottom {
+    font-family: "Tanha";
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0.4rem 3rem rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.5px);
+    -webkit-backdrop-filter: blur(4.5px);
+    border: 0.1rem solid rgba(255, 255, 255, 0.15);
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .footerBottom p {
+    color: #fff;
+  }
+  
+  .designer {
+    opacity: 0.7;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0 0.5rem;
+    cursor: pointer;
+  }
+  
+  .designer:hover {
+    opacity: 1;
+    color: aqua;
+    transition: 0.3s;
+  }
+  @media (min-width: 320px) and (max-width: 480px) {
+    .footerNav ul {
+      flex-direction: column;
+    }
+  
+    .footerNav ul li {
+      text-align: center;
+      margin: 0.7rem;
+    }
+  
+    .footerNav ul li a {
+      font-size: 1rem;
+    }
+  
+    .socialIcons a i {
+      font-size: 1.6rem;
+    }
+  
+    .socialIcons a {
+      padding: 0.5rem;
+    }
+  }
+  @media (min-width: 481px) and (max-width: 768px) {
+    .footerNav ul {
+      flex-direction: column;
+    }
+  
+    .footerNav ul li {
+      text-align: center;
+      margin: 1rem;
+    }
+  
+    .footerNav ul li a {
+      font-size: 1.2rem;
+    }
+  
+    .socialIcons a i {
+      font-size: 1.3rem;
+    }
+  
+    .socialIcons a {
+      padding: 0.5rem;
+    }
+  }
+  @media (min-width: 769px) and (max-width: 1024px) {
+  }
+  @media (min-width: 1024px) and (max-width: 1200px) {
+  }
+  @media (max-width: 700px) {
+  }
+  

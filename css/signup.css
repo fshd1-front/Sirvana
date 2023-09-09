@@ -1,0 +1,335 @@
+/* Webfont: ../fonts/Yekan-Font-3.0/Yekan.eot */
+@font-face {
+  font-family: "Tanha";
+  src: url("../fonts/Tanha.eot"); /* IE9 Compat Modes */
+  src: url("../fonts/?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/Tanha.woff2") format("woff2"),
+    /* Modern Browsers */ url("../fonts/Tanha.woff") format("woff"),
+    /* Modern Browsers */ url("../fonts/Tanha.ttf") format("truetype"); /* Safari, Android, iOS */
+  font-weight: normal;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  font-display: auto;
+}
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato:ital,wght@1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato:ital,wght@1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  font-size: 10px;
+}
+
+.main {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+
+  background-image: url(../img/signup.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+/* video {
+  position: fixed;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+} */
+
+/* .navbar__leftbox--logo {
+  transition: all 0.3s ease-out;
+} */
+
+.navbar__leftbox--logo .white-one {
+  font-size: 4rem;
+  color: white;
+  font-weight: 900;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+}
+
+.navbar__leftbox--logo .blue-one {
+  color: #66fcf1;
+  font-size: 4.1rem;
+  font-weight: 900;
+  cursor: pointer;
+  font-family: "Lato", sans-serif;
+}
+
+.navbar__leftbox--logo:hover .white-one {
+  color: #66fcf1;
+}
+
+.navbar__leftbox--logo:hover .blue-one {
+  color: white;
+}
+
+.login input {
+  display: block;
+}
+
+input[type="checkbox"] {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  border: 1px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #5adbb5;
+}
+
+label a {
+  font-weight: 500;
+}
+
+label a:hover {
+  font-weight: 800;
+}
+
+label {
+  font-family: "Tanha";
+  font-size: 1.2rem;
+}
+
+.login {
+  margin: auto;
+  width: 40rem;
+  height: 40rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 2.5rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+}
+
+.login input[type="text"],
+.login [type="password"] {
+  width: 30rem;
+  height: 4rem;
+  margin: 1.4rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 0.2rem solid #000;
+  color: #fff;
+  font-family: "Tanha";
+  font-size: 1.6rem;
+  caret-color: aqua;
+}
+
+input::placeholder {
+  color: #fff;
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
+.login .text {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  width: 75%;
+  margin: 1.4rem;
+}
+
+.login .text a {
+  font-weight: 600;
+  opacity:  0.8;
+}
+
+.login .text a:hover {
+  opacity: 1;
+}
+
+.login input[type="submit"],
+.registration input[type="submit"],
+.forgot input[type="submit"] {
+  width: 30rem;
+  height: 4rem;
+  margin: 1rem 1.4rem 1.4rem 1.4rem;
+  font-weight: bold;
+  font-family: "Tanha";
+  border: none;
+  outline: none;
+  border-radius: 2.5rem;
+  cursor: pointer;
+  background: aqua;
+  opacity: 0.7;
+  /* transition: all 0.3s ease; */
+}
+
+.login input[type="submit"]:hover,
+.registration input[type="submit"]:hover,
+.forgot input[type="submit"]:hover {
+  opacity: 1;
+}
+
+.login .create {
+  text-align: center;
+  margin-top: 1rem;
+  font-family: "Tanha";
+  font-size: 1.6rem;
+}
+
+#registerbtn {
+  font-family: "Tanha";
+  color: #000;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+a {
+  font-family: "Tanha";
+  color: #000;
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+
+.registration {
+  visibility: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 40rem;
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 2.5rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+}
+
+.registration input[type="text"],
+.registration input[type="email"],
+.registration input[type="password"] {
+  width: 30rem;
+  height: 4rem;
+  margin: 1.4rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 0.2rem solid #000;
+  color: #fff;
+  font-family: "Tanha";
+  font-size: 1.6rem;
+  caret-color: aqua;
+}
+
+.registration input {
+  display: block;
+}
+
+.registration input[type="checkbox"] {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: white;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  border: 1px solid #ddd;
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  cursor: pointer;;
+}
+
+.registration input[type="checkbox"]:checked {
+  background-color: #5adbb5;
+}
+
+.agree {
+  width: 75%;
+  margin: 1.4rem;
+}
+
+.open {
+  margin-top: 1rem;
+  font-family: "Tanha";
+  font-size: 1.6rem;
+}
+
+.open a {
+  padding-right: 0.5rem;
+  font-size: 1.6rem;
+}
+
+.forgot {
+  visibility: hidden;
+  margin: auto;
+  width: 40rem;
+  height: 30rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 2.5rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+}
+
+.forgot input {
+  display: block;
+}
+
+.forgot input[type="email"] {
+  width: 30rem;
+  height: 4rem;
+  margin: 1.4rem;
+  border: none;
+  outline: none;
+  background: transparent;
+  border-bottom: 0.2rem solid #000;
+  color: #fff;
+  font-family: "Tanha";
+  font-size: 1.6rem;
+  caret-color: aqua;
+  margin: 3rem 0 1rem 0;
+}
