@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+form {
+    font-family: "Tanha";
+}
+
+form label {
+    margin-bottom: 0.3rem;
+    /* display: block; */
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control {
+  margin: 0 2rem 2rem 0;
+}
+
+.form-control input {
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  width: 15rem;
+  margin: 0.5rem 0;
+  transition: border 0.1s, box-shadow 0.1s;
+}
+
+.form-control input:focus {
+  outline: none;
+  border: 1px solid #c4b5fd;
+  box-shadow: 0 0 0px 4px #f5f3ff;
+}
+
+form button {
+  margin: 0 2rem 2rem 0;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.5rem 0.7rem;
+  border: 1px solid #ccc;
+  background-color: #a78bfa;
+  color: #fff;
+}
