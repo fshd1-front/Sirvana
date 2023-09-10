@@ -101,13 +101,79 @@
       </div>
 
       <!-- creat tournoment modal box -->
-      
+      <div class="create-tour">
+        <div class="create-tour__content">
+          <span class="close-button">&times;</span>
+          <form action="">
+            <div class="right-box">
+              <div class="form-control">
+                <label for="name">اسم تورنومنت‌ :</label>
+                <input type="text" id="name" autofocus />
+              </div>
+              <div class="mmr-control">
+                <label>محدوده رنک :</label>
+                <label class="in" for="mmr-first">از</label>
+                <input type="text" list="ranks-first" id="mmr-first" />
+                <datalist id="ranks-first">
+                  <option>Herald</option>
+                  <option>Guardian</option>
+                  <option>Crusader</option>
+                  <option>Archon</option>
+                  <option>Legend</option>
+                  <option>Ancient</option>
+                  <option>Divine</option>
+                  <option>Immortal</option>
+                </datalist>
+                <label class="in" for="mmr-last">تا</label>
+                <input type="text" list="ranks-last" />
+                <datalist id="ranks-last">
+                  <option>Herald</option>
+                  <option>Guardian</option>
+                  <option>Crusader</option>
+                  <option>Archon</option>
+                  <option>Legend</option>
+                  <option>Ancient</option>
+                  <option>Divine</option>
+                  <option>Immortal</option>
+                </datalist>
+              </div>
+              <div class="date">
+                <label for="date">تاریخ شروع :</label>
+                <input type="datetime-local" id="date" />
+              </div>
+              <div class="prize">
+                <label for="prize">جایزه :</label>
+                <input type="text" id="prize" />
+              </div>
+            </div>
+            <div class="middle"></div>
+            <div class="left-box">
+              <div class="description">
+                <label for="desc">توضیحات تورنومنت :</label>
+                <textarea
+                  name="desc"
+                  id="desc"
+                  cols="10"
+                  rows="10"
+                  required
+                ></textarea>
+              </div>
+              <label>تصویر تورنومنت :</label>
+              <div class="image-upload">
+                <input type="file" id="file" multiple />
+                <a href="#"><i class="bx bx-plus"></i></a>
+              </div>
+              <button class="create" type="submit">ایجاد</button>
+            </div>
+          </form>
+        </div>
+      </div>
 
       <!-- cards -->
       <div class="tour-cards">
         <div class="body-plus">
-          <a href="#" class="add-tour">ایجاد تورنومنت</a>
-          <a href="create-tour.html" class="plus-card">
+          <a href="#" class="add-tour trigger">ایجاد تورنومنت</a>
+          <a class="plus-card">
             <span class="row"></span>
             <span class="column"></span>
           </a>
@@ -235,5 +301,6 @@
 
     <!-- scripts -->
     <script src="js/burger.js"></script>
+    <script src="js/tour-modalbox.js"></script>
   </body>
 </html>

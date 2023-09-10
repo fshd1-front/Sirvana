@@ -129,7 +129,7 @@ label {
   border-radius: 2.5rem;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.26);
 }
 
@@ -154,6 +154,10 @@ input::placeholder {
 
 input:focus::placeholder {
   color: transparent;
+}
+
+input:focus {
+  border: #66fcf1;
 }
 
 .login .text {
