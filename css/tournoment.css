@@ -30,7 +30,7 @@ body {
 
 .create-tour__content {
   position: absolute;
-  width: 55rem;
+  width: 60rem;
   height: 42rem;
   top: 50%;
   left: 50%;
@@ -90,7 +90,7 @@ form label {
   border: 1px solid #d1d5db;
   border-radius: 5px;
   padding: 0.5rem 1rem;
-  width: 23rem;
+  width: 27rem;
   margin: 0.5rem 0;
   transition: border 0.1s, box-shadow 0.1s;
 }
@@ -102,7 +102,7 @@ form label {
 .description textarea:focus {
   outline: none;
   border: 1px solid #c4b5fd;
-  box-shadow: 0 0 0px 4px #f5f3ff;
+  box-shadow: 0 0 0px 2px aqua;
 }
 
 .mmr-control .in {
@@ -113,7 +113,7 @@ form label {
   border: 1px solid #d1d5db;
   border-radius: 5px;
   padding: 0.5rem 1rem;
-  width: 8.6rem;
+  width: 10.6rem;
   margin: 0.5rem 0;
   transition: border 0.1s, box-shadow 0.1s;
 }
