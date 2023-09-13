@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato:ital,wght@1,900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -9,215 +11,31 @@ html {
 }
 
 body {
-  background: #000;
+  background-color: #000;
 }
 
-/* modal box */
-.create-tour {
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  z-index: 99;
-  left: 0;
+.navbar {
+  position: absolute;
   top: 0;
-  opacity: 0;
-  visibility: hidden;
-  transform: scale(1.1);
-  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-  background-color: rgba(0, 0, 0, 0.8);
-  /* backdrop-filter: blur(0.4rem); */
 }
 
-.create-tour__content {
-  position: absolute;
-  width: 60rem;
-  height: 42rem;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 0.5rem;
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(1rem);
-  border: 1px solid rgba(255, 255, 255, 0.26);
-}
-
-.close-button {
-  width: 1.5rem;
-  font-size: 2rem;
-  /* line-height: 2rem; */
-  padding: 0 1.3rem;
-  text-align: center;
-  cursor: pointer;
-  background: none;
-  color: #fff;
-  transition: color 0.12s ease-in-out;
-}
-
-.close-button:hover {
-  color: #d75b4c;
-}
-
-form {
+.tournament-page {
   width: 100%;
-  height: 100%;
-  font-family: "Tanha";
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: 1rem 3rem;
-}
-
-form label {
-  margin: 0.1rem 0.6rem;
-  display: block;
-  color: #fff;
-  font-size: 2rem;
-}
-
-.form-control,
-.mmr-control,
-.date,
-.prize,
-.description,
-.image-upload {
-  width: 100%;
-  margin: 0 0.2rem 2rem 0;
-}
-
-.form-control input,
-.date input,
-.prize input {
-  border: 1px solid #d1d5db;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
-  width: 27rem;
-  margin: 0.5rem 0;
-  transition: border 0.1s, box-shadow 0.1s;
-}
-
-.form-control input:focus,
-.mmr-control input:focus,
-.date input:focus,
-.prize input:focus,
-.description textarea:focus {
-  outline: none;
-  border: 1px solid #c4b5fd;
-  box-shadow: 0 0 0px 2px aqua;
-}
-
-.mmr-control .in {
-  display: inline;
-}
-
-.mmr-control input {
-  border: 1px solid #d1d5db;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
-  width: 10.6rem;
-  margin: 0.5rem 0;
-  transition: border 0.1s, box-shadow 0.1s;
-}
-
-textarea {
-  resize: none;
-  height: 12rem;
-  font-family: "Tanha";
-}
-
-.image-upload {
-  width: 18rem;
-  height: 2.8rem;
-  border: 2px dashed #fff;
-  position: relative;
-  border-radius: 5px;
-  margin-top: 0.5rem;
-}
-
-.image-upload a {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  line-height: 2.5rem;
-  color: #fff;
-  font-size: 1.2rem;
-}
-
-.image-upload input::file-selector-button {
-  cursor: pointer;
-}
-
-.image-upload input {
-  position: absolute;
-  outline: none;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.middle {
-  width: 2px;
-  height: 90%;
-  border: 1px dashed #5f5f5f;
-  background-color: none;
-  margin: 0 1rem;
-}
-
-.description textarea {
-  border: 1px solid #d1d5db;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
-  width: 18rem;
-  margin: 0.5rem 0 0 0;
-  transition: border 0.1s, box-shadow 0.1s;
-}
-
-form .create {
-  margin: 4rem 0.2rem 0 0;
-  width: 100%;
-  outline: 0;
-  cursor: pointer;
-  border-radius: 5px;
-  padding: 0.2rem 0.7rem;
-  border: none;
-  background-color: #00e5ff;
-  color: #000000;
-  font-family: "Tanha";
-  font-size: 1.6rem;
-  transition: all 0.2s ease;
-}
-
-form .create:hover {
-  background-color: #18ffff;
-}
-form .create:focus {
-  transform: translateY(3px);
-}
-
-.show-modal {
-  opacity: 1;
-  visibility: visible;
-  transform: scale(1);
-  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
-}
-
-.an {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-}
-
-.contain {
-  width: 100%;
-  height: 100%;
-  background-image: url(../img/tourcards.png);
-  background-size: cover;
+  height: 50rem;
+  background-image: url(../img/dota-2-ti9-stadium.jpg);
   background-position: center;
-  position: absolute;
-  top: 0;
-  left: 0;
+  background-size: cover;
+}
+
+.dark-box {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 1%,
+    rgba(255, 255, 255, 0) 100%
+  );
 }
 
 .header-title {
@@ -244,86 +62,532 @@ form .create:focus {
 }
 
 /* create tournoment modal box */
-
-.tour-cards {
+.create-tour {
   width: 100%;
-  position: relative;
-  top: calc(100% - 60%);
-  padding: 30rem 3rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
-  gap: 5rem;
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 1) 75%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  height: 100%;
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* backdrop-filter: blur(0.4rem); */
 }
 
-.body-plus {
+.create-tour__content {
+  position: absolute;
+  width: 60rem;
+  height: 50rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(1rem);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+}
+
+.close-button {
+  width: 1.5rem;
+  font-size: 2rem;
+  /* line-height: 2rem; */
+  padding: 0 1.3rem;
+  text-align: center;
+  cursor: pointer;
+  background: none;
+  color: #fff;
+  transition: color 0.12s ease-in-out;
+}
+
+.close-button:hover {
+  color: #d75b4c;
+}
+
+.team-form {
   width: 100%;
-  height: 32rem;
+  height: 100%;
+  font-family: "Tanha";
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem 3rem;
+}
+
+.team-form label {
+  margin: 0.1rem 0.6rem;
+  display: block;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.form-acontrol,
+.mmr-control,
+.date,
+.prize,
+.description,
+.image-upload {
+  width: 100%;
+  margin: 0 0.2rem 2rem 0;
+}
+
+.form-acontrol input,
+.date input,
+.prize input {
+  border: 1px solid #5a5c60;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  width: 27rem;
+  background: rgba(0, 0, 0, 0);
+  color: #fff;
+  margin: 0.5rem 0;
+  font-family: "Tanha";
+  transition: border 0.1s, box-shadow 0.1s;
+}
+
+.form-acontrol input:focus,
+.mmr-control input:focus,
+.date input:focus,
+.prize input:focus,
+.description textarea:focus {
+  outline: none;
+  border: 1px solid #c4b5fd;
+  /* box-shadow: 0 0 0px 2px #ee0f03; */
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px inset aquamarine !important;
+}
+
+.date input::-webkit-calendar-picker-indicator {
+  color-scheme: dark;
+  cursor: pointer;
+}
+
+.mmr-control .in {
+  display: inline;
+}
+
+.mmr-control input {
+  border-radius: 5px;
+  border: 1px solid #5a5c60;
+  color: #fff;
+  background: rgba(0, 0, 0, 0);
+  padding: 0.5rem 1rem;
+  width: 10.6rem;
+  margin: 0.5rem 0;
+  transition: border 0.1s, box-shadow 0.1s;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.discheck {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bracket {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.bracket input {
+  display: none;
+}
+
+.bracket input ~ span {
   position: relative;
+  display: inline-block;
+  padding: 3px 0 3px 25px;
+  cursor: pointer;
+}
+
+.bracket input ~ span:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  margin-right: 5px;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  left: 0;
+  /* top: 0; */
+  bottom: 30%;
+  box-sizing: border-box;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+
+.bracket input[type="radio"]:checked ~ span:before {
+  border: 9px solid aqua;
+}
+
+.bracket input:checked + label {
+  color: #08f;
+}
+
+.check .mg {
+  margin: 0 1rem 0 0;
+}
+
+.check input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 0.1rem;
+  height: 2rem;
+  /* border: 0.5rem solid currentColor; */
+  border-radius: 0.5rem;
+  /* transform: translateY(0.075em); */
+  cursor: pointer;
+  position: relative;
+}
+
+.check input[type="checkbox"]::before {
+  content: "";
+  width: 85%;
+  height: 85%;
+  transform: scale(0);
+  position: absolute;
+  border-radius: 0.5rem;
+  left: 50%;
+  bottom: 50%;
+  opacity: 0;
+  transform: translate(-50%, 50%);
+  transition: 0.1s transform ease-in-out;
+  /* box-shadow: inset 1em 1em aqua; */
+  background-color: aqua;
+}
+
+.check input[type="checkbox"]:checked::before {
+  transform: scale(1);
+  opacity: 1;
+  transform: translate(-50%, 50%);
+}
+
+.description textarea {
+  resize: none;
+  height: 12rem;
+  font-family: "Tanha";
+  background: rgba(0, 0, 0, 0);
+  color: #fff;
+  border: 1px solid #5a5c60;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  width: 18rem;
+  margin: 0.5rem 0 0 0;
+  transition: border 0.1s, box-shadow 0.1s;
+}
+
+.image-upload {
+  width: 18rem;
+  height: 2.8rem;
+  border: 2px dashed #5a5c60;
+  position: relative;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+}
+
+.image-upload a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  line-height: 2.5rem;
+  color: #989da6;
+  font-size: 1.2rem;
+}
+
+.image-upload input::file-selector-button {
+  cursor: pointer;
+}
+
+.image-upload input {
+  position: absolute;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.vert {
+  width: 2px;
+  height: 90%;
+  border: 1px dashed #5f5f5f;
+  background-color: none;
+  margin: 0 1rem;
+}
+
+.team-form .create {
+  margin: 4rem 0.2rem 0 0;
+  width: 100%;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.2rem 0.7rem;
+  border: none;
+  background-color: #00e5ff;
+  color: #000000;
+  font-family: "Tanha";
+  font-size: 1.6rem;
+  transition: all 0.2s ease;
+}
+
+.team-form .create:hover {
+  background-color: #18ffff;
+}
+.team-form .create:focus {
+  transform: translateY(3px);
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+/* --------------------------------- */
+
+.tour-box {
+  width: 100%;
+  max-width: 130rem;
+  margin: 0 auto;
+}
+
+.shadow-box {
+  width: 100%;
+  /* height: 100%; */
   display: flex;
   flex-direction: column;
+  /* align-items: center; */
 }
-.plus-card {
-  cursor: pointer;
+
+.top-box {
+  width: 100%;
+  height: 5rem;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+}
+
+.top-box .search {
+  margin: 0 2rem 0 1rem;
+}
+
+.search .navbar__leftbox--search {
+  border-radius: 0.7rem;
+}
+
+.filters {
+  display: flex;
   align-items: center;
-  width: 15rem;
-  height: 15rem;
-  position: absolute;
-  top: 40%;
-  right: 50%;
-  transform: translate(50%, -50%);
-  background-color: rgba(106, 108, 111, 0.186);
-  border-radius: 50%;
 }
 
-.plus-card:hover .row,
-.plus-card:hover .column {
-  background-color: rgb(230, 212, 189);
-}
-
-.plus-card .row {
-  display: block;
-  width: 8rem;
-  height: 0.9rem;
-  border-radius: 1.5rem;
-  background-color: rgb(181, 166, 147);
-}
-
-.plus-card .column {
-  display: block;
-  width: 8rem;
-  height: 0.9rem;
-  border-radius: 1.5rem;
-  transform: rotate(90deg);
-  position: absolute;
-  background-color: rgb(181, 166, 147);
-}
-
-.body-plus .add-tour {
-  position: absolute;
-  bottom: 20%;
-  right: 50%;
-  transform: translateX(50%);
-  color: aliceblue;
+.range-label {
   font-family: "Tanha";
-  font-size: 1.9rem;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 0 1.5rem;
   font-weight: bold;
 }
 
-.body-cards {
+/* filter range */
+*:before, *:after {
+  box-sizing: inherit;
+}
+
+.slider-medals {
+  width: 100%;
+  height: 100%;
+}
+
+.slider {
+  margin-bottom: 4rem;
+}
+
+.output {
+  position: relative; 
+  width: 40px;
+  height: 40px;
+  margin-left: -4%;
+  -webkit-transition: opacity 0.3s ease-in-out 0s;
+  transition: opacity 0.3s ease-in-out 0s;
+}
+
+#range {
+  --active: #5628ee;
+  --value: #fff;
+  --line: #cdd9ed;
+  touch-action: none;
+  -webkit-appearance: none;
+  appearance: none;
+  user-select: none;
+  width: 32rem;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--line);
+  position: relative;
+
+}
+#range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 19px;
+  height: 14px;
+  background: #f5f9ff;
+  cursor: pointer;
+  border-radius: 18px;
+  transition: 0.5s ease;
+}
+#range::-webkit-slider-thumb:focus, #range::-webkit-slider-thumb:active {
+  padding: 2px;
+  background: aqua;
+}
+#range:focus, #range:active {
+  outline: none;
+}
+
+.range {
+  margin: 0 3rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-family: "Tanha";
+  cursor: pointer;
+  filter: brightness(70%);
+  transition: filter 0.2s ease;
+}
+
+.range:hover {
+  filter: brightness(100%);
+}
+
+
+/* --------------------------- */
+.middle {
+  min-width: 20rem;
+  width: 100%;
+  height: 3px;
+  margin: 0 auto;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(51, 0, 255, 1) 50%,
+    rgba(255, 0, 0, 1) 100%
+  );
+  background-size: 500% 500%;
+  animation: grads 6s linear infinite;
+}
+
+@-webkit-keyframes grads {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes grads {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.tours-cards {
+  display: flex;
+  width: 100%;
+  max-width: 1300px;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  justify-content: center;
+}
+
+.tour-card:first-child {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.tour-card:first-child p {
+  color: #fff;
+  padding: 2rem 0 0;
+  font-size: 2rem;
+  font-family: "Tanha";
+  font-weight: bold;
+  opacity: 0.7;
+  transition: opacity 0.1s ease;
+}
+
+.tour-card:first-child i {
+  color: #fff;
+  opacity: 0.7;
+  font-size: 5rem;
+  transition: opacity 0.3s ease;
+}
+
+.tours-cards:first-child:hover i,
+.tours-cards:first-child:hover p {
+  opacity: 1;
+}
+
+.tour-card {
   position: relative;
-  max-width: 40rem;
-  min-width: 28rem;
-  height: 32rem;
+  width: 400px;
+  height: 30rem;
+  margin: 2rem 1.6rem;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.tour-card:hover {
+  --border-size: 7px;
+  --border-angle: 0turn;
+  background-image: conic-gradient(
+      from var(--border-angle),
+      #213,
+      #213 50%,
+      #213
+    ),
+    conic-gradient(from var(--border-angle), #08f, #f03, #08f);
+  background-size: calc(100% - (var(--border-size) * 2))
+      calc(100% - (var(--border-size) * 2)),
+    cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  animation: bg-spin 2s linear infinite;
 }
 
 @keyframes bg-spin {
@@ -338,73 +602,145 @@ form .create:focus {
   initial-value: 0turn;
 }
 
-.body-cards:hover {
-  /* animation-play-state: paused; */
-  --border-size: 3px;
-  --border-angle: 0turn;
-  background-image: conic-gradient(
-      from var(--border-angle),
-      #213,
-      #112 50%,
-      #213
-    ),
-    conic-gradient(from var(--border-angle), #08f, #f03, #08f);
-  background-size: calc(100% - (var(--border-size) * 2))
-      calc(100% - (var(--border-size) * 2)),
-    cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-
-  animation: bg-spin 2s linear infinite;
-  /* transition: 0.3s ease-in-out; */
-}
-
-.body-cards img {
+.tour-card img {
   width: 100%;
-  padding: 3px;
-  height: 18rem;
+  height: 100%;
+  padding: 0.5rem;
+  border-radius: 1.5rem;
+  object-fit: cover;
+  transition: all 0.4s ease;
+  cursor: pointer;
 }
 
-.card-titles {
+.tour-card:hover .td {
+  /* transform: scale(1.2); */
+  filter: blur(1.4px);
+}
+
+.tour-caption {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  top: auto;
+  bottom: 0;
+  right: 0;
+  width: 98%;
+  height: 98%;
+  margin: 0.4rem 0.4rem;
+  color: #fff;
+  border-radius: 1rem;
+  background-color: #000;
+  cursor: pointer;
+  opacity: 0.9;
+  /* padding: 15px; */
+  -webkit-transform: translateY(80%);
+  transform: translateY(80%);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: opacity 0.1s 0.3s, -webkit-transform 0.4s;
+  transition: opacity 0.1s 0.3s, -webkit-transform 0.4s;
+  transition: transform 0.4s, opacity 0.1s 0.3s;
+  transition: transform 0.4s, opacity 0.1s 0.3s, -webkit-transform 0.4s;
   font-family: "Tanha";
-  font-weight: bold;
-  color: aliceblue;
-  padding: 1rem 1rem 3rem 0;
 }
 
-.card-titles span {
+.show-medals {
+  display: flex;
+  align-items: center;
+}
+
+.first-medal,
+.second-medal {
+  width: 5rem;
+  height: 5rem;
+  position: relative;
+  top: 50%;
+  transform: translateY(-40%);
+}
+
+.from-to {
+  width: 1.3rem;
+  height: 0.2rem;
+  background-color: #fff;
+  position: relative;
+  top: 10%;
+  /* transform: translateY(-50%); */
+}
+
+.first-medal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.second-medal img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tour-card__title {
+  padding: 2rem 0;
+  font-size: 2rem;
+  font-family: "Lato";
+}
+
+.tour-card__content,
+.medal-title {
+  padding: 2rem 0 1rem 0;
   font-size: 1.7rem;
 }
 
-.card-titles i {
+.tour-card__members {
+  padding: 0 0 1rem;
+}
+
+.tour-card__needmember {
+  padding: 0 0 1rem;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.tour-card__needmember i {
   color: aqua;
-  padding: 2px 1px 2px 5px;
+  padding: 0.4rem;
 }
 
-.card-titles h1 i {
-  padding: 2px 0;
+.more-button a {
+  color: #000;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  background-color: aqua;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 1rem;
+  transition: background-color 0.2s ease;
 }
 
-.body-cards button {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  margin: 4px;
-  padding: 0.6rem 3rem;
-  cursor: pointer;
-  outline: none;
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
-  color: aliceblue;
+.more-button a:hover {
+  background-color: aquamarine;
+}
+
+.more-button {
+  margin-top: 6rem;
+}
+
+.tour-card:hover .tour-caption {
+  opacity: 0.9;
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: opacity 0.1s, -webkit-transform 0.4s;
+  transition: opacity 0.1s, -webkit-transform 0.4s;
+  transition: transform 0.4s, opacity 0.1s;
+  transition: transform 0.4s, opacity 0.1s, -webkit-transform 0.4s;
+}
+
+.tours-cards h1 {
+  text-align: center;
+  color: #fff;
   font-family: "Tanha";
-  font-size: 1.5rem;
-}
-
-.body-cards button:hover {
-  background: rgba(255, 255, 255, 0.2);
-  color: aqua;
-  transition: all 0.2s ease;
+  font-size: 3.4rem;
+  margin-top: 7rem;
 }
