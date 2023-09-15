@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tournaments</title>
+    <title>Teams</title>
 
     <link rel="shortcut icon" href="./img/shortcut icon.png" />
     <!-- Site Icon -->
@@ -13,10 +13,9 @@
     />
     <!-- css links -->
     <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/tournoment.css" />
+    <link rel="stylesheet" href="css/player.css" />
     <link rel="stylesheet" href="css/footer.css" />
   </head>
-
   <body>
     <!-- Navbar -->
     <div class="navbar" dir="ltr">
@@ -40,11 +39,11 @@
         </div>
         <div class="navbar__rightbox--link">
           <div class="nav-text">
-            <a href="player.html">پلیر ها</a>
+            <a href="tournoment.html">تورنومنت ها</a>
           </div>
           <div class="navbar__rightbox icon">
             <a href="#">
-              <i class='bx bxs-group'></i>
+              <i class="bx bxs-award"></i>
             </a>
           </div>
         </div>
@@ -53,8 +52,8 @@
             <a href="teams.html">تیم ها</a>
           </div>
           <div class="navbar__rightbox icon">
-            <a href="teams.html">
-              <i class='bx bxs-flag-alt'></i></i>
+            <a href="#">
+              <i id="first-icon" class="bx bxs-user-account"></i>
             </a>
           </div>
         </div>
@@ -77,108 +76,12 @@
     </div>
 
     <!-- background -->
-    <div class="tournament-page">
-      <div class="dark-box">
-        <div class="header-title">
-          <p>تورنومنت بزرگ خود را بسازید.</p>
-          <span
-            >بیش از صد تورنومنت کامل شده و ده ها تورنومنت پیش رو.‌ آیا آماده
-            نبرد هستید ؟</span
-          >
-        </div>
-      </div>
+    <div class="teams-page">
+      <div class="dark-box"></div>
     </div>
     <!--  -->
 
-    <!-- creat tournoment modal box -->
-    <div class="create-tour">
-      <div class="create-tour__content">
-        <div class="modal-title">
-          <span class="close-button">&times;</span>
-          <h1 class="modal-title">تشکیل تورنومنت</h1>
-        </div>
-        <form action="" class="tour-form">
-          <div class="right-box">
-            <div class="form-acontrol">
-              <label for="name">اسم تورنومنت‌ :</label>
-              <input type="text" id="name" autofocus />
-              <!-- <span class="wrong-input-alrt">* اسم تورنومنتت یادت رفت</span> -->
-            </div>
-            <div class="mmr-control">
-              <label>محدوده رنک :</label>
-              <label class="in" for="mmr-first">از</label>
-              <input type="text" list="ranks-first" id="mmrfirst" />
-              <datalist id="ranks-first">
-                <option>Herald</option>
-                <option>Guardian</option>
-                <option>Crusader</option>
-                <option>Archon</option>
-                <option>Legend</option>
-                <option>Ancient</option>
-                <option>Divine</option>
-                <option>Immortal</option>
-              </datalist>
-              <label class="in" for="mmrlast">تا</label>
-              <input type="text" list="ranks-last" id="mmrlast" />
-              <datalist id="ranks-last">
-                <option>Herald</option>
-                <option>Guardian</option>
-                <option>Crusader</option>
-                <option>Archon</option>
-                <option>Legend</option>
-                <option>Ancient</option>
-                <option>Divine</option>
-                <option>Immortal</option>
-              </datalist>
-              <div class="check">
-                <div class="discheck">
-                  <input type="checkbox" id="discheck" />
-                  <label for="discheck" class="mg"> بدون رنک </label>
-                </div>
-                <div class="bracket">
-                  <label for="bo1">
-                    <input type="radio" id="bo1" name="drone" checked />
-                    <span>bo1</span>
-                  </label>
-                  <label for="bo3">
-                    <input type="radio" id="bo3" name="drone" />
-                    <span>bo3</span>
-                  </label>
-                </div>
-              </div>
-              <!-- <span class="wrong-input-alrt"> * رنک تورنومنتت رو انتخاب نکردی!</span> -->
-            </div>
-            <div class="bracket"></div>
-            <div class="date">
-              <label for="date">تاریخ شروع :</label>
-              <input type="datetime-local" id="date" />
-              <!-- <span class="wrong-input-alrt">* تورنومنتت سال بعد شروع میشه مگه‌؟</span> -->
-            </div>
-            <div class="prize">
-              <label for="prize">جایزه :</label>
-              <input type="number" id="prize" />
-              <!-- <span class="wrong-input-alrt">* مسابقه بدون جایزه حال نمیده!</span> -->
-            </div>
-          </div>
-          <div class="vert"></div>
-          <div class="left-box">
-            <div class="description">
-              <label for="desc">توضیحات تورنومنت :</label>
-              <textarea name="desc" id="desc" cols="10" rows="10"></textarea>
-            </div>
-            <label>تصویر تورنومنت :</label>
-            <div class="image-upload">
-              <input type="file" id="file" multiple />
-              <a href="#"><i class="bx bx-plus"></i></a>
-            </div>
-            <button class="create" type="submit">ایجاد</button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <!-- -------------------------------------------------- -->
-    <!-- Cards -->
-    <div class="tour-box">
+    <div class="team-box">
       <div class="shadow-box">
         <div class="top-box">
           <form class="filters" action="">
@@ -189,28 +92,45 @@
                   <input
                     dir="rtl"
                     type="search"
-                    placeholder="جستجوی تورنومنت ..."
+                    placeholder="جستجوی پلیر ..."
                   />
                 </div>
               </div>
-              <label for="range" class="range-label">رنک تورنومنت :</label>
-              <div class="slider" dir="ltr">
-                <div id="output" class="output">
-                  <img
-                    class="slider-medals"
-                    src="img/Herald_medal.webp"
-                    alt=""
-                  />
-                </div>
-                <input
-                  type="range"
-                  min="0"
-                  max="100"
-                  value="0"
-                  step="14.28"
-                  oninput="move()"
-                  id="range"
-                />
+
+              <div class="mmr-control">
+                <label>رنک :</label>
+                <label class="in" for="mmr-first">از</label>
+                <input type="text" list="ranks-first" id="mmrfirst" />
+                <datalist id="ranks-first">
+                  <option>Herald</option>
+                  <option>Guardian</option>
+                  <option>Crusader</option>
+                  <option>Archon</option>
+                  <option>Legend</option>
+                  <option>Ancient</option>
+                  <option>Divine</option>
+                  <option>Immortal</option>
+                </datalist>
+                <label class="in" for="mmrlast">تا</label>
+                <input type="text" list="ranks-last" id="mmrlast" />
+                <datalist id="ranks-last">
+                  <option>Herald</option>
+                  <option>Guardian</option>
+                  <option>Crusader</option>
+                  <option>Archon</option>
+                  <option>Legend</option>
+                  <option>Ancient</option>
+                  <option>Divine</option>
+                  <option>Immortal</option>
+                </datalist>
+              </div>
+
+              <div class="vertical"></div>
+              <div class="checkbox">
+                <label for="check" class="form-control">
+                  <input type="checkbox" id="check" name="checkbox" />
+                  نیازمند تیم
+                </label>
               </div>
               <button type="submit" class="range">اعمال فیلتر</button>
             </div>
@@ -223,21 +143,14 @@
           </form>
         </div>
         <div class="middle"></div>
-        <div class="tours-cards">
-          <div class="tour-card" id="create-button">
-            <a>
-              <i class="bx bx-plus-medical"></i>
-            </a>
-            <a>
-              <p>ایجاد تورنومنت</p>
-            </a>
-          </div>
-          <div class="tour-card">
-            <img class="td" src="img/tourcards.png" alt="" />
-            <div class="tour-caption">
-              <h2 class="tour-card__title">Alliance Tournament</h2>
-              <p class="tour-card__content">شروع از : ۱۴۰۲/۰۶/۲۲</p>
 
+        <!-- cards----------------------------------------- -->
+        <div class="players-cards">
+          <div class="player-card">
+            <img class="pic" src="img/player-card.jpg" alt="" />
+            <div class="player-caption">
+              <h2 class="player-card__title">Jerax</h2>
+              <p class="player-card__content">پوز : ۱ - ۲</p>
               <div class="show-medals">
                 <div class="medal-title">
                   <span>رنک :</span>
@@ -250,16 +163,18 @@
                   <img src="img/Archon_medal.webp" alt="" />
                 </div>
               </div>
-
+              <p class="player-card__needmember">
+                نیازمند تیم :
+                <i class="bx bxs-check-circle"></i>
+              </p>
               <p class="more-button"><a href="#">جز‌ئیات بیشتر</a></p>
             </div>
           </div>
-          <div class="tour-card">
-            <img class="td" src="img/tourcards.png" alt="" />
-            <div class="tour-caption">
-              <h2 class="tour-card__title">Alliance Tournament</h2>
-              <p class="tour-card__content">شروع از : ۱۴۰۲/۰۶/۲۲</p>
-
+          <div class="player-card">
+            <img class="pic" src="img/player-card6.jpg" alt="" />
+            <div class="player-caption">
+              <h2 class="player-card__title">Jerax</h2>
+              <p class="player-card__content">پوز : ۱ - ۲</p>
               <div class="show-medals">
                 <div class="medal-title">
                   <span>رنک :</span>
@@ -272,16 +187,18 @@
                   <img src="img/Archon_medal.webp" alt="" />
                 </div>
               </div>
-
+              <p class="player-card__needmember">
+                نیازمند تیم :
+                <i class="bx bxs-check-circle"></i>
+              </p>
               <p class="more-button"><a href="#">جز‌ئیات بیشتر</a></p>
             </div>
           </div>
-          <div class="tour-card">
-            <img class="td" src="img/tourcards.png" alt="" />
-            <div class="tour-caption">
-              <h2 class="tour-card__title">Alliance Tournament</h2>
-              <p class="tour-card__content">شروع از : ۱۴۰۲/۰۶/۲۲</p>
-
+          <div class="player-card">
+            <img class="pic" src="img/player-card3.jpg" alt="" />
+            <div class="player-caption">
+              <h2 class="player-card__title">Jerax</h2>
+              <p class="player-card__content">پوز : ۱ - ۲</p>
               <div class="show-medals">
                 <div class="medal-title">
                   <span>رنک :</span>
@@ -294,16 +211,18 @@
                   <img src="img/Archon_medal.webp" alt="" />
                 </div>
               </div>
-
+              <p class="player-card__needmember">
+                نیازمند تیم :
+                <i class="bx bxs-check-circle"></i>
+              </p>
               <p class="more-button"><a href="#">جز‌ئیات بیشتر</a></p>
             </div>
           </div>
-          <div class="tour-card">
-            <img class="td" src="img/tourcards.png" alt="" />
-            <div class="tour-caption">
-              <h2 class="tour-card__title">Alliance Tournament</h2>
-              <p class="tour-card__content">شروع از : ۱۴۰۲/۰۶/۲۲</p>
-
+          <div class="player-card">
+            <img class="pic" src="img/player-card4.jpg" alt="" />
+            <div class="player-caption">
+              <h2 class="player-card__title">Jerax</h2>
+              <p class="player-card__content">پوز : ۱ - ۲</p>
               <div class="show-medals">
                 <div class="medal-title">
                   <span>رنک :</span>
@@ -316,16 +235,18 @@
                   <img src="img/Archon_medal.webp" alt="" />
                 </div>
               </div>
-
+              <p class="player-card__needmember">
+                نیازمند تیم :
+                <i class="bx bxs-check-circle"></i>
+              </p>
               <p class="more-button"><a href="#">جز‌ئیات بیشتر</a></p>
             </div>
           </div>
-          <div class="tour-card">
-            <img class="td" src="img/tourcards.png" alt="" />
-            <div class="tour-caption">
-              <h2 class="tour-card__title">Alliance Tournament</h2>
-              <p class="tour-card__content">شروع از : ۱۴۰۲/۰۶/۲۲</p>
-
+          <div class="player-card">
+            <img class="pic" src="img/player-card5.jpg" alt="" />
+            <div class="player-caption">
+              <h2 class="player-card__title">Jerax</h2>
+              <p class="player-card__content">پوز : ۱ - ۲</p>
               <div class="show-medals">
                 <div class="medal-title">
                   <span>رنک :</span>
@@ -338,16 +259,18 @@
                   <img src="img/Archon_medal.webp" alt="" />
                 </div>
               </div>
-
+              <p class="player-card__needmember">
+                نیازمند تیم :
+                <i class="bx bxs-check-circle"></i>
+              </p>
               <p class="more-button"><a href="#">جز‌ئیات بیشتر</a></p>
             </div>
           </div>
-          <div class="tour-card">
-            <img class="td" src="img/tourcards.png" alt="" />
-            <div class="tour-caption">
-              <h2 class="tour-card__title">Alliance Tournament</h2>
-              <p class="tour-card__content">شروع از : ۱۴۰۲/۰۶/۲۲</p>
-
+          <div class="player-card">
+            <img class="pic" src="img/player-card2.jpg" alt="" />
+            <div class="player-caption">
+              <h2 class="player-card__title">Jerax</h2>
+              <p class="player-card__content">پوز : ۱ - ۲</p>
               <div class="show-medals">
                 <div class="medal-title">
                   <span>رنک :</span>
@@ -360,12 +283,16 @@
                   <img src="img/Archon_medal.webp" alt="" />
                 </div>
               </div>
-
+              <p class="player-card__needmember">
+                نیازمند تیم :
+                <i class="bx bxs-check-circle"></i>
+              </p>
               <p class="more-button"><a href="#">جز‌ئیات بیشتر</a></p>
             </div>
           </div>
+          
           <!-- <h1 class="header1">جستجو موردنظر یافت نشد...</h1> -->
-          <!-- <h1 class="header2">هنوز هیچ تورنومنتی ثبت نشده است ...</h1> -->
+          <!-- <h1 class="header2">هنوز هیچ پلیری ثبت نشده است ...</h1> -->
         </div>
       </div>
     </div>
@@ -401,7 +328,6 @@
 
     <!-- scripts -->
     <script src="js/burger.js"></script>
-    <script src="js/tour-modalbox.js"></script>
-    <script src="js/range-filter.js"></script>
+    <script src="js/team-modalbox.js"></script>
   </body>
 </html>

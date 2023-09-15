@@ -19,12 +19,12 @@ body {
   top: 0;
 }
 
-.tournament-page {
+.teams-page {
   width: 100%;
   height: 50rem;
-  background-image: url(../img/dota-2-ti9-stadium.jpg);
-  background-position: center;
+  background-image: url(../img/playerbg_11zon.jpg);
   background-size: cover;
+  background-position: 25% 25%;
 }
 
 .dark-box {
@@ -38,31 +38,8 @@ body {
   );
 }
 
-.header-title {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
-  color: aliceblue;
-  background: rgba(0, 0, 0, 0.1);
-  /* -webkit-backdrop-filter: blur(10px); */
-  backdrop-filter: blur(3px);
-  border-radius: 1.5rem;
-  padding: 1.5rem;
-}
-.header-title p {
-  font-size: 4rem;
-  font-family: "Tanha";
-  font-weight: 900;
-}
-.header-title span {
-  font-size: 2.5rem;
-  font-family: "Tanha";
-}
-
-/* create tournoment modal box */
-.create-tour {
+/* create team modal box */
+.create-team {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -74,21 +51,26 @@ body {
   transform: scale(1.1);
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
   background-color: rgba(0, 0, 0, 0.8);
-  /* backdrop-filter: blur(0.4rem); */
 }
 
-.create-tour__content {
+.create-teambg {
+  width: 100%;
+  height: 100%;
+}
+
+.create-team__content {
   position: absolute;
-  width: 63rem;
+  width: 60rem;
   z-index: 99;
+  overflow: hidden;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 0.5rem;
   background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(1rem);
-  border: 1px solid rgba(255, 255, 255, 0.26);
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.26);
 }
 
 .modal-title {
@@ -97,7 +79,7 @@ body {
   font-size: 3.5rem;
   display: flex;
   justify-content: center;
-  padding: 0.5rem 0 0;
+  padding: 1rem 0 0.5rem 0;
   font-family: "Tanha";
 }
 
@@ -117,72 +99,32 @@ body {
   color: #d75b4c;
 }
 
-.tour-form {
+.team-make {
   width: 100%;
   height: 100%;
   font-family: "Tanha";
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 1rem 3rem;
+  padding: 1.5rem 3rem 3rem 1.5rem;
 }
 
-.tour-form label {
+.team-make label {
   margin: 0.1rem 0.6rem;
   display: block;
   color: #fff;
   font-size: 2rem;
 }
 
-.right-box {
-  height: 100%;
-}
-
-.form-acontrol,
-.mmr-control,
-.date,
-.prize,
-.description,
-.image-upload {
+.form-controls,
+.mmr-controls,
+.dates,
+.image-uploads {
   width: 100%;
   margin: 0 0.2rem 2rem 0;
 }
 
-.form-acontrol input,
-.date input,
-.prize input {
-  border: 1px solid #5a5c60;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
-  width: 27rem;
-  background: rgba(0, 0, 0, 0);
-  color: #fff;
-  margin: 0.5rem 0;
-  font-family: "Tanha";
-  transition: border 0.1s, box-shadow 0.1s;
-}
-
-.form-acontrol input:focus,
-.mmr-control input:focus,
-.date input:focus,
-.prize input:focus,
-.description textarea:focus {
-  outline: none;
-  border: 1px solid aqua;
-  /* box-shadow: 0 0 0px 2px #ee0f03; */
-}
-
-.form-acontrol {
-  display: flex;
-  flex-direction: column;
-}
-
-.date {
-  display: flex;
-  flex-direction: column;
-}
-
-.prize {
+.form-controls {
   display: flex;
   flex-direction: column;
 }
@@ -195,6 +137,25 @@ body {
   padding: 0 0.5rem;
 }
 
+.form-controls input,
+.dates input {
+  border: 1px solid #5a5c60;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  width: 27rem;
+  margin: 0.5rem 0;
+  transition: border 0.1s, box-shadow 0.1s;
+}
+
+.form-controls input:focus,
+.mmr-controls input:focus,
+.dates input:focus,
+.descriptions textarea:focus {
+  outline: none;
+  border: 1px solid aqua;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -205,170 +166,59 @@ input:-webkit-autofill:active {
 input:-webkit-autofill {
   -webkit-text-fill-color: #fff;
 }
-input[type="number"]::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-}
-input[type=number] { 
-  -moz-appearance: textfield;
-  appearance: textfield;
-  margin: 0; 
+
+.form-controls input::placeholder {
+  font-family: "Tanha";
+  font-size: 1.2rem;
 }
 
-.date input::-webkit-calendar-picker-indicator {
-  color-scheme: dark;
-  cursor: pointer;
+.form-controls input:focus::placeholder {
+  color: transparent;
 }
 
-.mmr-control .in {
-  display: inline;
-}
-
-.mmr-control input {
-  border-radius: 5px;
+/* .mmr-controls input {
   border: 1px solid #5a5c60;
-  color: #fff;
   background: rgba(0, 0, 0, 0);
+  border-radius: 5px;
   padding: 0.5rem 1rem;
-  width: 10.6rem;
+  width: 100%;
   margin: 0.5rem 0;
   transition: border 0.1s, box-shadow 0.1s;
-}
+} */
 
-.check {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 1rem;
-}
-
-.discheck {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.bracket {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.bracket input {
-  display: none;
-}
-
-.bracket input ~ span {
-  position: relative;
-  display: inline-block;
-  padding: 3px 0 3px 25px;
-  cursor: pointer;
-}
-
-.bracket input ~ span:before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 18px;
-  height: 18px;
-  background: #fff;
-  margin-right: 5px;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
-  left: 0;
-  /* top: 0; */
-  bottom: 30%;
-  box-sizing: border-box;
-  transition: all 300ms ease-in-out;
-  cursor: pointer;
-}
-
-.bracket input[type="radio"]:checked ~ span:before {
-  border: 9px solid aqua;
-}
-
-.bracket input:checked + label {
-  color: #08f;
-}
-
-.check .mg {
-  margin: 0 1rem 0 0;
-}
-
-.check input[type="checkbox"] {
-  -webkit-appearance: none;
-  appearance: none;
-  margin: 0;
-  font: inherit;
-  color: currentColor;
-  width: 0.1rem;
-  height: 2rem;
-  /* border: 0.5rem solid currentColor; */
-  border-radius: 0.5rem;
-  /* transform: translateY(0.075em); */
-  cursor: pointer;
-  position: relative;
-}
-
-.check input[type="checkbox"]::before {
-  content: "";
-  width: 85%;
-  height: 85%;
-  transform: scale(0);
-  position: absolute;
-  border-radius: 0.5rem;
-  left: 50%;
-  bottom: 50%;
-  opacity: 0;
-  transform: translate(-50%, 50%);
-  transition: 0.1s transform ease-in-out;
-  /* box-shadow: inset 1em 1em aqua; */
-  background-color: aqua;
-}
-
-.check input[type="checkbox"]:checked::before {
-  transform: scale(1);
-  opacity: 1;
-  transform: translate(-50%, 50%);
-}
-
-.description textarea {
+textarea {
   resize: none;
   height: 12rem;
   font-family: "Tanha";
-  background: rgba(0, 0, 0, 0);
-  color: #fff;
   border: 1px solid #5a5c60;
-  border-radius: 5px;
-  padding: 0.5rem 1rem;
-  width: 18rem;
-  margin: 0.5rem 0 0 0;
-  transition: border 0.1s, box-shadow 0.1s;
+  background: rgba(0, 0, 0, 0);
 }
 
-.image-upload {
+.image-uploads {
   width: 18rem;
   height: 2.8rem;
-  border: 2px dashed #5a5c60;
+  border: 1px dashed #5a5c60;
+  background: rgba(0, 0, 0, 0);
   position: relative;
   border-radius: 5px;
   margin-top: 0.5rem;
 }
 
-.image-upload a {
+.image-uploads a {
   position: absolute;
   width: 100%;
   height: 100%;
   text-align: center;
-  line-height: 2.5rem;
+  line-height: 3rem;
   color: #989da6;
   font-size: 1.2rem;
 }
 
-.image-upload input::file-selector-button {
+.image-uploads input::file-selector-button {
   cursor: pointer;
 }
 
-.image-upload input {
+.image-uploads input {
   position: absolute;
   outline: none;
   width: 100%;
@@ -392,7 +242,16 @@ input[type=number] {
   animation: grads 6s linear infinite;
 }
 
-.tour-form .create {
+.descriptions textarea {
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  width: 18rem;
+  margin: 0.5rem 0 0 0;
+  transition: border 0.1s, box-shadow 0.1s;
+}
+
+.team-make .create {
   margin: 4rem 0.2rem 0 0;
   width: 100%;
   outline: 0;
@@ -407,10 +266,10 @@ input[type=number] {
   transition: all 0.2s ease;
 }
 
-.tour-form .create:hover {
+.team-make .create:hover {
   background-color: #18ffff;
 }
-.tour-form .create:focus {
+.team-make .create:focus {
   transform: translateY(3px);
 }
 
@@ -423,7 +282,7 @@ input[type=number] {
 
 /* --------------------------------- */
 
-.tour-box {
+.team-box {
   width: 100%;
   max-width: 130rem;
   margin: 0 auto;
@@ -441,23 +300,12 @@ input[type=number] {
   width: 100%;
   height: 5rem;
   margin: 0 auto;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.top-box .search {
-  margin: 0 2rem 0 1rem;
-}
-
-.search .navbar__leftbox--search {
-  border-radius: 0.7rem;
 }
 
 .filters {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
 }
 
 .right-filter {
@@ -493,90 +341,159 @@ input[type=number] {
   filter: brightness(1);
 }
 
-.range-label {
-  font-family: "Tanha";
-  color: #fff;
-  font-size: 1.5rem;
-  padding: 0 1.5rem;
-  font-weight: bold;
+.top-box .search {
+  margin: 0 2rem 0 1rem;
 }
 
-/* filter range */
-*:before,
-*:after {
-  box-sizing: inherit;
+.search .navbar__leftbox--search {
+  border-radius: 0.7rem;
 }
 
-.slider-medals {
-  width: 100%;
-  height: 100%;
-}
-
-.slider {
-  margin-bottom: 4rem;
-}
-
-.output {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  margin-left: -4%;
-  -webkit-transition: opacity 0.3s ease-in-out 0s;
-  transition: opacity 0.3s ease-in-out 0s;
-}
-
-#range {
-  --active: #5628ee;
-  --value: #fff;
-  --line: #cdd9ed;
-  touch-action: none;
-  -webkit-appearance: none;
-  appearance: none;
-  user-select: none;
-  width: 32rem;
-  height: 2px;
-  border-radius: 1px;
-  background: var(--line);
-  position: relative;
-}
-#range::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 19px;
-  height: 14px;
-  background: #f5f9ff;
-  cursor: pointer;
-  border-radius: 18px;
-  transition: 0.5s ease;
-}
-#range::-webkit-slider-thumb:focus,
-#range::-webkit-slider-thumb:active {
-  padding: 2px;
-  background: aqua;
-}
-#range:focus,
-#range:active {
+.mmr-control input:focus {
   outline: none;
+  border: 1px solid aqua;
+}
+.mmr-control .in {
+  display: inline;
+}
+.mmr-control input {
+  border-radius: 5px;
+  border: 1px solid #5a5c60;
+  color: #fff;
+  background: rgba(0, 0, 0, 0);
+  padding: 0.5rem 1rem;
+  width: 10.6rem;
+  margin: 0.5rem 0;
+  transition: border 0.1s, box-shadow 0.1s;
 }
 
-.range {
-  margin: 0 3rem;
-  padding: 0.7rem 1.5rem;
-  border-radius: 0.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background-color: rgba(255, 255, 255, 0.05);
+.mmr-control label {
+  margin: 0.1rem 0.6rem;
+  font-family: "Tanha";
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+.top-box .vertical {
+  width: 2px;
+  height: 60%;
+  background-color: aqua;
+}
+
+.top-box .checkbox {
+  margin: 0 2.5rem;
+}
+
+.form-control {
+  font-family: "Tanha";
+  font-size: 1.7rem;
+  font-weight: bold;
+  line-height: 1.1;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+  cursor: pointer;
+}
+
+.form-control input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 0.5rem solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(0.075em);
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+
+.form-control input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em aqua;
+}
+
+.form-control input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+.dpdw-menu i {
+  color: aqua;
+  font-size: 2.2rem;
+  padding: 0 0.5rem;
+}
+
+.dpdw-menu span {
   color: #fff;
   font-family: "Tanha";
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 0 0 0 1rem;
+}
+
+.menu select {
+  appearance: none;
+  background-color: transparent;
+  padding: 0.5rem 2rem;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 100%;
+  cursor: inherit;
+  font-family: "Tanha";
+  font-weight: bold;
+  overflow: hidden;
+}
+
+select option {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.menu {
+  position: relative;
+  width: 50%;
+  min-width: 15ch;
+  max-width: 30ch;
+  border: 0.1rem solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
   cursor: pointer;
-  filter: brightness(70%);
-  transition: filter 0.2s ease;
+  line-height: 1.1;
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
-.range:hover {
-  filter: brightness(100%);
+.menu::after {
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: #fff;
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  position: absolute;
+  bottom: 50%;
+  left: 14%;
+  transform: translateY(50%);
+  pointer-events: none;
 }
 
-/* --------------------------- */
+select:focus + .focus {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  border: 1px solid aqua;
+  border-radius: inherit;
+}
+
 .middle {
   min-width: 20rem;
   width: 100%;
@@ -616,18 +533,24 @@ input[type=number] {
   }
 }
 
-.bottom-box {
-  display: flex;
+.range {
+  margin: 0 3rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  font-family: "Tanha";
+  cursor: pointer;
+  filter: brightness(70%);
+  transition: filter 0.2s ease;
 }
 
-.create-btn {
-  width: 40rem;
-  height: 30rem;
-  background-color: #00e5ff;
-  display: inline-block;
+.range:hover {
+  filter: brightness(100%);
 }
 
-.tours-cards {
+.players-cards {
   display: flex;
   width: 100%;
   max-width: 1300px;
@@ -636,7 +559,7 @@ input[type=number] {
   justify-content: flex-start;
 }
 
-.tour-card:first-child {
+.player-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -644,38 +567,21 @@ input[type=number] {
   cursor: pointer;
 }
 
-.tour-card:first-child p {
-  color: #fff;
-  padding: 2rem 0 0;
-  font-size: 2rem;
-  font-family: "Tanha";
-  font-weight: bold;
-  opacity: 0.7;
-  transition: opacity 0.1s ease;
-}
-
-.tour-card:first-child i {
-  color: #fff;
-  opacity: 0.7;
-  font-size: 5rem;
-  transition: opacity 0.3s ease;
-}
-
-.tours-cards:first-child:hover i,
-.tours-cards:first-child:hover p {
+.player-card:first-child:hover i,
+.player-card:first-child:hover p {
   opacity: 1;
 }
 
-.tour-card {
+.player-card {
   position: relative;
-  width: 40rem;
-  height: 30rem;
-  margin: 2rem 1.6rem;
+  width: 285px;
+  height: 35rem;
+  margin: 2rem 2rem;
   overflow: hidden;
   border-radius: 1rem;
 }
 
-.tour-card:hover {
+.player-card:hover {
   --border-size: 7px;
   --border-angle: 0turn;
   background-image: conic-gradient(
@@ -705,22 +611,21 @@ input[type=number] {
   initial-value: 0turn;
 }
 
-.tour-card img {
+.player-card .pic {
   width: 100%;
   height: 100%;
   padding: 0.5rem;
   border-radius: 1.5rem;
   object-fit: cover;
   transition: all 0.4s ease;
-  cursor: pointer;
 }
 
-.tour-card:hover .td {
+.player-card:hover .pic {
   /* transform: scale(1.2); */
   filter: blur(1.4px);
 }
 
-.tour-caption {
+.player-caption {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -734,7 +639,6 @@ input[type=number] {
   color: #fff;
   border-radius: 1rem;
   background-color: #000;
-  cursor: pointer;
   opacity: 0.9;
   /* padding: 15px; */
   -webkit-transform: translateY(80%);
@@ -747,6 +651,16 @@ input[type=number] {
   transition: transform 0.4s, opacity 0.1s 0.3s, -webkit-transform 0.4s;
   font-family: "Tanha";
 }
+.player-card:hover .player-caption {
+  opacity: 0.9;
+  -webkit-transform: translateY(0px);
+  transform: translateY(0px);
+  -webkit-transition: opacity 0.1s, -webkit-transform 0.4s;
+  transition: opacity 0.1s, -webkit-transform 0.4s;
+  transition: transform 0.4s, opacity 0.1s;
+  transition: transform 0.4s, opacity 0.1s, -webkit-transform 0.4s;
+}
+
 
 .show-medals {
   display: flex;
@@ -755,10 +669,10 @@ input[type=number] {
 
 .first-medal,
 .second-medal {
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   position: relative;
-  top: 50%;
+  top: 40%;
   transform: translateY(-40%);
 }
 
@@ -783,32 +697,54 @@ input[type=number] {
   object-fit: cover;
 }
 
-.tour-card__title {
-  padding: 2rem 0;
-  font-size: 2rem;
-  font-family: "Lato";
-}
-
-.tour-card__content,
 .medal-title {
   padding: 2rem 0 1rem 0;
   font-size: 1.7rem;
 }
 
-.tour-card__members {
-  padding: 0 0 1rem;
+.player-card__title {
+  padding: 2rem 0;
+  font-size: 2rem;
+  font-family: "Lato";
 }
 
-.tour-card__needmember {
-  padding: 0 0 1rem;
+.player-card__content {
+  padding: 2rem 0 1rem 0;
+  font-size: 1.7rem;
+}
+
+.player-card__needmember {
+  padding: 2rem 0 1rem;
   font-size: 1.6rem;
   display: flex;
   align-items: center;
 }
 
-.tour-card__needmember i {
-  color: aqua;
+.player-card__needmember i {
+  /* color: aqua; */
+  font-size: 1.6rem;
   padding: 0.4rem;
+}
+
+.player-card__needmember .bxs-check-circle {
+  color: #00c853;
+}
+
+.player-card__needmember .bxs-x-circle {
+  color: #d50000;
+}
+
+.player-card__needmember i {
+  /* color: aqua; */
+  padding: 0.4rem;
+}
+
+.player-card__needmember .bxs-check-circle {
+  color: #00c853;
+}
+
+.player-card__needmember .bxs-x-circle {
+  color: #d50000;
 }
 
 .more-button a {
@@ -830,17 +766,8 @@ input[type=number] {
   margin-top: 6rem;
 }
 
-.tour-card:hover .tour-caption {
-  opacity: 0.9;
-  -webkit-transform: translateY(0px);
-  transform: translateY(0px);
-  -webkit-transition: opacity 0.1s, -webkit-transform 0.4s;
-  transition: opacity 0.1s, -webkit-transform 0.4s;
-  transition: transform 0.4s, opacity 0.1s;
-  transition: transform 0.4s, opacity 0.1s, -webkit-transform 0.4s;
-}
 
-.tours-cards .header1 {
+.header1 {
   text-align: center;
   color: #fff;
   font-family: "Tanha";
@@ -848,7 +775,7 @@ input[type=number] {
   margin-top: 10rem;
 }
 
-.tours-cards .header2 {
+.header2 {
   text-align: center;
   color: #fff;
   font-family: "Tanha";

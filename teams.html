@@ -21,8 +21,8 @@
     <div class="navbar" dir="ltr">
       <div class="navbar__leftbox">
         <div class="navbar__leftbox--logo">
-          <a href="site.html" class="navbar__leftbox--logo white-one">Sir</a>
-          <a href="site.html" class="navbar__leftbox--logo blue-one">Vana</a>
+          <a href="index.html" class="navbar__leftbox--logo white-one">Sir</a>
+          <a href="index.html" class="navbar__leftbox--logo blue-one">Vana</a>
         </div>
       </div>
       <div class="navbar__rightbox">
@@ -39,11 +39,11 @@
         </div>
         <div class="navbar__rightbox--link">
           <div class="nav-text">
-            <a href="teams.html">هوش مصنوعی (رحیمی)</a>
+            <a href="player.html">پلیر ها</a>
           </div>
           <div class="navbar__rightbox icon">
             <a href="#">
-              <i id="first-icon" class="bx bxs-user-account"></i>
+              <i class='bx bxs-group'></i>
             </a>
           </div>
         </div>
@@ -84,39 +84,46 @@
     <!-- create team modal box -->
     <div class="create-team">
       <div class="create-team__content">
-        <span class="close-button">&times;</span>
-        <form class="team-make" action="">
-          <div class="right-box">
-            <div class="form-controls">
-              <label for="name">اسم کامل تیم :</label>
-              <input type="text" id="name" autofocus required/>
-              <label for="tag">تگ تیم :</label>
-              <input
-                type="text"
-                id="tag"
-                placeholder="تگ میتواند مخفف اسم تیم باشد."
-                required
-              />
-            </div>
-            <!-- <div class="mmr-controls">
+        <div class="create-teambg">
+          <div class="modal-title">
+            <span class="close-button">&times;</span>
+            <h1 class="modal-title">تشکیل تیم</h1>
+          </div>
+          <form class="team-make" action="">
+            <div class="right-box">
+              <div class="form-controls">
+                <label for="name">اسم کامل تیم :</label>
+                <input type="text" id="name" autofocus required />
+                <!-- <span class="wrong-input-alrt">* اسم تورنومنتت یادت رفت</span> -->
+                <label for="tag">تگ تیم :</label>
+                <input
+                  type="text"
+                  id="tag"
+                  placeholder="تگ مخفف اسم تیم است ."
+                  required
+                />
+                <!-- <span class="wrong-input-alrt"> * رنک تورنومنتت رو انتخاب نکردی!</span> -->
+              </div>
+              <!-- <div class="mmr-controls">
               <label for="avg-mmr">میانگین رنک :</label>
               <input type="number" id="avg-mmr" min="1" max="10000" />
             </div> -->
-          </div>
-          <div class="vert"></div>
-          <div class="left-box">
-            <div class="descriptions">
-              <label for="desc">توضیحات تیم :</label>
-              <textarea name="desc" id="desc" cols="10" rows="10"></textarea>
             </div>
-            <label>تصویر تیم :</label>
-            <div class="image-uploads">
-              <input type="file" id="file" multiple />
-              <a href="#"><i class="bx bx-plus"></i></a>
+            <div class="vert"></div>
+            <div class="left-box">
+              <div class="descriptions">
+                <label for="desc">توضیحات تیم :</label>
+                <textarea name="desc" id="desc" cols="10" rows="10"></textarea>
+              </div>
+              <label>تصویر تیم :</label>
+              <div class="image-uploads">
+                <input type="file" id="file" multiple />
+                <a href="#"><i class="bx bx-plus"></i></a>
+              </div>
+              <button class="create" type="submit">ایجاد</button>
             </div>
-            <button class="create" type="submit">ایجاد</button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
     <!-- -------------------------------------------------- -->
@@ -124,42 +131,46 @@
       <div class="shadow-box">
         <div class="top-box">
           <form class="filters" action="">
-          <div class="search">
-            <div class="navbar__leftbox--search" id="show" dir="rtl">
-              <i class="bx bx-search-alt"></i>
-              <input
-                dir="rtl"
-                type="search"
-                placeholder="جستجوی تیم ..."
-              />
+            <div class="right-filter">
+              <div class="search">
+                <div class="navbar__leftbox--search" id="show" dir="rtl">
+                  <i class="bx bx-search-alt"></i>
+                  <input dir="rtl" type="search" placeholder="جستجوی تیم ..." />
+                </div>
+              </div>
+              <div class="dpdw-menu">
+                <i class="bx bx-sort-down"></i>
+                <span>مرتب سازی‌ :</span>
+                <div class="menu">
+                  <select>
+                    <option data-value="name" selected>اسم تیم</option>
+                    <option data-value="average">میانگین رنک</option>
+                    <option data-value="memeber">تعداد اعضا</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+              </div>
+              <div class="vertical"></div>
+              <div class="checkbox">
+                <label for="check" class="form-control">
+                  <input type="checkbox" id="check" name="checkbox" />
+                  نیازمند پلیر
+                </label>
+              </div>
+              <button type="submit" class="range">اعمال فیلتر</button>
             </div>
-          </div>
-          <div class="dpdw-menu">
-            <i class="bx bx-sort-down"></i>
-            <span>مرتب سازی‌ :</span>
-            <div class="menu">
-              <select>
-                <option data-value="name" selected>اسم تیم</option>
-                <option data-value="average">میانگین رنک</option>
-                <option data-value="memeber">تعداد اعضا</option>
-              </select>
-              <span class="focus"></span>
+            <div class="left-filter">
+              <div class="remove-filter">
+                <a href="#" class="remove-filter">حذف فیلتر </a>
+              <i class='bx bx-chevron-left'></i>
+              </div>
             </div>
-          </div>
-          <div class="vertical"></div>
-          <div class="checkbox">
-            <label for="check" class="form-control">
-              <input type="checkbox" id="check" name="checkbox" />
-              نیازمند پلیر
-            </label>
-          </div>
-          <button type="submit" class="range">اعمال فیلتر</button>
           </form>
         </div>
         <div class="middle"></div>
         <div class="teams-cards">
           <div class="team-card" id="create-button">
-            <a href="#">
+            <a>
               <i class="bx bx-plus-medical"></i>
             </a>
             <a>
@@ -244,6 +255,8 @@
               <p class="more-button"><a href="#">جز‌ئیات بیشتر</a></p>
             </div>
           </div>
+          <!-- <h1 class="header1">جستجو موردنظر یافت نشد...</h1> -->
+          <!-- <h1 class="header2">هنوز هیچ تیمی ثبت نشده است ...</h1> -->
         </div>
       </div>
     </div>

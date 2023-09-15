@@ -36,7 +36,7 @@ html {
   width: 100%;
   /* height: 85.2px; */
   position: absolute;
-  z-index: 199;
+  z-index: 90;
   display: flex;
   align-items: center;
   justify-content: space-between;

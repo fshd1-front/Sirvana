@@ -32,40 +32,45 @@ html {
 
 .main {
   position: relative;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
-  margin: auto;
-
-  background-image: url(../img/signup.jpg);
+  background-image: url(../img/Signup-bg.png);
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
 }
 
-/* video {
-  position: fixed;
-  object-fit: cover;
-  height: 100%;
+.shadow-box {
   width: 100%;
-} */
+  height: 100%;
 
-/* .navbar__leftbox--logo {
-  transition: all 0.3s ease-out;
-} */
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.8) 19%,
+    rgba(0, 0, 0, 0.7) 42%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* ------------------------- >>> */
+.navbar__leftbox--logo {
+  padding: 1rem 0;
+}
 
 .navbar__leftbox--logo .white-one {
   font-size: 4rem;
   color: white;
   font-weight: 900;
   cursor: pointer;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato";
 }
 
 .navbar__leftbox--logo .blue-one {
   color: #66fcf1;
-  font-size: 4.1rem;
+  font-size: 4rem;
   font-weight: 900;
   cursor: pointer;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato";
 }
 
 .navbar__leftbox--logo:hover .white-one {
@@ -76,264 +81,558 @@ html {
   color: white;
 }
 
-.login input {
-  display: block;
-}
-
-input[type="checkbox"] {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  background-color: white;
-  border-radius: 50%;
-  vertical-align: middle;
-  margin-left: 0.5rem;
-  border: 1px solid #ddd;
-  appearance: none;
-  -webkit-appearance: none;
-  outline: none;
-  cursor: pointer;
-}
-
-input[type="checkbox"]:checked {
-  background-color: #5adbb5;
-}
-
-label a {
-  font-weight: 500;
-}
-
-label a:hover {
-  font-weight: 800;
-}
-
-label {
-  font-family: "Tanha";
-  font-size: 1.2rem;
-}
-
+/* -------------------------------------------- */
 .login {
-  margin: auto;
   width: 40rem;
-  height: 40rem;
+  height: 45rem;
+
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  right: 50%;
+  transform: translate(50%, -50%);
+
+  display: flex;
+  justify-content: center;
+
+  /* Background : */
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 0.5rem;
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+}
+
+.login-form {
+  width: 30rem;
+  height: 100%;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.06);
-  border-radius: 2.5rem;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.26);
+
+  position: absolute;
 }
 
-.login input[type="text"],
-.login [type="password"] {
+.login-form input[type="text"],
+.login-form input[type="password"] {
   width: 30rem;
-  height: 4rem;
-  margin: 1.4rem;
-  border: none;
-  outline: none;
-  background: transparent;
-  border-bottom: 0.2rem solid #000;
+
+  padding: 0.5rem 1.5rem;
+  margin: 1rem 0 0;
+
+  display: block;
+
   color: #fff;
   font-family: "Tanha";
   font-size: 1.6rem;
-  caret-color: aqua;
+
+  outline: none;
+  border: 1px solid #5a5c60;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  transition: border 0.1s, box-shadow 0.1s;
 }
 
-input::placeholder {
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+  outline: none;
+  border: 1px solid aqua;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px inset rgba(0, 0, 0, 0.9) !important;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: #fff;
+}
+
+.email-box,
+.password-box {
+  margin-top: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.password-box {
+  position: relative;
+}
+
+.password-box:hover i,
+.need-password:hover i {
+  visibility: visible;
+}
+
+.password-box i {
+  color: #fff;
+  font-size: 1.6rem;
+
+  visibility: hidden;
+
+  position: absolute;
+  top: 67%;
+  left: 5%;
+
+  cursor: pointer;
+}
+
+.email-box label,
+.password-box label {
+  font-family: "Tanha";
+  font-size: 2rem;
   color: #fff;
 }
 
-input:focus::placeholder {
-  color: transparent;
-}
-
-input:focus {
-  border: #66fcf1;
-}
-
-.login .text {
+.text-box {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  width: 75%;
-  margin: 1.4rem;
+  align-items: center;
+  width: 100%;
+  margin: 1.4rem 0;
 }
 
-.login .text a {
-  font-weight: 600;
-  opacity:  0.8;
+.remember-me {
+  display: flex;
+  align-items: center;
 }
 
-.login .text a:hover {
+.remember-me label {
+  margin: 0 0.6rem 0 0;
+
+  font-family: "Tanha";
+  font-size: 1.3rem;
+  color: #fff;
+
+  filter: brightness(70%);
+
+  cursor: pointer;
+}
+.remember-me label:hover {
+  filter: brightness(1);
+}
+.remember-me:hover > label {
+  filter: brightness(1);
+}
+
+.remember-me input {
+  width: 1.6rem;
+  height: 1.6rem;
+
+  border: 1px solid #5a5c60;
+  background: rgba(0, 0, 0, 0);
+
+  -webkit-appearance: none;
+  appearance: none;
+
+  font: inherit;
+
+  border-radius: 0.5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.remember-me input:before {
+  content: "";
+  width: 85%;
+  height: 85%;
+
+  position: absolute;
+  right: 4%;
+  top: 6%;
+  transform: scale(0);
+
+  opacity: 0;
+  border-radius: 0.5rem;
+
+  transition: 0.1s transform ease-in-out;
+  background-color: aqua;
+}
+
+.remember-me input:checked:before {
+  transform: scale(1);
   opacity: 1;
 }
 
-.login input[type="submit"],
-.registration input[type="submit"],
+.forgot-password a {
+  font-family: "Tanha";
+  font-size: 1.3rem;
+  color: #fff;
+
+  filter: brightness(70%);
+}
+.forgot-password a:hover {
+  filter: brightness(1);
+}
+
+.login-form input[type="submit"],
+.register-form input[type="submit"],
 .forgot input[type="submit"] {
   width: 30rem;
   height: 4rem;
   margin: 1rem 1.4rem 1.4rem 1.4rem;
+
   font-weight: bold;
   font-family: "Tanha";
+
   border: none;
   outline: none;
   border-radius: 2.5rem;
-  cursor: pointer;
+
   background: aqua;
-  opacity: 0.7;
-  /* transition: all 0.3s ease; */
+  filter: brightness(0.7);
+  transition: filter 0.3s ease;
+  cursor: pointer;
 }
 
-.login input[type="submit"]:hover,
+.register-form input[type="submit"],
+.forgot input[type="submit"] {
+  margin: 0.5rem 0;
+}
+
+.login-form input[type="submit"]:hover,
 .registration input[type="submit"]:hover,
 .forgot input[type="submit"]:hover {
-  opacity: 1;
+  filter: brightness(1);
 }
 
-.login .create {
+.login-form p {
+  color: #fff;
+  font-size: 1.3rem;
+  font-family: "Tanha";
+
   text-align: center;
   margin-top: 1rem;
-  font-family: "Tanha";
-  font-size: 1.6rem;
+  margin-bottom: 3rem;
+
+  filter: brightness(0.7);
 }
 
 #registerbtn {
   font-family: "Tanha";
-  color: #000;
+  color: #fff;
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
-a {
-  font-family: "Tanha";
-  color: #000;
-  font-weight: 900;
-  font-size: 1.4rem;
-}
-
+/* ----------------------------------------------------- */
+/* Registration : */
 .registration {
-  visibility: hidden;
+  width: 60rem;
+  height: 61rem;
+
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 40rem;
-  width: 40rem;
+  right: 50%;
+  transform: translate(50%, -50%);
+
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  /* From https://css.glass */
+
+  visibility: hidden;
+
+  /* Background : */
   background: rgba(255, 255, 255, 0.06);
-  border-radius: 2.5rem;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 0.5rem;
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
 }
 
-.registration input[type="text"],
-.registration input[type="email"],
-.registration input[type="password"] {
-  width: 30rem;
-  height: 4rem;
-  margin: 1.4rem;
-  border: none;
-  outline: none;
-  background: transparent;
-  border-bottom: 0.2rem solid #000;
+.register-form {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+}
+
+.flex-block {
+  display: flex;
+  justify-content: space-between;
+
+  height: 32.8rem;
+
+  margin-top: 2rem;
+}
+
+.vert {
+  width: 3px;
+  height: 85%;
+  margin: 2rem 3rem 0;
+
+  background-color: aqua;
+}
+
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"],
+.register-form input[type="number"] {
+  width: 23rem;
+
+  padding: 0.5rem 1.5rem 0.5rem 3rem;
+  margin: 1rem 0 0;
+
+  display: block;
+
   color: #fff;
   font-family: "Tanha";
   font-size: 1.6rem;
-  caret-color: aqua;
+
+  outline: none;
+  border: 1px solid #5a5c60;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  transition: border 0.1s, box-shadow 0.1s;
 }
 
-.registration input {
+.register-form input[type="number"]::placeholder {
+  font-family: "Tanha";
+  font-size: 1.2rem;
+}
+
+.register-form input[type="number"]:focus::placeholder {
+  color: transparent;
+}
+
+.register-form input[type="text"]:focus,
+.register-form input[type="email"]:focus,
+.register-form input[type="password"]:focus {
+  outline: none;
+  border: 1px solid aqua;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px inset rgba(0, 0, 0, 0.9) !important;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: #fff;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type=number] { 
+  -moz-appearance: textfield;
+  appearance: textfield;
+  margin: 0; 
+}
+
+.right-block label,
+.left-block label {
+  font-family: "Tanha";
+  font-size: 2rem;
+  color: #fff;
+}
+
+.signup-email,
+.need-password:last-child,
+.id,
+.id2 {
+  margin-top: 1rem;
+}
+
+.user-name span,
+.signup-email span,
+.need-password span,
+.id span,
+.id2 span {
   display: block;
 }
 
-.registration input[type="checkbox"] {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  background-color: white;
-  border-radius: 50%;
-  vertical-align: middle;
-  margin-left: 0.5rem;
-  border: 1px solid #ddd;
-  appearance: none;
-  -webkit-appearance: none;
-  outline: none;
-  cursor: pointer;;
+.need-password {
+  position: relative;
 }
 
-.registration input[type="checkbox"]:checked {
-  background-color: #5adbb5;
+.need-password i {
+  color: #fff;
+  font-size: 1.6rem;
+
+  visibility: hidden;
+
+  position: absolute;
+  top: 67%;
+  left: 5%;
+
+  cursor: pointer;
+}
+
+.wrong-input-alrt {
+  color: red;
+  font-family: "Tanha";
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0.6rem 0;
 }
 
 .agree {
-  width: 75%;
-  margin: 1.4rem;
+  display: flex;
+  align-items: center;
+
+  margin: 1rem 0 1rem;
+}
+
+.agree input[type="checkbox"] {
+  width: 1.6rem;
+  height: 1.6rem;
+
+  border: 1px solid #5a5c60;
+  background: rgba(0, 0, 0, 0);
+
+  -webkit-appearance: none;
+  appearance: none;
+
+  font: inherit;
+
+  border-radius: 0.5rem;
+  cursor: pointer;
+  position: relative;
+}
+
+.agree input[type="checkbox"]:before {
+  content: "";
+  width: 85%;
+  height: 85%;
+
+  position: absolute;
+  right: 4%;
+  top: 6%;
+  transform: scale(0);
+
+  opacity: 0;
+  border-radius: 0.5rem;
+
+  transition: 0.1s transform ease-in-out;
+  background-color: aqua;
+}
+
+.agree input[type="checkbox"]:checked:before {
+  transform: scale(1);
+  opacity: 1;
+}
+.agree label {
+  margin: 0 0.6rem 0 0;
+
+  font-family: "Tanha";
+  font-size: 1.3rem;
+  color: #fff;
+
+  filter: brightness(70%);
+
+  cursor: pointer;
+}
+.agree label:hover {
+  filter: brightness(1);
+}
+
+.agree:hover > label {
+  filter: brightness(1);
 }
 
 .open {
-  margin-top: 1rem;
+  color: #fff;
+  font-size: 1.3rem;
   font-family: "Tanha";
-  font-size: 1.6rem;
+
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+
+  filter: brightness(0.7);
 }
 
-.open a {
-  padding-right: 0.5rem;
-  font-size: 1.6rem;
+#loginbtn {
+  font-family: "Tanha";
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 0 0.5rem;
 }
+
+/* ----------------------------------------------------------- */
 
 .forgot {
   visibility: hidden;
-  margin: auto;
   width: 40rem;
-  height: 30rem;
+  height: 33rem;
+
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  display: flex;
+  justify-content: center;
+
+  /* Background : */
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.26);
+  border-radius: 0.5rem;
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+}
+
+.forgot-form {
+  width: 30rem;
+  height: 100%;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.06);
-  border-radius: 2.5rem;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.26);
-}
 
-.forgot input {
-  display: block;
+  position: absolute;
 }
 
 .forgot input[type="email"] {
   width: 30rem;
-  height: 4rem;
-  margin: 1.4rem;
-  border: none;
-  outline: none;
-  background: transparent;
-  border-bottom: 0.2rem solid #000;
+
+  padding: 0.5rem 1.5rem;
+  margin: 1rem 0 0;
+
+  display: block;
+
   color: #fff;
   font-family: "Tanha";
   font-size: 1.6rem;
-  caret-color: aqua;
-  margin: 3rem 0 1rem 0;
+
+  outline: none;
+  border: 1px solid #5a5c60;
+  background: rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  transition: border 0.1s, box-shadow 0.1s;
+}
+
+.forgot-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 2rem 0 1.5rem;
+}
+
+.forgot-box label {
+  font-family: "Tanha";
+  font-size: 2rem;
+  color: #fff;
+}
+
+#logingbtn {
+  font-family: "Tanha";
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.3rem;
+  padding: 0 0.5rem;
 }

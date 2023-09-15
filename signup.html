@@ -12,72 +12,145 @@
 
     <!-- Css Links -->
     <link rel="stylesheet" href="css/signup.css" />
+    <link rel="shortcut icon" href="img/shortcut icon.png" />
     <title>SignUp</title>
   </head>
   <body>
-    <!-- <video autoplay muted loop>
-      <source src="img/lanaya.mp4" />
-    </video> -->
-
-    <!-- middle : -->
-    <form action="">
-      <div class="main">
+    <div class="main">
+      <div class="shadow-box">
+        <!-- SignUp ---------------------------------------------------------->
         <div class="registration" id="register-box">
-          <div class="navbar__leftbox--logo">
-            <a href="site.html" class="navbar__leftbox--logo white-one">Sir</a>
-            <a href="site.html" class="navbar__leftbox--logo blue-one">Vana</a>
-          </div>
-          <input type="text" placeholder="نام" required />
-          <span>نامی که در سایت نمایش داده میشود.</span>
-          <input type="email" placeholder="ایمیل" required />
-          <input type="password" placeholder="رمز عبور" required />
-          <input type="password" placeholder="تکرار رمز عبور" required />
-          <div class="agree">
-            <label for="ch">
-              <input type="checkbox" id="ch" /><a href="#"
-                >شرایط و قوانین سایت را میپذیرم.</a
+          <form action="" class="register-form">
+            <div class="navbar__leftbox--logo">
+              <a href="index.html" class="navbar__leftbox--logo white-one"
+                >Sir</a
               >
-            </label>
-          </div>
-          <input type="submit" value="تکمیل ثبت نام" />
-          <p class="open">
-            حساب کاربری دارید‌؟<a href="#" id="loginbtn">ورود</a>
-          </p>
+              <a href="index.html" class="navbar__leftbox--logo blue-one"
+                >Vana</a
+              >
+            </div>
+            <div class="flex-block">
+              <div class="right-block">
+                <div class="user-name">
+                  <label for="name">نام :</label>
+                  <input type="text" required id="name" />
+                  <!-- <span class="wrong-input-alrt"> * اسمتو پیشی خورد ؟ </span> -->
+                </div>
+                <div class="signup-email">
+                  <label for="signup-email">ایمیل :</label>
+                  <input type="email" required id="signup-email" />
+                  <!-- <span class="wrong-input-alrt"> * ایمیل یادت رفت ! </span> -->
+                </div>
+                <div class="need-password">
+                  <label for="need-password">رمز عبور‌ :</label>
+                  <input type="password" id="need-password" required />
+                  <i class="bx bx-hide" id="icon"></i>
+
+                  <!-- <span class="wrong-input-alrt"> * الو ؟ رمزت کو ؟! </span> -->
+                </div>
+              </div>
+              <div class="vert"></div>
+              <div class="left-block">
+                <div class="need-password">
+                  <label for="need-password2">تکرار رمز عبور :</label>
+                  <input type="password" id="need-password2" required />
+                  <i class="bx bx-hide" id="icon2"></i>
+                  <!-- <span class="wrong-input-alrt"
+                    >* رمزو زدی . تکرارشم بزن !</span
+                  > -->
+                  <!-- <span class="wrong-input-alrt">* رمزهات یکی نیستن !</span> -->
+                </div>
+                <div class="id">
+                  <label for="dota-id">آیدی دوتا ۲ :</label>
+                  <input
+                    type="number"
+                    id="dota-id"
+                    placeholder="برای ارتباط بهتر با سایر پلیرها"
+                    required
+                  />
+                  <!-- <span class="wrong-input-alrt"> * آیدی خیلی بدردت میخوره ! </span> -->
+                </div>
+                <div class="id2">
+                  <label for="discord-id">آیدی دیسکورد :</label>
+                  <input type="text" id="discord-id" />
+                </div>
+              </div>
+            </div>
+            <div class="agree">
+              <input type="checkbox" id="ch" />
+              <label for="ch">شرایط و قوانین سایت را میپذیرم . </label>
+            </div>
+            <input type="submit" value="تکمیل ثبت نام" />
+            <p class="open">
+              حساب کاربری دارید‌؟<a href="#" id="loginbtn">ورود</a>
+            </p>
+          </form>
         </div>
+
+        <!-- Login ------------------------------------------------------->
 
         <div class="login" id="login-box">
-          <div class="navbar__leftbox--logo">
-            <a href="site.html" class="navbar__leftbox--logo white-one">Sir</a>
-            <a href="site.html" class="navbar__leftbox--logo blue-one">Vana</a>
-          </div>
-          <input type="text" placeholder="ایمیل" />
-          <input type="password" placeholder="رمز عبور" />
-          <div class="text">
-            <label for="checkbox">
-              <input type="checkbox" id="checkbox" />
-              <a href="#">مرا بخاطر بسپار</a>
-            </label>
-            <a href="#" id="forgotbtn">فراموشی رمز عبور</a>
-          </div>
-          <input type="submit" value="ورود" />
-          <p class="create">
-            عضو نیستید؟ <a href="#" id="registerbtn">اینجا</a> کلیک کنید.
-          </p>
+          <form action="" class="login-form">
+            <div class="navbar__leftbox--logo">
+              <a href="index.html" class="navbar__leftbox--logo white-one"
+                >Sir</a
+              >
+              <a href="index.html" class="navbar__leftbox--logo blue-one"
+                >Vana</a
+              >
+            </div>
+            <div class="email-box">
+              <label for="email">ایمیل :</label>
+              <input type="text" id="email" />
+              <!-- <span class="wrong-input-alrt">* ایمیل یادت رفت !</span> -->
+            </div>
+            <div class="password-box">
+              <label for="password">رمز عبور :</label>
+              <input type="password" id="password" />
+              <i class="bx bx-hide" id="icon3"></i>
+              <!-- <span class="wrong-input-alrt">* رمزو نمیخوای بزنی ؟!</span> -->
+            </div>
+            <div class="text-box">
+              <div class="remember-me">
+                <input type="checkbox" id="checkbox" />
+                <label for="checkbox"> مرا بخاطر بسپار </label>
+              </div>
+              <div class="forgot-password">
+                <a href="#" id="forgotbtn">فراموشی رمز عبور</a>
+              </div>
+            </div>
+            <input type="submit" value="ورود" />
+            <p class="create">
+              عضو نیستید؟ <a href="#" id="registerbtn">اینجا</a> کلیک کنید.
+            </p>
+          </form>
         </div>
 
+        <!-- Forgot Password ----------------------------------------------- -->
+
         <div class="forgot" id="forgot-box">
-          <div class="navbar__leftbox--logo">
-            <a href="site.html" class="navbar__leftbox--logo white-one">Sir</a>
-            <a href="site.html" class="navbar__leftbox--logo blue-one">Vana</a>
-          </div>
-          <input type="email" placeholder=" ایمیل خود را وارد نمایید" />
-          <input type="submit" value="ارسال" />
-          <p class="open">
-            حساب کاربری دارید‌؟<a href="#" id="logingbtn">ورود</a>
-          </p>
+          <form action="" class="forgot-form">
+            <div class="navbar__leftbox--logo">
+              <a href="index.html" class="navbar__leftbox--logo white-one"
+                >Sir</a
+              >
+              <a href="index.html" class="navbar__leftbox--logo blue-one"
+                >Vana</a
+              >
+            </div>
+            <div class="forgot-box">
+              <label for="forgot-email">ایمیل خود را وارد نمایید :</label>
+              <input type="email" id="forgot-email" required />
+              <!-- <span class="wrong-input-alrt">* ایمیل یادت رفت !</span> -->
+            </div>
+            <input type="submit" value="ارسال" />
+            <p class="open">
+              حساب کاربری دارید‌؟<a href="#" id="logingbtn">ورود</a>
+            </p>
+          </form>
         </div>
       </div>
-    </form>
+    </div>
 
     <script src="js/loginsign.js"></script>
   </body>

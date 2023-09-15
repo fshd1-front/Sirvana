@@ -53,20 +53,36 @@ body {
   transform: scale(1.1);
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
   background-color: rgba(0, 0, 0, 0.8);
-  /* backdrop-filter: blur(0.4rem); */
+}
+
+.create-teambg {
+  width: 100%;
+  height: 100%;
 }
 
 .create-team__content {
   position: absolute;
   width: 60rem;
-  height: 42rem;
+  z-index: 99;
+  overflow: hidden;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 0.5rem;
   background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(1rem);
+  overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.26);
+}
+
+.modal-title {
+  width: 100%;
+  color: #fff;
+  font-size: 3.5rem;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0 0.5rem 0;
+  font-family: "Tanha";
 }
 
 .close-button {
@@ -85,17 +101,17 @@ body {
   color: #d75b4c;
 }
 
-form {
+.team-make {
   width: 100%;
   height: 100%;
   font-family: "Tanha";
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 1rem 3rem;
+  padding: 1.5rem 3rem 3rem 1.5rem;
 }
 
-form label {
+.team-make label {
   margin: 0.1rem 0.6rem;
   display: block;
   color: #fff;
@@ -110,9 +126,23 @@ form label {
   margin: 0 0.2rem 2rem 0;
 }
 
+.form-controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrong-input-alrt {
+  color: red;
+  font-family: "Tanha";
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0 0.5rem;
+}
+
 .form-controls input,
 .dates input {
-  border: 1px solid #d1d5db;
+  border: 1px solid #5a5c60;
+  background: rgba(0, 0, 0, 0);
   border-radius: 5px;
   padding: 0.5rem 1rem;
   width: 27rem;
@@ -125,8 +155,18 @@ form label {
 .dates input:focus,
 .descriptions textarea:focus {
   outline: none;
-  border: 1px solid #c4b5fd;
-  box-shadow: 0 0 0px 2px aqua;
+  border: 1px solid aqua;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px inset rgba(0, 0, 0, 0.9) !important;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: #fff;
 }
 
 .form-controls input::placeholder {
@@ -138,25 +178,29 @@ form label {
   color: transparent;
 }
 
-.mmr-controls input {
-  border: 1px solid #d1d5db;
+/* .mmr-controls input {
+  border: 1px solid #5a5c60;
+  background: rgba(0, 0, 0, 0);
   border-radius: 5px;
   padding: 0.5rem 1rem;
   width: 100%;
   margin: 0.5rem 0;
   transition: border 0.1s, box-shadow 0.1s;
-}
+} */
 
 textarea {
   resize: none;
   height: 12rem;
   font-family: "Tanha";
+  border: 1px solid #5a5c60;
+  background: rgba(0, 0, 0, 0);
 }
 
 .image-uploads {
   width: 18rem;
   height: 2.8rem;
-  border: 2px dashed #fff;
+  border: 1px dashed #5a5c60;
+  background: rgba(0, 0, 0, 0);
   position: relative;
   border-radius: 5px;
   margin-top: 0.5rem;
@@ -167,8 +211,8 @@ textarea {
   width: 100%;
   height: 100%;
   text-align: center;
-  line-height: 2.5rem;
-  color: #fff;
+  line-height: 3rem;
+  color: #989da6;
   font-size: 1.2rem;
 }
 
@@ -188,10 +232,8 @@ textarea {
 
 .vert {
   width: 3px;
-  height: 90%;
-  border: 1px solid #5f5f5f;
   background-color: none;
-  margin: 0 1rem;
+  margin: 1rem 1rem 0;
   background: linear-gradient(
     90deg,
     rgba(255, 0, 0, 1) 0%,
@@ -211,7 +253,7 @@ textarea {
   transition: border 0.1s, box-shadow 0.1s;
 }
 
-form .create {
+.team-make .create {
   margin: 4rem 0.2rem 0 0;
   width: 100%;
   outline: 0;
@@ -226,10 +268,10 @@ form .create {
   transition: all 0.2s ease;
 }
 
-form .create:hover {
+.team-make .create:hover {
   background-color: #18ffff;
 }
-form .create:focus {
+.team-make .create:focus {
   transform: translateY(3px);
 }
 
@@ -265,7 +307,40 @@ form .create:focus {
 .filters {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
+}
+
+.right-filter {
+  display: flex;
+  align-items: center;
+}
+
+.left-filter {
+  display: flex;
+  align-items: center;
+}
+
+.left-filter .remove-filter a {
+  text-decoration: none;
+  color: #fff;
+  filter: brightness(70%);
+  font-family: "Tanha";
+  font-size: 1.4rem;
+  padding: 0 3rem 0 1rem;
+  transition: filter 0.3s ease;
+}
+
+.left-filter i {
+  color: #fff;
+  filter: brightness(70%);
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: filter 0.3s ease;
+}
+
+.remove-filter:hover a,
+.remove-filter:hover i {
+  filter: brightness(1);
 }
 
 .top-box .search {
@@ -464,7 +539,7 @@ select:focus + .focus {
   max-width: 1300px;
   flex-wrap: wrap;
   margin: 1rem 0;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .team-card:first-child {
@@ -642,8 +717,18 @@ select:focus + .focus {
   transition: transform 0.4s, opacity 0.1s, -webkit-transform 0.4s;
 }
 
-/* Footer */
-footer {
-  /* position: relative;
-  bottom: 0; */
+.header1 {
+  text-align: center;
+  color: #fff;
+  font-family: "Tanha";
+  font-size: 3.4rem;
+  margin-top: 10rem;
+}
+
+.header2 {
+  text-align: center;
+  color: #fff;
+  font-family: "Tanha";
+  font-size: 3.4rem;
+  margin-top: 13rem;
 }
