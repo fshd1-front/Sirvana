@@ -1,5 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato:ital,wght@1,900&display=swap");
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #ffffff92;
+  border-radius: 1rem;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+a{
+  cursor: pointer;
+}
+/* -------------------- */
 * {
   padding: 0;
   margin: 0;
@@ -17,6 +42,10 @@ body {
 .navbar {
   position: absolute;
   top: 0;
+}
+
+.navbar__leftbox--search {
+  width: 20rem;
 }
 
 .teams-page {
@@ -186,6 +215,11 @@ input:-webkit-autofill {
   transition: border 0.1s, box-shadow 0.1s;
 } */
 
+.mmr-control {
+  display: flex;
+  align-items: center;
+}
+
 textarea {
   resize: none;
   height: 12rem;
@@ -304,8 +338,11 @@ textarea {
 
 .filters {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  max-width: 1400px;
+  width: 100%;
 }
 
 .right-filter {
@@ -353,9 +390,7 @@ textarea {
   outline: none;
   border: 1px solid aqua;
 }
-.mmr-control .in {
-  display: inline;
-}
+
 .mmr-control input {
   border-radius: 5px;
   border: 1px solid #5a5c60;
@@ -368,15 +403,18 @@ textarea {
 }
 
 .mmr-control label {
-  margin: 0.1rem 0.6rem;
+  margin: 0 1rem;
   font-family: "Tanha";
   color: #fff;
   font-size: 1.6rem;
 }
 
-.top-box .vertical {
-  width: 2px;
-  height: 60%;
+.vertical {
+  width: 3px;
+  height: 3.5rem;
+
+  margin: 0 2rem;
+
   background-color: aqua;
 }
 
@@ -460,7 +498,6 @@ select option {
 
 .menu {
   position: relative;
-  width: 50%;
   min-width: 15ch;
   max-width: 30ch;
   border: 0.1rem solid rgba(255, 255, 255, 0.15);
@@ -773,12 +810,4 @@ select:focus + .focus {
   font-family: "Tanha";
   font-size: 3.4rem;
   margin-top: 10rem;
-}
-
-.header2 {
-  text-align: center;
-  color: #fff;
-  font-family: "Tanha";
-  font-size: 3.4rem;
-  margin-top: 13rem;
 }

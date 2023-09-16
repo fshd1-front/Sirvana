@@ -1,5 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato:ital,wght@1,900&display=swap");
 
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #ffffff92;
+  border-radius: 1rem;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+a{
+  cursor: pointer;
+}
+/* ----------------- */
 * {
   padding: 0;
   margin: 0;
@@ -106,7 +132,7 @@ body {
   height: 100%;
   font-family: "Tanha";
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   padding: 1.5rem 3rem 3rem 1.5rem;
 }
@@ -118,12 +144,24 @@ body {
   font-size: 2rem;
 }
 
+.right-box {
+  margin-left: 2rem;
+}
+
+.left-box {
+  margin-right: 2rem;
+}
+
 .form-controls,
 .mmr-controls,
 .dates,
 .image-uploads {
   width: 100%;
-  margin: 0 0.2rem 2rem 0;
+  margin: 0rem 0.2rem 2rem 0;
+}
+
+#name {
+  margin-bottom: 2rem;
 }
 
 .form-controls {
@@ -169,6 +207,11 @@ input:-webkit-autofill {
   -webkit-text-fill-color: #fff;
 }
 
+input,
+textarea {
+  color: #fff;
+}
+
 .form-controls input::placeholder {
   font-family: "Tanha";
   font-size: 1.2rem;
@@ -178,15 +221,67 @@ input:-webkit-autofill {
   color: transparent;
 }
 
-/* .mmr-controls input {
+.find-player {
+  display: flex;
+  flex-direction: column;
+}
+
+.find-player__search {
+  width: 100%;
+
+  margin-bottom: 2rem;
+}
+
+.find-player__search input[type="search"] {
+  width: 100%;
+
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 0;
+
+  color: #fff;
+
   border: 1px solid #5a5c60;
   background: rgba(0, 0, 0, 0);
   border-radius: 5px;
-  padding: 0.5rem 1rem;
-  width: 100%;
-  margin: 0.5rem 0;
+
   transition: border 0.1s, box-shadow 0.1s;
-} */
+}
+.find-player__search input[type="search"]::placeholder {
+  font-family: "Tanha";
+  font-size: 1.2rem;
+}
+.find-player__search input[type="search"]:focus {
+  outline: none;
+  border: 1px solid aqua;
+}
+
+.find-player__btns {
+  display: flex;
+  justify-content: space-around;
+}
+
+.find-player__btns .more-btn,
+.add-btn {
+  outline: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.2rem 1rem;
+  border: none;
+  background-color: #00e5ff;
+  color: #000000;
+  font-family: "Tanha";
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+}
+
+.find-player__btns .more-btn:hover,
+.add-btn:hover {
+  background-color: #18ffff;
+}
+.find-player__btns .more-btn:focus,
+.add-btn:focus {
+  transform: translateY(3px);
+}
 
 textarea {
   resize: none;
@@ -542,7 +637,7 @@ select:focus + .focus {
   justify-content: flex-start;
 }
 
-.team-card:first-child {
+#create-button {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -550,7 +645,7 @@ select:focus + .focus {
   cursor: pointer;
 }
 
-.team-card:first-child p {
+#create-button p {
   color: #fff;
   padding: 2rem 0 0;
   font-size: 2rem;
@@ -560,15 +655,15 @@ select:focus + .focus {
   transition: opacity 0.1s ease;
 }
 
-.team-card:first-child i {
+#create-button i {
   color: #fff;
   opacity: 0.7;
   font-size: 5rem;
   transition: opacity 0.3s ease;
 }
 
-.team-card:first-child:hover i,
-.team-card:first-child:hover p {
+#create-button:hover i,
+#create-button:hover p {
   opacity: 1;
 }
 
@@ -723,12 +818,4 @@ select:focus + .focus {
   font-family: "Tanha";
   font-size: 3.4rem;
   margin-top: 10rem;
-}
-
-.header2 {
-  text-align: center;
-  color: #fff;
-  font-family: "Tanha";
-  font-size: 3.4rem;
-  margin-top: 13rem;
 }

@@ -27,45 +27,16 @@
       </div>
       <div class="navbar__rightbox">
         <div class="navbar__rightbox--link">
-          <div id="hide" class="navbar__leftbox--search" dir="rtl">
-            <i id="hideI" class="bx bx-search-alt"></i>
-            <input
-              id="hideInp"
-              dir="rtl"
-              type="search"
-              placeholder="جستجوی تیم ، بازیکن ، تورنومنت .."
-            />
-          </div>
+          <a href="player.html">پلیر ها</a>
+          <a href="player.html"><i class="bx bxs-group"></i></a>
         </div>
         <div class="navbar__rightbox--link">
-          <div class="nav-text">
-            <a href="player.html">پلیر ها</a>
-          </div>
-          <div class="navbar__rightbox icon">
-            <a href="#">
-              <i class='bx bxs-group'></i>
-            </a>
-          </div>
+          <a href="tournoment.html">تورنومنت ها</a>
+          <a href="tournoment.html"><i class="bx bxs-award"></i></a>
         </div>
         <div class="navbar__rightbox--link">
-          <div class="nav-text">
-            <a href="tournoment.html">تورنومنت ها</a>
-          </div>
-          <div class="navbar__rightbox icon">
-            <a href="#">
-              <i class="bx bxs-award"></i>
-            </a>
-          </div>
-        </div>
-        <div class="navbar__rightbox--link">
-          <div class="nav-text">
-            <a href="signup.html">ورود | ثبت نام</a>
-          </div>
-          <div class="navbar__rightbox icon">
-            <a href="signup.html">
-              <i class="bx bxs-log-in-circle"></i>
-            </a>
-          </div>
+          <a href="signup.html">ورود | ثبت نام</a>
+          <a href="signup.html"><i class="bx bxs-log-in-circle"></i></a>
         </div>
       </div>
       <div class="hamburger">
@@ -104,10 +75,21 @@
                 />
                 <!-- <span class="wrong-input-alrt"> * رنک تورنومنتت رو انتخاب نکردی!</span> -->
               </div>
-              <!-- <div class="mmr-controls">
-              <label for="avg-mmr">میانگین رنک :</label>
-              <input type="number" id="avg-mmr" min="1" max="10000" />
-            </div> -->
+
+              <div class="find-player">
+                <div class="find-player__search">
+                  <label for="search">یافتن پلیر :</label>
+                  <input
+                    id="search"
+                    type="search"
+                    placeholder="جستجوی پلیر ..."
+                  />
+                </div>
+                <div class="find-player__btns">
+                  <button class="more-btn">مشاهده پروفایل پلیر</button>
+                  <button class="add-btn">درخواست عضویت به تیم</button>
+                </div>
+              </div>
             </div>
             <div class="vert"></div>
             <div class="left-box">
@@ -126,7 +108,8 @@
         </div>
       </div>
     </div>
-    <!-- -------------------------------------------------- -->
+    <!-- End of Modal -------------------------------------------------- -->
+    <!-- filter box -->
     <div class="team-box">
       <div class="shadow-box">
         <div class="top-box">
@@ -162,12 +145,14 @@
             <div class="left-filter">
               <div class="remove-filter">
                 <a href="#" class="remove-filter">حذف فیلتر </a>
-              <i class='bx bx-chevron-left'></i>
+                <i class="bx bx-chevron-left"></i>
               </div>
             </div>
           </form>
         </div>
         <div class="middle"></div>
+        <!-- End of filter box ------------------------------->
+        <!-- Cards -->
         <div class="teams-cards">
           <div class="team-card" id="create-button">
             <a>
@@ -255,12 +240,12 @@
               <p class="more-button"><a href="#">جز‌ئیات بیشتر</a></p>
             </div>
           </div>
-          <!-- <h1 class="header1">جستجو موردنظر یافت نشد...</h1> -->
-          <!-- <h1 class="header2">هنوز هیچ تیمی ثبت نشده است ...</h1> -->
+          <!-- <h1 class="header1">هنوز هیچ تیمی ثبت نشده است ...</h1> -->
         </div>
+        <!-- <h1 class="header1">جستجو موردنظر یافت نشد...</h1> -->
       </div>
     </div>
-
+    <!-- End of Cards------------------------------------------- -->
     <!-- Footer -->
     <footer>
       <div class="footerContainer">

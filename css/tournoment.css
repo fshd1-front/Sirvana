@@ -1,5 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lato:ital,wght@1,900&display=swap");
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #ffffff92;
+  border-radius: 1rem;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+a{
+  cursor: pointer;
+}
+/* ---------------------------------- */
 * {
   padding: 0;
   margin: 0;
@@ -616,17 +641,6 @@ input[type=number] {
   }
 }
 
-.bottom-box {
-  display: flex;
-}
-
-.create-btn {
-  width: 40rem;
-  height: 30rem;
-  background-color: #00e5ff;
-  display: inline-block;
-}
-
 .tours-cards {
   display: flex;
   width: 100%;
@@ -636,7 +650,7 @@ input[type=number] {
   justify-content: flex-start;
 }
 
-.tour-card:first-child {
+#create-button {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -644,7 +658,7 @@ input[type=number] {
   cursor: pointer;
 }
 
-.tour-card:first-child p {
+#create-button p {
   color: #fff;
   padding: 2rem 0 0;
   font-size: 2rem;
@@ -654,15 +668,15 @@ input[type=number] {
   transition: opacity 0.1s ease;
 }
 
-.tour-card:first-child i {
+#create-button i {
   color: #fff;
   opacity: 0.7;
   font-size: 5rem;
   transition: opacity 0.3s ease;
 }
 
-.tours-cards:first-child:hover i,
-.tours-cards:first-child:hover p {
+#create-button:hover i,
+#create-button:hover p {
   opacity: 1;
 }
 
@@ -840,18 +854,10 @@ input[type=number] {
   transition: transform 0.4s, opacity 0.1s, -webkit-transform 0.4s;
 }
 
-.tours-cards .header1 {
+.header1 {
   text-align: center;
   color: #fff;
   font-family: "Tanha";
   font-size: 3.4rem;
-  margin-top: 10rem;
-}
-
-.tours-cards .header2 {
-  text-align: center;
-  color: #fff;
-  font-family: "Tanha";
-  font-size: 3.4rem;
-  margin-top: 13rem;
+  margin-top: 14  rem;
 }

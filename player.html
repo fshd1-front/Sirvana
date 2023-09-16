@@ -33,39 +33,22 @@
               id="hideInp"
               dir="rtl"
               type="search"
-              placeholder="جستجوی تیم ، بازیکن ، تورنومنت .."
+              placeholder="جستجوی تیم ، پلیر ، تورنومنت .."
             />
           </div>
         </div>
+
         <div class="navbar__rightbox--link">
-          <div class="nav-text">
-            <a href="tournoment.html">تورنومنت ها</a>
-          </div>
-          <div class="navbar__rightbox icon">
-            <a href="#">
-              <i class="bx bxs-award"></i>
-            </a>
-          </div>
+          <a href="teams.html">تیم ها</a>
+          <a href="teams.html"><i class="bx bxs-flag-alt"></i></a>
         </div>
         <div class="navbar__rightbox--link">
-          <div class="nav-text">
-            <a href="teams.html">تیم ها</a>
-          </div>
-          <div class="navbar__rightbox icon">
-            <a href="#">
-              <i id="first-icon" class="bx bxs-user-account"></i>
-            </a>
-          </div>
+          <a href="tournoment.html">تورنومنت ها</a>
+          <a href="tournoment.html"><i class="bx bxs-award"></i></a>
         </div>
         <div class="navbar__rightbox--link">
-          <div class="nav-text">
-            <a href="signup.html">ورود | ثبت نام</a>
-          </div>
-          <div class="navbar__rightbox icon">
-            <a href="signup.html">
-              <i class="bx bxs-log-in-circle"></i>
-            </a>
-          </div>
+          <a href="signup.html">ورود | ثبت نام</a>
+          <a href="signup.html"><i class="bx bxs-log-in-circle"></i></a>
         </div>
       </div>
       <div class="hamburger">
@@ -98,43 +81,58 @@
               </div>
 
               <div class="mmr-control">
-                <label>رنک :</label>
-                <label class="in" for="mmr-first">از</label>
-                <input type="text" list="ranks-first" id="mmrfirst" />
-                <datalist id="ranks-first">
-                  <option>Herald</option>
-                  <option>Guardian</option>
-                  <option>Crusader</option>
-                  <option>Archon</option>
-                  <option>Legend</option>
-                  <option>Ancient</option>
-                  <option>Divine</option>
-                  <option>Immortal</option>
-                </datalist>
-                <label class="in" for="mmrlast">تا</label>
-                <input type="text" list="ranks-last" id="mmrlast" />
-                <datalist id="ranks-last">
-                  <option>Herald</option>
-                  <option>Guardian</option>
-                  <option>Crusader</option>
-                  <option>Archon</option>
-                  <option>Legend</option>
-                  <option>Ancient</option>
-                  <option>Divine</option>
-                  <option>Immortal</option>
-                </datalist>
+                <label for="">رنک از :</label>
+                <div class="menu">
+                  <select>
+                    <option>Herald</option>
+                    <option>Guardian</option>
+                    <option>Crusader</option>
+                    <option>Archon</option>
+                    <option>Legend</option>
+                    <option>Ancient</option>
+                    <option>Divine</option>
+                    <option>Immortal</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+                <label for="">تا‌:</label>
+                <div class="menu">
+                  <select>
+                    <option>Herald</option>
+                    <option>Guardian</option>
+                    <option>Crusader</option>
+                    <option>Archon</option>
+                    <option>Legend</option>
+                    <option>Ancient</option>
+                    <option>Divine</option>
+                    <option>Immortal</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
+
+                <div class="vertical"></div>
+                <label for="">پوز‌ :</label>
+                <div class="menu">
+                  <select>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                  </select>
+                  <span class="focus"></span>
+                </div>
               </div>
 
-              <div class="vertical"></div>
               <div class="checkbox">
                 <label for="check" class="form-control">
                   <input type="checkbox" id="check" name="checkbox" />
                   نیازمند تیم
                 </label>
               </div>
-              <button type="submit" class="range">اعمال فیلتر</button>
             </div>
             <div class="left-filter">
+              <button type="submit" class="range">اعمال فیلتر</button>
               <div class="remove-filter">
                 <a href="#" class="remove-filter">حذف فیلتر </a>
                 <i class="bx bx-chevron-left"></i>
@@ -290,10 +288,9 @@
               <p class="more-button"><a href="#">جز‌ئیات بیشتر</a></p>
             </div>
           </div>
-          
-          <!-- <h1 class="header1">جستجو موردنظر یافت نشد...</h1> -->
-          <!-- <h1 class="header2">هنوز هیچ پلیری ثبت نشده است ...</h1> -->
         </div>
+        <!-- <h1 class="header1">جستجو موردنظر یافت نشد...</h1> -->
+        <!-- <h1 class="header1">هنوز هیچ پلیری ثبت نشده است ...</h1> -->
       </div>
     </div>
 
