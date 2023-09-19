@@ -861,3 +861,7 @@ input[type=number] {
   font-size: 3.4rem;
   margin-top: 14  rem;
 }
+
+.active a {
+  color: aqua;
+}

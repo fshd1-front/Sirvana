@@ -41,12 +41,12 @@ a {
 }
 /* --------------------------------------------------- */
 body {
-  scroll-behavior: smooth;
   background-color: #000;
 }
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 .scroll-down {
@@ -435,30 +435,116 @@ html {
 /* End of Last-tournaments------------------------------------- */
 /* Cards */
 .cards {
-  max-width: 130rem;
+  width: 100%;
+
+  position: relative;
 
   margin: 0 auto;
 
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+
+  background-image: url(../img/important-bg.jpg);
+  background-position: center;
+  background-size: cover;
 }
+
+.shadow-box1 {
+  width: 100%;
+  height: 10%;
+
+  position: absolute;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.8) 10%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.shadow-box2{
+
+  width: 100%;
+  height: 20%;
+
+  position: absolute;
+  top: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.8) 10%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.card-box1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 90%;
+  height: 60vh;
+
+}
+
+.card-box2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 90%;
+  height: 60vh;
+}
+.card-box3 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+
+  width: 90%;
+  height: 60vh;
+
+  margin: 0 auto;
+}
+
 .card {
-  width: 40rem;
-  height: 25rem;
+  width: 60rem;
+  height: 30rem;
   border: 0.1rem solid rgba(255, 255, 255, 0.15);
   border-radius: 0.5rem;
   overflow: hidden;
 
-  margin: 1.5rem;
+  margin: 8rem 0;
 
   position: relative;
+  transition: transform 1s ease;
 }
 
-.card-body:hover {
-  backdrop-filter: blur(0.2rem);
-  color: aqua;
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  line-height: 2;
+
+  max-width: 62.5rem;
+}
+
+.card-content h1 {
+  font-size: 3rem;
+  font-family: "Tanha";
+  color: #fff;
+}
+
+.card-content p {
+  font-size: 2rem;
+  font-family: "Tanha";
+  color: #ffffffad;
 }
 
 .card-img {
@@ -467,47 +553,24 @@ html {
   object-fit: cover;
 }
 
-.card-body {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  border-radius: 1.5rem;
-  padding: 2rem 6rem;
-  transition: all 0.2s ease-in-out;
-  /* Background : */
-  /* background: rgb(0, 0, 0); */
-  background: linear-gradient(
-    0deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0.8995973389355743) 28%,
-    rgba(255, 255, 255, 0) 87%
-  );
-}
-
-.card-title {
-  font-size: 2.5rem;
-  font-family: "Tanha";
-  color: #fff;
-}
-
 .card-btn {
-  width: 20rem;
-  padding: 1rem;
+  width: 15rem;
+
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+
   display: flex;
   justify-content: center;
+
   border-radius: 0.5rem;
-  border: none;
   outline: none;
-  cursor: pointer;
+
+  font-size: 1.3rem;
   color: #fff;
   font-family: "Tanha";
+
   /* background: none; */
   background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 0.4rem 3rem rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(4.5px);
   border: 0.1rem solid rgba(255, 255, 255, 0.15);
   transition: all 0.2s ease;
@@ -553,6 +616,7 @@ html {
 
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
   background: rgba(0, 0, 0, 0);
   border-radius: 0.5rem;
@@ -616,6 +680,7 @@ html {
   align-items: center;
 
   text-decoration: none;
+  /* overflow: hidden; */
 
   padding: 1.5rem 3rem;
 
@@ -641,8 +706,7 @@ html {
 
 .rol,
 .player-rol {
-  width: 3rem;
-  margin-left: 2rem;
+  padding: 0 1rem;
 }
 .rank,
 .player-rank {
@@ -797,14 +861,7 @@ html {
 }
 
 @media (min-width: 1200px) {
-  .card-title {
-    font-size: 2.1rem;
-  }
-  .card-btn {
-    width: 10rem;
-    padding: 0.7rem;
-    font-size: 1rem;
-  }
+
   /* Slider news */
   .slider__news--box-title h1 {
     font-size: 1.7rem;

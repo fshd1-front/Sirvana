@@ -10,18 +10,18 @@
   box-shadow: inset 0 0 5px #ffffff92;
   border-radius: 1rem;
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888; 
+  background: #888;
   border-radius: 1rem;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555; 
+  background: #555;
 }
-a{
+a {
   cursor: pointer;
 }
 /* -------------------- */
@@ -698,7 +698,6 @@ select:focus + .focus {
   transition: transform 0.4s, opacity 0.1s, -webkit-transform 0.4s;
 }
 
-
 .show-medals {
   display: flex;
   align-items: center;
@@ -803,11 +802,14 @@ select:focus + .focus {
   margin-top: 6rem;
 }
 
-
 .header1 {
   text-align: center;
   color: #fff;
   font-family: "Tanha";
   font-size: 3.4rem;
   margin-top: 10rem;
+}
+
+.active a{
+  color: aqua;
 }
