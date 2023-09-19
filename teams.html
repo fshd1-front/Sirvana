@@ -1,286 +1,274 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Teams</title>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Teams</title>
 
-    <link rel="shortcut icon" href="./img/shortcut icon.png" />
-    <!-- Site Icon -->
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <!-- css links -->
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/teams.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-  </head>
-  <body>
-    <!-- Navbar -->
-    <div class="navbar" dir="ltr">
-      <div class="navbar__leftbox">
-        <div class="navbar__leftbox--logo">
-          <a href="index.html" class="navbar__leftbox--logo white-one">Sir</a>
-          <a href="index.html" class="navbar__leftbox--logo blue-one">Vana</a>
-        </div>
-      </div>
-      <div class="navbar__rightbox">
-        <div class="navbar__rightbox--link">
-          <a href="player.html">پلیر ها</a>
-          <a href="player.html"><i class="bx bxs-group"></i></a>
-        </div>
-        <div class="navbar__rightbox--link active">
-          <a href="teams.html">تیم ها</a>
-          <a href="teams.html"><i class="bx bxs-flag-alt"></i></a>
-        </div>
-        <div class="navbar__rightbox--link">
-          <a href="tournoment.html">تورنومنت ها</a>
-          <a href="tournoment.html"><i class="bx bxs-award"></i></a>
-        </div>
-        <div class="navbar__rightbox--link">
-          <a href="signup.html">ورود | ثبت نام</a>
-          <a href="signup.html"><i class="bx bxs-log-in-circle"></i></a>
-        </div>
-      </div>
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-    </div>
+		<link rel="shortcut icon" href="./img/shortcut icon.png" />
+		<!-- Site Icon -->
+		<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+		<!-- css links -->
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/teams.css" />
+		<link rel="stylesheet" href="css/footer.css" />
+	</head>
+	<body>
+		<!-- Navbar -->
+		<div class="navbar" dir="ltr">
+			<div class="navbar__leftbox">
+				<div class="navbar__leftbox--logo">
+					<a href="index.html" class="navbar__leftbox--logo white-one">Sir</a>
+					<a href="index.html" class="navbar__leftbox--logo blue-one">Vana</a>
+				</div>
+			</div>
+			<div class="navbar__rightbox">
+				<div class="navbar__rightbox--link">
+					<a href="player.html">پلیر ها</a>
+					<a href="player.html"><i class="bx bxs-group"></i></a>
+				</div>
+				<div class="navbar__rightbox--link active">
+					<a href="teams.html">تیم ها</a>
+					<a href="teams.html"><i class="bx bxs-flag-alt"></i></a>
+				</div>
+				<div class="navbar__rightbox--link">
+					<a href="tournoment.html">تورنومنت ها</a>
+					<a href="tournoment.html"><i class="bx bxs-award"></i></a>
+				</div>
+				<div class="navbar__rightbox--link">
+					<a href="signup.html">ورود | ثبت نام</a>
+					<a href="signup.html"><i class="bx bxs-log-in-circle"></i></a>
+				</div>
+			</div>
+			<div class="hamburger">
+				<span class="bar"></span>
+				<span class="bar"></span>
+				<span class="bar"></span>
+			</div>
+		</div>
 
-    <!-- background -->
-    <div class="teams-page">
-      <div class="dark-box"></div>
-    </div>
-    <!--  -->
+		<!-- background -->
+		<div class="teams-page">
+			<div class="dark-box"></div>
+		</div>
+		<!--  -->
 
-    <!-- create team modal box -->
-    <div class="create-team">
-      <div class="create-team__content">
-        <div class="create-teambg">
-          <div class="modal-title">
-            <span class="close-button">&times;</span>
-            <h1 class="modal-title">تشکیل تیم</h1>
-          </div>
-          <form class="team-make" action="">
-            <div class="right-box">
-              <div class="form-controls">
-                <label for="name">اسم کامل تیم :</label>
-                <input type="text" id="name" autofocus required />
-                <!-- <span class="wrong-input-alrt">* اسم تورنومنتت یادت رفت</span> -->
-                <label for="tag">تگ تیم :</label>
-                <input
-                  type="text"
-                  id="tag"
-                  placeholder="تگ مخفف اسم تیم است ."
-                  required
-                />
-                <!-- <span class="wrong-input-alrt"> * رنک تورنومنتت رو انتخاب نکردی!</span> -->
-              </div>
+		<!-- create team modal box -->
+		<div class="create-team">
+			<div class="create-team__content">
+				<div class="create-teambg">
+					<div class="modal-title">
+						<span class="close-button">&times;</span>
+						<h1 class="modal-title">تشکیل تیم</h1>
+					</div>
+					<form class="team-make" action="">
+						<div class="right-box">
+							<div class="form-controls">
+								<label for="name">اسم کامل تیم :</label>
+								<input type="text" id="name" autofocus required />
+								<!-- <span class="wrong-input-alrt">* اسم تورنومنتت یادت رفت</span> -->
+								<label for="tag">تگ تیم :</label>
+								<input type="text" id="tag" placeholder="تگ مخفف اسم تیم است ." required />
+								<!-- <span class="wrong-input-alrt"> * رنک تورنومنتت رو انتخاب نکردی!</span> -->
+							</div>
 
-              <div class="find-player">
-                <div class="find-player__search">
-                  <label for="search">یافتن پلیر :</label>
-                  <input
-                    id="search"
-                    type="search"
-                    placeholder="جستجوی پلیر ..."
-                  />
-                </div>
-                <div class="find-player__btns">
-                  <button class="more-btn">مشاهده پروفایل پلیر</button>
-                  <button class="add-btn">درخواست عضویت به تیم</button>
-                </div>
-              </div>
-            </div>
-            <div class="vert"></div>
-            <div class="left-box">
-              <div class="descriptions">
-                <label for="desc">توضیحات تیم :</label>
-                <textarea name="desc" id="desc" cols="10" rows="10"></textarea>
-              </div>
-              <label>تصویر تیم :</label>
-              <div class="image-uploads">
-                <input type="file" id="file" multiple />
-                <a href="#"><i class="bx bx-plus"></i></a>
-              </div>
-              <button class="create" type="submit">ایجاد</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <!-- End of Modal -------------------------------------------------- -->
-    <!-- filter box -->
-    <div class="team-box">
-      <div class="shadow-box">
-        <div class="top-box">
-          <form class="filters" action="">
-            <div class="right-filter">
-              <div class="search">
-                <div class="navbar__leftbox--search" id="show" dir="rtl">
-                  <i class="bx bx-search-alt"></i>
-                  <input dir="rtl" type="search" placeholder="جستجوی تیم ..." />
-                </div>
-              </div>
-              <div class="dpdw-menu">
-                <i class="bx bx-sort-down"></i>
-                <span>مرتب سازی‌ :</span>
-                <div class="menu">
-                  <select>
-                    <option data-value="name" selected>اسم تیم</option>
-                    <option data-value="average">میانگین رنک</option>
-                    <option data-value="memeber">تعداد اعضا</option>
-                  </select>
-                  <span class="focus"></span>
-                </div>
-              </div>
-              <div class="vertical"></div>
-              <div class="checkbox">
-                <label for="check" class="form-control">
-                  <input type="checkbox" id="check" name="checkbox" />
-                  نیازمند پلیر
-                </label>
-              </div>
-              <button type="submit" class="range">اعمال فیلتر</button>
-            </div>
-            <div class="left-filter">
-              <div class="remove-filter">
-                <a href="#" class="remove-filter">حذف فیلتر </a>
-                <i class="bx bx-chevron-left"></i>
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="middle"></div>
-        <!-- End of filter box ------------------------------->
-        <!-- Cards -->
-        <div class="teams-cards">
-          <div class="team-card" id="create-button">
-            <a>
-              <i class="bx bx-plus-medical"></i>
-            </a>
-            <a>
-              <p>ایجاد تیم</p>
-            </a>
-          </div>
-          <div class="team-card">
-            <img src="img/alliancelogo.png" alt="" />
-            <div class="team-caption">
-              <h2 class="team-card__title">Team Alliance</h2>
-              <p class="team-card__content">میانگین رنک : ۴۱۰۰</p>
-              <p class="team-card__members">تعداد اعضا : ۳</p>
-              <p class="team-card__needmember">
-                نیازمند پلیر :
-                <i class="bx bxs-check-circle"></i>
-              </p>
-              <p class="more-button"><a href="#">جز‌ئیات بیشتر</a></p>
-            </div>
-          </div>
-          <div class="team-card">
-            <img src="img/oglogo.png" alt="" />
-            <div class="team-caption">
-              <h2 class="team-card__title">Team OG</h2>
-              <p class="team-card__content">میانگین رنک : ۴۱۰۰</p>
-              <p class="team-card__members">تعداد اعضا : ۳</p>
-              <p class="team-card__needmember">
-                نیازمند پلیر :
-                <i class="bx bxs-check-circle"></i>
-              </p>
-              <p class="more-button"><a href="#">جز‌ئیات بیشتر</a></p>
-            </div>
-          </div>
-          <div class="team-card">
-            <img src="img/newbeelogo.jpg" alt="" />
-            <div class="team-caption">
-              <h2 class="team-card__title">Team Newbee</h2>
-              <p class="team-card__content">میانگین رنک : ۴۱۰۰</p>
-              <p class="team-card__members">تعداد اعضا : ۳</p>
-              <p class="team-card__needmember">
-                نیازمند پلیر :
-                <i class="bx bxs-check-circle"></i>
-              </p>
-              <p class="more-button"><a href="#">جز‌ئیات بیشتر</a></p>
-            </div>
-          </div>
-          <div class="team-card">
-            <img src="img/teamspiritlogo.jpg" alt="" />
-            <div class="team-caption">
-              <h2 class="team-card__title">Team Spirit</h2>
-              <p class="team-card__content">میانگین رنک : ۴۱۰۰</p>
-              <p class="team-card__members">تعداد اعضا : ۳</p>
-              <p class="team-card__needmember">
-                نیازمند پلیر :
-                <i class="bx bxs-check-circle"></i>
-              </p>
-              <p class="more-button"><a href="#">جز‌ئیات بیشتر</a></p>
-            </div>
-          </div>
-          <div class="team-card">
-            <img src="img/teamliquidlogo.jfif" alt="" />
-            <div class="team-caption">
-              <h2 class="team-card__title">Team Liquid</h2>
-              <p class="team-card__content">میانگین رنک : ۴۱۰۰</p>
-              <p class="team-card__members">تعداد اعضا : ۳</p>
-              <p class="team-card__needmember">
-                نیازمند پلیر :
-                <i class="bx bxs-check-circle"></i>
-              </p>
-              <p class="more-button"><a href="#">جز‌ئیات بیشتر</a></p>
-            </div>
-          </div>
-          <div class="team-card">
-            <img src="img/teamasterlogo.png" alt="" />
-            <div class="team-caption">
-              <h2 class="team-card__title">Team Aster</h2>
-              <p class="team-card__content">میانگین رنک : ۴۱۰۰</p>
-              <p class="team-card__members">3</p>
-              <p class="team-card__needmember">
-                نیازمند پلیر :
-                <i class="bx bxs-check-circle"></i>
-              </p>
-              <p class="more-button"><a href="#">جز‌ئیات بیشتر</a></p>
-            </div>
-          </div>
-          <!-- <h1 class="header1">هنوز هیچ تیمی ثبت نشده است ...</h1> -->
-        </div>
-        <!-- <h1 class="header1">جستجو موردنظر یافت نشد...</h1> -->
-      </div>
-    </div>
-    <!-- End of Cards------------------------------------------- -->
-    <!-- Footer -->
-    <footer>
-      <div class="footerContainer">
-        <div class="socialIcons">
-          <a href="#"><i class="bx bxl-facebook-circle"></i></a>
-          <a href="#"><i class="bx bxl-instagram"></i></a>
-          <a href="#"><i class="bx bxl-twitter"></i></a>
-          <a href="#"><i class="bx bxl-telegram"></i></a>
-          <a href="#"><i class="bx bxl-youtube"></i></a>
-        </div>
-        <div class="footerNav">
-          <ul>
-            <li><a href="#">درباره ما</a></li>
-            <li><a href="#news">اخبار</a></li>
-            <li><a href="#">درباره ما</a></li>
-            <li><a href="#">تماس با ما</a></li>
-            <li><a href="#">تیم ما</a></li>
-          </ul>
-        </div>
-        <div class="footerBottom">
-          <p>
-            &copy;1402 ; تمامی حقوق برای
-            <span class="designer">تیم نوب سگان</span> محفوظ است. کپی به هرشکل
-            غیرمجاز و غیرقانونی است.
-          </p>
-        </div>
-      </div>
-    </footer>
+							<div class="find-player">
+								<div class="find-player__search">
+									<label for="search">یافتن پلیر :</label>
+									<input id="search" type="search" placeholder="جستجوی پلیر ..." />
+								</div>
+								<div class="find-player__btns">
+									<button class="more-btn">مشاهده پروفایل پلیر</button>
+									<button class="add-btn">درخواست عضویت به تیم</button>
+								</div>
+							</div>
+						</div>
+						<div class="vert"></div>
+						<div class="left-box">
+							<div class="descriptions">
+								<label for="desc">توضیحات تیم :</label>
+								<textarea name="desc" id="desc" cols="10" rows="10"></textarea>
+							</div>
+							<label>تصویر تیم :</label>
+							<div class="image-uploads">
+								<input type="file" id="file" multiple />
+								<a href="#"><i class="bx bx-plus"></i></a>
+							</div>
+							<button class="create" type="submit">ایجاد</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- End of Modal -------------------------------------------------- -->
+		<!-- filter box -->
+		<div class="team-box">
+			<div class="shadow-box">
+				<div class="top-box">
+					<form class="filters" action="">
+						<div class="right-filter">
+							<div class="search">
+								<div class="navbar__leftbox--search" id="show" dir="rtl">
+									<i class="bx bx-search-alt"></i>
+									<input dir="rtl" type="search" placeholder="جستجوی تیم ..." />
+								</div>
+							</div>
+							<div class="dpdw-menu">
+								<i class="bx bx-sort-down"></i>
+								<span>مرتب سازی‌ :</span>
+								<div class="menu">
+									<select>
+										<option selected>اسم تیم</option>
+										<option>میانگین رنک</option>
+										<option>تعداد اعضا</option>
+									</select>
+									<span class="focus"></span>
+								</div>
+							</div>
+							<div class="vertical"></div>
+							<div class="checkbox">
+								<label for="check" class="form-control">
+									<input type="checkbox" id="check" name="checkbox" />
+									نیازمند پلیر
+								</label>
+							</div>
+							<button type="submit" class="range">اعمال فیلتر</button>
+						</div>
+						<div class="left-filter">
+							<div class="remove-filter">
+								<a href="#" class="remove-filter">حذف فیلتر </a>
+								<i class="bx bx-chevron-left"></i>
+							</div>
+						</div>
+					</form>
+				</div>
+				<div class="middle"></div>
+				<!-- End of filter box ------------------------------->
+				<!-- Cards -->
+				<div class="teams-cards">
+					<div class="team-card" id="create-button">
+						<a>
+							<i class="bx bx-plus-medical"></i>
+						</a>
+						<a>
+							<p>ایجاد تیم</p>
+						</a>
+					</div>
+					<div class="team-card">
+						<img src="img/alliancelogo.png" alt="" />
+						<div class="team-caption">
+							<h2 class="team-card__title">Team Alliance</h2>
+							<p class="team-card__content">میانگین رنک : ۴۱۰۰</p>
+							<p class="team-card__members">تعداد اعضا : ۳</p>
+							<p class="team-card__needmember">
+								نیازمند پلیر :
+								<i class="bx bxs-check-circle"></i>
+							</p>
+							<p class="more-button"><a href="#">جز‌ئیات بیشتر</a></p>
+						</div>
+					</div>
+					<div class="team-card">
+						<img src="img/oglogo.png" alt="" />
+						<div class="team-caption">
+							<h2 class="team-card__title">Team OG</h2>
+							<p class="team-card__content">میانگین رنک : ۴۱۰۰</p>
+							<p class="team-card__members">تعداد اعضا : ۳</p>
+							<p class="team-card__needmember">
+								نیازمند پلیر :
+								<i class="bx bxs-check-circle"></i>
+							</p>
+							<p class="more-button"><a href="#">جز‌ئیات بیشتر</a></p>
+						</div>
+					</div>
+					<div class="team-card">
+						<img src="img/newbeelogo.jpg" alt="" />
+						<div class="team-caption">
+							<h2 class="team-card__title">Team Newbee</h2>
+							<p class="team-card__content">میانگین رنک : ۴۱۰۰</p>
+							<p class="team-card__members">تعداد اعضا : ۳</p>
+							<p class="team-card__needmember">
+								نیازمند پلیر :
+								<i class="bx bxs-check-circle"></i>
+							</p>
+							<p class="more-button"><a href="#">جز‌ئیات بیشتر</a></p>
+						</div>
+					</div>
+					<div class="team-card">
+						<img src="img/teamspiritlogo.jpg" alt="" />
+						<div class="team-caption">
+							<h2 class="team-card__title">Team Spirit</h2>
+							<p class="team-card__content">میانگین رنک : ۴۱۰۰</p>
+							<p class="team-card__members">تعداد اعضا : ۳</p>
+							<p class="team-card__needmember">
+								نیازمند پلیر :
+								<i class="bx bxs-check-circle"></i>
+							</p>
+							<p class="more-button"><a href="#">جز‌ئیات بیشتر</a></p>
+						</div>
+					</div>
+					<div class="team-card">
+						<img src="img/teamliquidlogo.jfif" alt="" />
+						<div class="team-caption">
+							<h2 class="team-card__title">Team Liquid</h2>
+							<p class="team-card__content">میانگین رنک : ۴۱۰۰</p>
+							<p class="team-card__members">تعداد اعضا : ۳</p>
+							<p class="team-card__needmember">
+								نیازمند پلیر :
+								<i class="bx bxs-check-circle"></i>
+							</p>
+							<p class="more-button"><a href="#">جز‌ئیات بیشتر</a></p>
+						</div>
+					</div>
+					<div class="team-card">
+						<img src="img/teamasterlogo.png" alt="" />
+						<div class="team-caption">
+							<h2 class="team-card__title">Team Aster</h2>
+							<p class="team-card__content">میانگین رنک : ۴۱۰۰</p>
+							<p class="team-card__members">3</p>
+							<p class="team-card__needmember">
+								نیازمند پلیر :
+								<i class="bx bxs-check-circle"></i>
+							</p>
+							<p class="more-button"><a href="#">جز‌ئیات بیشتر</a></p>
+						</div>
+					</div>
+					<!-- <h1 class="header1">هنوز هیچ تیمی ثبت نشده است ...</h1> -->
+				</div>
+				<!-- <h1 class="header1">جستجو موردنظر یافت نشد...</h1> -->
+			</div>
+		</div>
+		<!-- End of Cards------------------------------------------- -->
+		<!-- Footer -->
+		<footer>
+			<div class="footerContainer">
+				<div class="socialIcons">
+					<a href="#"><i class="bx bxl-facebook-circle"></i></a>
+					<a href="#"><i class="bx bxl-instagram"></i></a>
+					<a href="#"><i class="bx bxl-twitter"></i></a>
+					<a href="#"><i class="bx bxl-telegram"></i></a>
+					<a href="#"><i class="bx bxl-youtube"></i></a>
+				</div>
+				<div class="footerNav">
+					<ul>
+						<li><a href="#">درباره ما</a></li>
+						<li><a href="#news">اخبار</a></li>
+						<li><a href="#">درباره ما</a></li>
+						<li><a href="#">تماس با ما</a></li>
+						<li><a href="#">تیم ما</a></li>
+					</ul>
+				</div>
+				<div class="footerBottom">
+					<p>
+						&copy;1402 ; تمامی حقوق برای
+						<span class="designer">تیم نوب سگان</span> محفوظ است. کپی به هرشکل غیرمجاز و غیرقانونی
+						است.
+					</p>
+				</div>
+			</div>
+		</footer>
 
-    <!-- scripts -->
-    <script src="js/burger.js"></script>
-    <script src="js/team-modalbox.js"></script>
-  </body>
+		<!-- scripts -->
+		<script src="js/burger.js"></script>
+		<script src="js/team-modalbox.js"></script>
+	</body>
 </html>

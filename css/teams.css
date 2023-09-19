@@ -366,7 +366,7 @@ textarea {
 .team-make .create:hover {
   background-color: #18ffff;
 }
-.team-make .create:focus {
+.team-make .create:active {
   transform: translateY(3px);
 }
 

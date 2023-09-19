@@ -584,7 +584,7 @@ html {
 /* online lft and lfp :*/
 .looking-for {
   max-width: 130rem;
-  margin: 10rem auto;
+  margin: 20rem auto;
 
   display: flex;
   flex-wrap: wrap;
@@ -596,8 +596,8 @@ html {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-
-  margin: 0 3rem 3rem 0;
+  justify-content: space-between;
+  margin: 0 3rem 0 0;
 }
 
 .looking-for__player--title p,
@@ -725,6 +725,99 @@ html {
 .player-rank img {
   width: 100%;
   height: 100%;
+}
+
+.lfp-select,
+.lft-select {
+  width: 100%;
+  height: 7rem;
+
+  margin: 1rem 0;
+  padding: 1rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.lfp-select button,
+.lft-select button {
+  width: 8rem;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 0.7rem 0.7rem;
+  margin-right: 3rem;
+  border: none;
+  background-color: #00e5ff;
+  color: #000000;
+  font-family: "Tanha";
+  font-size: 1.4rem;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+.lfp-select button:hover,
+.lft-select button:hover {
+  background-color: #18ffff;
+}
+.lfp-select button:active,
+.lft-select button:active {
+  transform: translateY(3px);
+}
+
+.lft-select button {
+  margin-right: 19rem;
+}
+
+.menu {
+  position: relative;
+  width: 6rem;
+  height: 4rem;
+  min-width: 15ch;
+  max-width: 30ch;
+
+  margin-left: 1rem;
+
+  border: 0.1rem solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+.lfp-select .menu:first-child {
+  width: 15rem;
+}
+.menu select {
+  appearance: none;
+  background-color: transparent;
+  padding: 0.5rem 2rem;
+  border: none;
+  outline: none;
+  color: #fff;
+  width: 100%;
+  height: 100%;
+  cursor: inherit;
+  font-family: "Tanha";
+  font-weight: bold;
+  overflow: hidden;
+}
+
+select option {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+
+.menu::after {
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: #fff;
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  position: absolute;
+  bottom: 50%;
+  left: 14%;
+  transform: translateY(50%);
+  pointer-events: none;
 }
 
 /* end of online lft and lfp ----------------------------*/
