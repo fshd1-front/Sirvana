@@ -79,7 +79,7 @@ html {
 
 /* ------------------------- >>> */
 .navbar__leftbox--logo {
-  padding: 1rem 0;
+  padding: 1.5rem 0;
 }
 
 .navbar__leftbox--logo .white-one {
@@ -109,7 +109,7 @@ html {
 /* -------------------------------------------- */
 .login {
   width: 40rem;
-  height: 45rem;
+  height: 47rem;
 
   position: absolute;
   top: 50%;
@@ -129,7 +129,7 @@ html {
 
 .login-form {
   width: 30rem;
-  height: 100%;
+  /* height: 100%; */
 
   display: flex;
   flex-direction: column;
@@ -178,11 +178,16 @@ input:-webkit-autofill {
 
 .email-box,
 .password-box {
-  margin-top: 1.5rem;
+  height: 10.9rem;
+  width: 100%;
+}
 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.wrong-input-alrt {
+  color: red;
+  font-family: "Tanha";
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
 }
 
 .password-box {
@@ -201,7 +206,7 @@ input:-webkit-autofill {
   visibility: hidden;
 
   position: absolute;
-  top: 67%;
+  top: 47%;
   left: 5%;
 
   cursor: pointer;
@@ -349,7 +354,7 @@ input:-webkit-autofill {
 /* Registration : */
 .registration {
   width: 60rem;
-  height: 61rem;
+  height: 58rem;
 
   position: absolute;
   top: 50%;
@@ -371,7 +376,6 @@ input:-webkit-autofill {
 
 .register-form {
   width: 100%;
-  height: 100%;
 
   display: flex;
   flex-direction: column;
@@ -385,15 +389,14 @@ input:-webkit-autofill {
   display: flex;
   justify-content: space-between;
 
-  height: 32.8rem;
-
-  margin-top: 2rem;
+  height: 30.6rem;
+  margin-top: 0.5rem;
 }
 
 .vert {
   width: 3px;
-  height: 85%;
-  margin: 2rem 3rem 0;
+  height: 100%;
+  margin: 0.5rem 3rem 0;
 
   background-color: aqua;
 }
@@ -456,11 +459,21 @@ input[type=number] {
   margin: 0; 
 }
 
+.right-block,
+.left-block {
+  height: 30.6rem;
+}
+
 .right-block label,
 .left-block label {
   font-family: "Tanha";
   font-size: 2rem;
   color: #fff;
+}
+
+:is(.user-name, .signup-email, .need-password,
+.id, .id2) {
+  height: 10.2rem;
 }
 
 .signup-email,
@@ -495,19 +508,11 @@ input[type=number] {
   cursor: pointer;
 }
 
-.wrong-input-alrt {
-  color: red;
-  font-family: "Tanha";
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin: 0.6rem 0;
-}
-
 .agree {
   display: flex;
   align-items: center;
 
-  margin: 1rem 0 1rem;
+  margin: 3rem 0 1rem;
 }
 
 .agree input[type="checkbox"] {

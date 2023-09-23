@@ -1,6 +1,7 @@
+
 let slideIndex = 0;
-let slides = document.getElementsByClassName("mySlides");
-let dots = document.getElementsByClassName("dot");
+const slides = document.getElementsByClassName("mySlides");
+// let dots = document.getElementsByClassName("dot");
 
 
 showSlides();
