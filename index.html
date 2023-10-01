@@ -35,7 +35,7 @@
 			<div class="navbar" dir="ltr">
 				<div class="navbar__leftbox">
 					<div class="navbar__leftbox--logo">
-						<a href="index.html" class="navbar__leftbox--logo white-one">Sir</a>
+						<a href="dashboard.html" class="navbar__leftbox--logo white-one">Sir</a>
 						<a href="index.html" class="navbar__leftbox--logo blue-one">Vana</a>
 					</div>
 					<div class="navbar__leftbox--search" id="show" dir="rtl">
@@ -153,22 +153,23 @@
 					<!-- -------------------------- -->
 
 					<div class="navbar__rightbox--link">
-						<a href="signup.html">ورود | ثبت نام</a>
-						<a href="signup.html"><i class="bx bxs-log-in-circle"></i></a>
-						<!-- <div class="open__bar" dir="rtl">
+						<a id="login-acc">Mr_Bean</a>
+						<a><i class="bx bxs-log-in-circle"></i></a>
+						<div class="open__bar" dir="rtl">
 							<div class="open__bar--block">
 								<i class="bx bxs-dashboard"></i>
-								<a href="dashboard.html">داشبورد</a>
+								<a href="dashboard.html" class="hover__overlay">داشبورد</a>
 							</div>
 							<div class="open__bar--block">
-								<i class="bx bxs-cog"></i>
-								<a href="#">تنظیمات</a>
+								<i class="bx bxs-bell"></i>
+								<a href="#" class="hover__overlay">اعلان ها</a>
+								<span>9+</span>
 							</div>
 							<div class="open__bar--block">
 								<i class="bx bxs-exit"></i>
-								<a href="#">خروج</a>
+								<a href="signup.html" class="hover__overlay">خروج</a>
 							</div>
-						</div> -->
+						</div>
 					</div>
 				</div>
 				<div class="hamburger">
@@ -383,14 +384,14 @@
 						</a>
 					</div>
 					<div class="lfp-select">
-						<div class="menu">
+						<div class="custom-select">
 							<select>
 								<option selected>Team Jinx</option>
 								<option>Team Liquid</option>
 								<option>Team Aster</option>
 							</select>
 						</div>
-						<div class="menu">
+						<div class="custom-select">
 							<select>
 								<option>پوز 1</option>
 								<option>پوز 2</option>
@@ -399,7 +400,7 @@
 								<option>پوز 5</option>
 							</select>
 						</div>
-						<div class="menu">
+						<div class="custom-select">
 							<select>
 								<option>Herald</option>
 								<option>Guardian</option>
@@ -527,8 +528,9 @@
 					</div>
 					<div class="lft-select">
 						<div>
-							<div class="menu">
+							<div class="custom-select off">
 								<select>
+									<option>پوز</option>
 									<option>پوز 1</option>
 									<option>پوز 2</option>
 									<option>پوز 3</option>
@@ -536,7 +538,7 @@
 									<option>پوز 5</option>
 								</select>
 							</div>
-							<div class="menu">
+							<div class="custom-select on">
 								<select>
 									<option>Herald</option>
 									<option>Guardian</option>
@@ -589,5 +591,6 @@
 		<script src="js/slider2.js"></script>
 		<script src="js/select-menu.js"></script>
 		<script src="js/transform.js"></script>
+		<script src="js/login-acc.js"></script>
 	</body>
 </html>

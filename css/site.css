@@ -667,8 +667,8 @@ html {
   max-height: 31.8rem;
 
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+  justify-content: flex-start;
 
   background: rgba(0, 0, 0, 0);
   border-radius: 0.5rem;
@@ -677,7 +677,7 @@ html {
   border: 1px solid #5a5c60;
   border-top: none;
 
-  overflow: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
 }
 
@@ -739,6 +739,10 @@ html {
   transition: background 0.2s ease;
 }
 
+/* .team:last-child {
+  margin-bottom: auto;
+} */
+
 .player:hover,
 .team:hover {
   background: rgba(255, 255, 255, 0.2);
@@ -785,15 +789,19 @@ html {
   height: 7rem;
 
   margin: 1rem 0;
-  padding: 1rem;
+  padding: 1rem 0;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.lft-select div {
+.lft-select > div {
+  width: 30rem;
   display: flex;
+}
+.on {
+  margin-right: 1.5rem;
 }
 
 .lfp-select button,
@@ -803,7 +811,7 @@ html {
   cursor: pointer;
   border-radius: 5px;
   padding: 0.7rem 0.7rem;
-  margin-right: 3rem;
+  /* margin-right: 3rem; */
   border: none;
   background-color: #00e5ff;
   color: #000000;
@@ -821,56 +829,65 @@ html {
   transform: translateY(3px);
 }
 
-.menu {
-  position: relative;
-  width: 6rem;
-  height: 4rem;
-  min-width: 15ch;
-  max-width: 30ch;
-
-  margin-left: 1rem;
-
-  border: 0.1rem solid rgba(255, 255, 255, 0.15);
-  border-radius: 0.5rem;
-  font-size: 1.25rem;
-  cursor: pointer;
-  line-height: 1.1;
-  background-color: rgba(255, 255, 255, 0.05);
-}
 .lfp-select .menu:first-child {
   width: 15rem;
 }
-.menu select {
-  appearance: none;
-  background-color: transparent;
-  padding: 0.5rem 2rem;
-  border: none;
-  outline: none;
-  color: #fff;
-  width: 100%;
-  height: 100%;
-  cursor: inherit;
-  font-family: "Tanha";
+
+.lft-select .custom-select,
+.lfp-select .custom-select {
+	position: relative;
+	font-family: 'Tanha';
+  font-size: 1.3rem;
   font-weight: bold;
-  overflow: hidden;
 }
-
-select option {
-  background-color: rgba(0, 0, 0, 0.9);
+.lft-select .custom-select select,
+.lfp-select .custom-select select {
+	display: none;
 }
-
-
-.menu::after {
-  content: "";
-  width: 0.8em;
-  height: 0.5em;
-  background-color: #fff;
-  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
-  position: absolute;
-  bottom: 50%;
-  left: 14%;
-  transform: translateY(50%);
-  pointer-events: none;
+.lft-select .custom-select .select-selected,
+.lfp-select .custom-select .select-selected {
+	background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.lft-select .custom-select .select-selected:after,
+.lfp-select .custom-select .select-selected:after  {
+	position: absolute;
+	content: '';
+	top: 14px;
+	left: 10px;
+	width: 0;
+	height: 0;
+	border: 6px solid transparent;
+	border-color: #fff transparent transparent transparent;
+}
+.select-selected.select-arrow-active:after {
+	border-color: transparent transparent #fff transparent;
+	top: 7px;
+}
+.select-items div,
+.select-selected {
+	color: #ffffff;
+	padding: 8px 16px;
+	border: 1px solid transparent;
+	cursor: pointer;
+	user-select: none;
+}
+.lft-select .custom-select .select-items,
+.lfp-select .custom-select .select-items  {
+	position: absolute;
+	  background-color: rgba(255, 255, 255, 0.1);
+	top: 100%;
+	left: 0;
+	right: 0;
+	z-index: 99;
+}
+.select-hide {
+	display: none;
+}
+.select-items div:hover,
+.same-as-selected {
+	background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* end of online lft and lfp ----------------------------*/

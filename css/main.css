@@ -329,10 +329,16 @@ html {
 	font-family: 'Tanha';
 }
 .navbar__rightbox--link:last-child {
-	position: relative;
+	position: relative;	
+}
+#login-acc {
+	max-width: 18rem;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
 }
 
-.navbar__rightbox--link:hover a {
+.navbar__rightbox--link:hover > a {
 	color: #66fcf1;
 }
 
@@ -344,8 +350,11 @@ html {
 }
 
 .open__bar {
-	width: 90%;
+	width: 12rem;
 	height: 11rem;
+
+	visibility: hidden;
+	opacity: 0;
 
 	display: flex;
 	flex-direction: column;
@@ -356,12 +365,13 @@ html {
 	border: 1px solid #5a5c60;
 	position: absolute;
 	top: 100%;
+	right: 14%;
 }
 .open__bar--block {
 	width: 100%;
 	display: flex;
 	align-items: center;
-	padding: 0.5rem;
+	padding: 0.5rem 0.7rem 0.5rem;
 }
 .open__bar--block a {
 	font-size: 1.5rem;
@@ -369,6 +379,26 @@ html {
 .open__bar--block i {
 	font-size: 1.4rem;
 }
+.open__bar.active {
+	visibility: visible;
+	opacity: 1;
+}
+.open__bar--block:hover > .hover__overlay{
+	color: aqua;
+}
+.open__bar--block:nth-child(2) span{
+	margin-right: 1rem;
+	font: 1rem sans-serif;
+	color: #fff;
+	font-weight: bold;
+	background-color: red;
+	border-radius: 50%;
+	padding: 0.3rem;
+	width: 2rem;
+	height: 2rem;
+	text-align: center;
+}
+
 
 /* burger menu */
 .hamburger {
