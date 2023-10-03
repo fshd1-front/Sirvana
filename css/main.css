@@ -130,13 +130,26 @@ html {
 }
 .uli1__watch {
 	height: 3.5rem;
+	padding: 0.3rem 0 0;
 
 	font-family: 'Tanha';
+	font-size: 1.5rem;
+	text-align: center;
 
 	background-color: #66fcf1;
 	border: transparent;
 	outline: none;
 	cursor: pointer;
+	filter: brightness(0.8);
+	transition: filter 0.3s ease;
+}
+.uli1__watch:link,
+.uli1__watch:visited {
+	background-color: #66fcf1;
+	color: #000;
+}
+.uli1__watch:hover {
+	filter: brightness(1);
 }
 
 .navbar__leftbox--search ul {

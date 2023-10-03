@@ -76,6 +76,24 @@ body {
 .container2 {
 	width: 100%;
 	height: 70rem;
+	position: relative;
+}
+.container2 .exit {
+	position: absolute;
+	top: 13%;
+	right: 30.5%;
+	width: 5rem;
+	height: 5rem;
+	box-shadow: 5px 5px 10px #000;
+}
+.exit img {
+	width: 5rem;
+	height: 5rem;
+
+	transition: filter 0.3s ease;
+}
+.exit:hover > img {
+	filter: contrast(3);
 }
 /* -------------------------- */
 .topblock {
@@ -109,10 +127,9 @@ body {
 	font-size: 2rem;
 	color: #fff;
 
-	filter: brightness(0.6);
-	-webkit-filter: brightness(0.6);
-	-moz-filter: brightness(0.6);
-	text-shadow: -1px 5px 5px rgba(0, 0, 0, 1);
+	filter: brightness(0.9);
+	-webkit-filter: brightness(0.8);
+	-moz-filter: brightness(0.8);
 
 	transition: filter 0.2s ease;
 }
@@ -126,9 +143,10 @@ body {
 }
 .topblock__menu .active {
 	filter: brightness(1);
+	font-weight: bold;
 }
 .topblock__nameteam {
-	width: 70%;
+	width: 89.5rem;
 	height: 40%;
 	padding-left: 14rem;
 	padding-bottom: 2.5rem;
@@ -433,9 +451,6 @@ body {
 	background-color: #02fa0a;
 }
 
-.team-need input[disabled] ~ .checkmark {
-}
-
 .medal {
 	width: 19%;
 	height: 100%;
@@ -543,6 +558,14 @@ body {
 	flex-direction: column;
 
 	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.mid-note {
+	width: 90%;
+	height: 1px;
+	margin-bottom: 0.6rem;
+
+	background-color: rgba(255, 255, 255, 0.3);
 }
 .midblock__right1 p {
 	font: 1.7rem 'Tanha';
