@@ -23,10 +23,13 @@
 						<a href="#">/</a>
 						<a href="#">تیم</a>
 						<a href="#">/</a>
+						<a href="#">اعلان ها</a>
+						<a href="#">/</a>
 						<a href="#" class="active">پروفایل</a>
 					</div>
 					<div class="topblock__nameteam">
-						<input type="text" value="Mr_Bean" disabled dir="ltr" />
+						<input class="" type="text" value="Mr_Bean" disabled dir="ltr" />
+						<!--class= editable -> for edit in js -->
 						<div class="topblock__team">
 							<span>09/19/2023</span>
 							<span>Team Jinx</span>
@@ -35,83 +38,32 @@
 				</div>
 				<div class="midblock">
 					<div class="midblockk">
-						<div class="midblock__rights">
+						<!-- <div class="midblock__rights">
 							<img src="img/png-hero.png" alt="" />
-						</div>
+						</div> -->
 						<div class="midblock__right">
-							<div class="midblock__right--top1">
-								<p>تیم ها :</p>
-								<div class="teams-details">
-									<div class="team-details__nameimage">
-										<img src="img/teamliquidlogo.jfif" alt="" />
-										<span>Team Liqiud</span>
+							<div class="midblock__right1">
+								<p>ارتباط با پلیر :</p>
+								<div class="midblock__right1--coms">
+									<div class="discord-id">
+										<span>آیدی دیسکورد :</span>
+										<span dir="ltr"><input type="text" value="fefe0066" disabled /></span>
 									</div>
-									<div class="more-team">
-										<a>برو به تیم</a>
-									</div>
-								</div>
-								<div class="teams-details">
-									<div class="team-details__nameimage">
-										<img src="img/teamliquidlogo.jfif" alt="" />
-										<span>Team Liqiud</span>
-									</div>
-									<div class="more-team">
-										<a>برو به تیم</a>
-									</div>
-								</div>
-								<div class="teams-details">
-									<div class="team-details__nameimage">
-										<img src="img/teamliquidlogo.jfif" alt="" />
-										<span>Team Liqiud</span>
-									</div>
-									<div class="more-team">
-										<a>برو به تیم</a>
-									</div>
-								</div>
-							</div>
-							<div class="midblock__right--top2">
-								<p>تورنومنت ها :</p>
-								<div class="tours-details">
-									<div class="tour-details__nameimage">
-										<img src="img/tourcards.png" alt="" />
-										<span>Farshad Hogo</span>
-									</div>
-									<div class="more-tour">
-										<a>برو به تورنومنت</a>
-									</div>
-								</div>
-								<div class="tours-details">
-									<div class="tour-details__nameimage">
-										<img src="img/tourcards.png" alt="" />
-										<span>Farshad Hogo</span>
-									</div>
-									<div class="more-tour">
-										<a>برو به تورنومنت</a>
-									</div>
-								</div>
-								<div class="tours-details">
-									<div class="tour-details__nameimage">
-										<img src="img/tourcards.png" alt="" />
-										<span>Farshad Hogo</span>
-									</div>
-									<div class="more-tour">
-										<a>برو به تورنومنت</a>
+									<div class="dota2-id">
+										<span>آیدی دوتا ۲ :</span>
+										<span dir="ltr"><input type="text" value="372407060" disabled /></span>
 									</div>
 								</div>
 							</div>
 							<div class="midblock__right--top3">
-								<div class="rightbox__bot--comments">
-									<div class="comments__image">
-										<img src="img/player-card6.jpg" alt="" />
-									</div>
+								<div class="rightbox__bot--comments" id="first-post">
 									<div class="comments__box">
 										<div class="comments__box--top">
 											<div class="comments__box--top-name">
 												<span>Mr_Bean</span>
 											</div>
 											<div class="comments__box--top-reply">
-												<a>ارسال پست</a>
-												<a><i class="bx bx-like"></i></a>
+												<a>ارسال</a>
 											</div>
 										</div>
 										<div class="comments__box--bot">
@@ -121,18 +73,44 @@
 										</div>
 									</div>
 								</div>
-								<div class="rightbox__bot--comments">
-									<div class="comments__image">
-										<img src="img/player-card6.jpg" alt="" />
-									</div>
+								<!-- ... -->
+								<div class="rightbox__bot--comments user-post">
 									<div class="comments__box">
 										<div class="comments__box--top">
 											<div class="comments__box--top-name">
 												<span>Mr_Bean</span>
 											</div>
 											<div class="comments__box--top-reply">
-												<a>تغییر متن</a>
-												<a><i class="bx bx-like"></i></a>
+												<a>حذف</a>
+												<!-- <a><i class="bx bx-like"></i></a> -->
+											</div>
+										</div>
+										<div class="comments__box--bot">
+											<div class="comments__box--bot-comment">
+												<p>
+													لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از
+													طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان
+													که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با
+													هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته
+													حال و آین
+												</p>
+											</div>
+										</div>
+										<!-- <div class="comments__box--reply">
+											<input type="text" placeholder="جواب به این نظر">
+											<a>ارسال</a>
+										</div> -->
+									</div>
+								</div>
+								<div class="rightbox__bot--comments user-reply">
+									<div class="comments__box">
+										<div class="comments__box--top">
+											<div class="comments__box--top-name">
+												<span>Rahimi</span>
+											</div>
+											<div class="comments__box--top-reply">
+												<a>حذف</a>
+												<!-- <a><i class="bx bx-like"></i></a> -->
 											</div>
 										</div>
 										<div class="comments__box--bot">
@@ -142,13 +120,36 @@
 										</div>
 									</div>
 								</div>
+								<div class="rightbox__bot--comments last-reply">
+									<div class="comments__box">
+										<div class="comments__box--top">
+											<div class="comments__box--top-name">
+												<span>Rahimi</span>
+											</div>
+											<div class="comments__box--top-reply">
+												<a>حذف</a>
+												<!-- <a><i class="bx bx-like"></i></a> -->
+											</div>
+										</div>
+										<div class="comments__box--bot">
+											<div class="comments__box--bot-comment">
+												<p>سلام بجه ها من بازیمو بردم ...</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- .... -->
 							</div>
 						</div>
 						<div class="midblock__left">
 							<div class="midblock__left1">
 								<div class="midblock__left1--top">
 									<div class="midblock__left1--topimg">
-										<img src="img/player-card6.jpg" alt="" />
+										<img src="img/default-player-dash" alt="" />
+										<!-- <div class="image-upload">
+											<input type="file">
+											<a><i class="bx bx-plus"></i></a>
+										</div> -->
 									</div>
 									<div class="midblock__left1--toprole">
 										<div class="coach-role">
@@ -170,11 +171,42 @@
 										<div class="rank">
 											<div class="pos">
 												<p>پوز</p>
-												<input type="text" value="2" disabled />
+												<details class="multiple-select">
+													<summary>jhjkhk</summary>
+													<div class="multiple-select-dropdown">
+														<label>
+															<input type="checkbox" hidden name="select" value="1" />
+															<span class="content">1</span>
+														</label>
+														<label>
+															<input type="checkbox" hidden name="select" value="2" />
+															<span class="content">2</span>
+														</label>
+														<label>
+															<input type="checkbox" hidden name="select" value="3" />
+															<span class="content">3</span>
+														</label>
+														<label>
+															<input type="checkbox" hidden name="select" value="4" />
+															<span class="content">4</span>
+														</label>
+														<label>
+															<input type="checkbox" hidden name="select" value="5" />
+															<span class="content">5</span>
+														</label>
+													</div>
+												</details>
 											</div>
 											<div class="mmr">
 												<p>رنک</p>
 												<input type="text" value="4100" disabled />
+											</div>
+											<div class="lft">
+												<p>نیازمند تیم</p>
+												<div class="team-need">
+													<input type="checkbox" disabled />
+													<span class="checkmark"></span>
+												</div>
 											</div>
 										</div>
 										<div class="medal">
@@ -184,33 +216,19 @@
 								</div>
 							</div>
 							<div class="midblock__left2">
-								<div
-									class="midblock__left2--images"
-									style="background-image: url(img/centaur-warrunner.jpg)"
-								></div>
-								<div
-									class="midblock__left2--images"
-									style="background-image: url(img/meepo.jpg)"
-								></div>
-								<div
-									class="midblock__left2--images"
-									style="background-image: url(img/wraith-king.jpg)"
-								></div>
+								<div class="midblock__left2--images">
+									<img src="img/centaur-warrunner.jpg" alt="" />
+									<img src="img/wraith-king.jpg" alt="" />
+									<img src="img/meepo.jpg" alt="" />
+								</div>
 							</div>
 							<div class="midblock__left3">
-								<div class="email">
-									<p>ایمیل :</p>
-									<p dir="ltr">
-										<input type="text" value="fshdtaraki1@gmial.com" disabled />
-									</p>
-								</div>
-								<div class="discord-id">
-									<p>آیدی دیسکورد :</p>
-									<p dir="ltr"><input type="text" value="fefe0066" disabled /></p>
-								</div>
-								<div class="dota2-id">
-									<p>آیدی دوتا ۲ :</p>
-									<p dir="ltr"><input type="text" value="372407060" disabled /></p>
+								<p>بیوگرافی :</p>
+								<div class="bio">
+									<textarea name="" id="" cols="30" rows="6">
+سلام من محمدم سلام من مححمدمممم مسنمنمسنی مسین مسنیم سنیمسن یسم نیمیم سنیم سن یمسن یمسن یسمیس لام من محمدم سلام من مححمدمممم مسنمنمسنی مسین مسنیم سنیمسن یسم نیمیم سنیم سن یمسن یمسن یسملام من محمدم سلام من مححمدمممم مسنمنمسنی مسین مسنیم سنیمسن یسم نیمیم سنیم سن یمسن یمسن یسملام من محمدم سلام من مححمدمممم مسنمنمسنی مسین مسنیم سنیمسن یسم نیمیم سنیم سن یمسن یمسن یسملام من محمدم سلام من مححمدمممم مسنمنمسنی مسین مسنیم سنیمسن یسم نیمیم سنیم سن یمسن یمسن یسملام من محمدم سلام من مححمدمممم مسنمنمسنی مسین مسنیم سنیمسن یسم نیمیم سنیم سن یمسن یمسن یسملام من محمدم سلام من مححمدمممم مسنمنمسنی مسین مسنیم سنیمسن یسم نیمیم سنیم سن یمسن یمسن یسملام من محمدم سلام من مححمدمممم مسنمنمسنی مسین مسنیم سنیمسن یسم نیمیم سنیم سن یمسن یمسن یسم
+									</textarea
+									>
 								</div>
 							</div>
 						</div>
@@ -223,7 +241,8 @@
 							تغییر پروفایل
 						</a>
 						<a class="edit-image">
-							<i class="bx bx-image"></i>
+							<label for="file-edit" style="cursor: pointer"><i class="bx bx-image"></i></label>
+							<input type="file" id="file-edit" style="display: none" />
 						</a>
 					</div>
 				</div>

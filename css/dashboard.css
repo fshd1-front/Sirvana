@@ -101,7 +101,6 @@ body {
 	display: flex;
 	align-items: flex-end;
 	justify-content: flex-end;
-	cursor: pointer;
 }
 .topblock__menu a {
 	padding-right: 2rem;
@@ -117,13 +116,16 @@ body {
 
 	transition: filter 0.2s ease;
 }
-.topblock__menu .active {
-	filter: brightness(1);
-}
 .topblock__menu a:hover:nth-child(2n-1) {
 	filter: brightness(1);
 	-webkit-filter: brightness(1);
 	-moz-filter: brightness(1);
+}
+.topblock__menu a:hover:nth-child(2n) {
+	cursor: default;
+}
+.topblock__menu .active {
+	filter: brightness(1);
 }
 .topblock__nameteam {
 	width: 70%;
@@ -145,6 +147,11 @@ body {
 	font: 3.5rem 'Lato', sans-serif;
 	color: #fff;
 }
+.editable {
+	border: 2px solid rgba(255, 255, 255, 0.7) !important;
+	background-color: rgba(0, 0, 0, 0.9) !important;
+}
+
 .topblock__team {
 	width: 100%;
 
@@ -239,6 +246,37 @@ body {
 	width: 100%;
 	height: 100%;
 }
+/* ----------------- */
+.image-upload {
+	width: 100%;
+	height: 100%;
+	font-size: 10px;
+	font-family: 'Tanha';
+	position: relative;
+}
+
+.image-upload input {
+	position: absolute;
+	outline: none;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.image-upload a {
+	cursor: pointer;
+	text-decoration: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 12.5rem;
+	color: #989da6;
+	font-size: 3rem;
+}
+/* ------------------- */
 .midblock__left1--toprole {
 	width: 65%;
 	height: 100%;
@@ -302,6 +340,7 @@ body {
 }
 
 .mmr {
+	width: 6rem;
 	height: 100%;
 
 	display: flex;
@@ -309,31 +348,92 @@ body {
 	justify-content: space-around;
 }
 .mmr p,
-.pos p {
+.pos p,
+.lft p {
 	font-family: 'Tanha', sans-serif;
 	font-size: 1.3rem;
 	color: #999;
 }
 
 .pos {
+	width: 10rem;
 	height: 100%;
 
 	padding-right: 1rem;
+	margin-left: 0.5rem;
 
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 }
 
-.rank input,
+.pos input,
 .mmr input {
 	width: 100%;
+	padding: 0 0.8rem;
 	background-color: transparent;
 	outline: none;
 	border: transparent;
 
 	font: 1.4rem 'Lato', sans-serif;
 	color: #fff;
+}
+
+.lft {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+
+	position: relative;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.lft .team-need {
+	width: 6rem;
+	height: 1.7rem;
+}
+
+.lft input {
+	position: absolute;
+	left: 40%;
+	z-index: 2;
+	opacity: 0;
+	cursor: pointer;
+	height: 1.5rem;
+	width: 1.5rem;
+}
+
+.checkmark {
+	position: absolute;
+	bottom: 15%;
+	left: 50%;
+	transform: translateX(-50%);
+	height: 1.5rem;
+	width: 1.5rem;
+	background-color: rgba(0, 0, 0, 0.6);
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-radius: 50%;
+}
+.checkmark:after {
+	content: '';
+	width: 1.5rem;
+	height: 1.5rem;
+	position: absolute;
+	display: none;
+
+	border-radius: 50%;
+}
+
+.team-need input:checked ~ .checkmark:after {
+	display: block;
+	background-color: #02fa0a;
+}
+
+.team-need input[disabled] ~ .checkmark {
 }
 
 .medal {
@@ -349,24 +449,25 @@ body {
 .midblock__left2 {
 	width: 100%;
 	height: 20%;
-
 	margin-bottom: 1rem;
-
-	display: flex;
-	align-items: center;
-	justify-content: center;
 
 	background-color: rgba(0, 0, 0, 0.4);
 }
 .midblock__left2--images {
 	width: 100%;
-	height: 95%;
+	height: 100%;
 
-	margin: 0 0.5rem;
-
-	border-radius: 0.5rem;
-	object-fit: contain;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
+.midblock__left2--images img {
+	width: 30%;
+	height: 100%;
+	object-fit: contain;
+	border-radius: 0.5rem;
+}
+
 .shadow-box {
 	width: 100%;
 	height: 100%;
@@ -394,39 +495,32 @@ body {
 .midblock__left3 {
 	width: 100%;
 	height: 50%;
-
 	padding: 1rem;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
 
 	background-color: rgba(0, 0, 0, 0.4);
 }
-.midblock__left3 input {
-	width: 50%;
-	background-color: transparent;
-	outline: none;
-	border: transparent;
 
-	font: 1.7rem 'Lato', sans-serif;
+.midblock__left3 > p {
+	font: bold 1.7rem 'Tanha';
 	color: #fff;
+	margin-bottom: 1rem;
 }
 
-.email p,
-.discord-id p,
-.dota2-id p {
-	font-family: 'Lato', 'Tanha', sans-serif;
-	color: #999;
-	font-size: 1.5rem;
+.midblock__left3 .bio {
+	width: 100%;
+	height: 75%;
+	overflow: hidden;
 }
+.midblock__left3 .bio textarea {
+	font: 1.2rem 'Tanha';
+	padding: 0.5rem;
+	color: #c8c8c8;
+	background-color: transparent;
+	border: transparent;
+	width: 100%;
+	outline: none;
 
-.email p:last-child,
-.discord-id p:last-child,
-.dota2-id p:last-child {
-	font-family: 'Lato', 'Tanha', sans-serif;
-	color: #cac8c8;
-	font-size: 1.5rem;
+	resize: none;
 }
 /* ------------------------------ */
 .midblock__right {
@@ -439,111 +533,62 @@ body {
 	flex-direction: column;
 	align-items: flex-start;
 }
-.midblock__right--top1 {
+/* ----------------------------------------- */
+.midblock__right1 {
 	width: 100%;
 	height: 30%;
 
-	padding: 0.3rem 1rem;
-
-	overflow: auto;
-	overflow-x: hidden;
-
+	padding: 1rem;
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
 
 	background-color: rgba(0, 0, 0, 0.4);
 }
-.midblock__right--top2 {
-	width: 100%;
-	height: 20%;
+.midblock__right1 p {
+	font: 1.7rem 'Tanha';
+	color: #fff;
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
 
-	padding: 0.3rem 1rem;
+.midblock__right1--coms {
+	width: 100%;
 	margin-top: 1rem;
 
-	overflow: auto;
-	overflow-x: hidden;
-
 	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-
-	background-color: rgba(0, 0, 0, 0.4);
-}
-.midblock__right--top1 p,
-.midblock__right--top2 p {
-	font-family: 'Tanha';
-	color: #fff;
-	font-size: 1.5rem;
-	font-weight: bold;
-}
-
-.midblock__right--top1 .teams-details,
-.midblock__right--top2 .tours-details {
-	width: 100%;
-	height: 100%;
-
-	margin: 0.5rem 0 3rem 0;
-
-	display: flex;
-	justify-content: space-between;
 	align-items: center;
+	justify-content: space-around;
 }
 
-.team-details__nameimage,
-.tour-details__nameimage {
+.midblock__right1--coms input {
 	width: 50%;
-	height: 100%;
+	background-color: transparent;
+	outline: none;
+	border: transparent;
 
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-}
-.team-details__nameimage img,
-.tour-details__nameimage img {
-	width: 7rem;
-	height: 4rem;
-
-	border-radius: 0.5rem;
-
-	margin-left: 2rem;
-}
-.team-details__nameimage span,
-.tour-details__nameimage span {
-	font-family: 'Lato', sans-serif;
+	font: 1.4rem 'Lato', sans-serif;
 	color: #fff;
-	font-size: 1.5rem;
+}
+.email span,
+.discord-id span,
+.dota2-id span {
+	font-family: 'Lato', 'Tanha', sans-serif;
+	color: #e0e0e0;
+	font-size: 1.4rem;
 }
 
-.teams-details .more-team,
-.tours-details .more-tour {
-	width: 50%;
-	display: flex;
-	justify-content: flex-end;
+.email span:last-child,
+.discord-id span:last-child,
+.dota2-id span:last-child {
+	font-family: 'Lato', 'Tanha', sans-serif;
+	color: #cac8c8;
+	font-size: 1.4rem;
 }
-.teams-details .more-team a,
-.tours-details .more-tour a {
-	padding: 0.5rem 2rem;
-
-	background-color: rgba(0, 0, 0, 0.6);
-	border-radius: 0.5rem;
-
-	font-family: 'Tanha';
-	color: #fff;
-	font-size: 1.3rem;
-
-	filter: brightness(0.8);
-	transition: filter 0.3s ease;
-}
-.teams-details .more-team a:hover,
-.tours-details .more-tour a:hover {
-	filter: brightness(1);
-}
-
+/* ---------------------------------------------- */
 .midblock__right--top3 {
 	width: 100%;
-	height: 50%;
-	margin: 1rem 0 0 0;
+	height: 70%;
+	margin-top: 1rem;
 
 	display: flex;
 	flex-direction: column;
@@ -557,12 +602,29 @@ body {
 
 .rightbox__bot--comments {
 	width: 100%;
-	height: 100%;
+	margin: 0 0 1rem 0;
+	padding: 1rem;
 
-	margin: 1rem 1rem 2rem;
+	border-radius: 0.5rem;
 
 	display: flex;
 	justify-content: flex-start;
+}
+
+#first-post {
+	padding: 1rem;
+	position: sticky;
+	position: -webkit-sticky;
+	top: 0;
+	background-color: rgb(27, 27, 27);
+	z-index: 3;
+}
+
+.user-post {
+	border-bottom: none;
+}
+.last-reply {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .comments__image img {
@@ -591,14 +653,37 @@ body {
 	color: #fff;
 }
 .comments__box--top-reply {
+	width: 13rem;
 	display: flex;
 	align-items: center;
+	justify-content: flex-end;
+}
+
+#first-post .comments__box--top-reply a {
+	padding: 0.5rem 1.5rem;
+	width: 8rem;
+	text-align: center;
+	margin-left: 0.5rem;
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	color: #fff;
+	font-family: 'Tanha';
+	font-size: 1.2rem;
+	border-radius: 0.5rem;
+	filter: brightness(0.8);
+	transition: filter 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+#first-post .comments__box--top-reply a:hover {
+	filter: brightness(1);
 }
 
 .comments__box--top-reply a:first-child {
 	padding: 0.5rem 1.5rem;
+	width: 8rem;
+	text-align: center;
 	margin-left: 0.5rem;
-	background-color: rgba(0, 0, 0, 0.6);
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.2);
 	color: #fff;
 	font-family: 'Tanha';
 	font-size: 1.2rem;
@@ -606,29 +691,66 @@ body {
 	filter: brightness(0.8);
 	transition: filter 0.3s ease;
 }
-
-.comments__box--top-reply a:last-child {
-	padding: 0.7rem 1.5rem;
-	background-color: rgba(0, 0, 0, 0.6);
+/* .comments__box--top-reply a:last-child {
+	display: flex;
+	width: 4.5rem;
+	justify-content: center;
+	align-items: center;
+	padding: 0.8rem 0;
+	text-align: center;
+	margin-left: 0.5rem;
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.2);
 	color: #fff;
-	font-size: 1.3rem;
+	font-family: 'Tanha';
+	font-size: 1.2rem;
 	border-radius: 0.5rem;
-	margin-left: 1rem;
-
 	filter: brightness(0.8);
 	transition: filter 0.3s ease;
-}
+} */
+
 .comments__box--top-reply a:hover {
 	filter: brightness(1);
 }
 
 .comments__box--bot {
-	width: 30rem;
-	height: 3rem;
+	width: 100%;
 }
 .comments__box--bot-comment input {
+	width: 99%;
+	height: 3rem;
+	padding: 0 1rem;
+	margin-top: 0.7rem;
+	font-family: 'Tanha', sans-serif;
+	font-size: 1.2rem;
+	outline: none;
+	color: #fff;
+	background-color: rgba(0, 0, 0, 0.4);
+	border-radius: 0.5rem;
+	border: 1px solid #3a3a3a;
+	box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.5);
+}
+.comments__box--bot-comment input:focus {
+	border-color: rgba(255, 255, 255, 0.4);
+}
+.comments__box--bot-comment p {
 	width: 100%;
-	height: 2.5rem;
+	padding: 0.6rem 0 1rem 0;
+	font: 1.2rem 'Tanha', sans-serif;
+	color: #fff;
+}
+
+.comments__box--reply {
+	width: 100%;
+	height: 4rem;
+	padding: 0 3rem 1rem 0;
+
+	display: flex;
+	justify-content: space-between;
+}
+.comments__box--reply input {
+	width: 70%;
+	height: 3rem;
 	padding: 0 1rem;
 	font-family: 'Tanha', sans-serif;
 	font-size: 1.2rem;
@@ -639,12 +761,26 @@ body {
 	border: 1px solid #3a3a3a;
 	box-shadow: 1rem 1rem 3rem rgba(0, 0, 0, 0.5);
 }
-.comments__box--bot-comment p {
-	width: 100%;
-	height: 2.5rem;
-	padding: 0.2rem 0;
-	font: 1.2rem 'Tanha', sans-serif;
+.comments__box--reply input:focus {
+	border-color: rgba(255, 255, 255, 0.4);
+}
+
+.comments__box--reply a {
+	padding: 0.5rem 1.5rem;
+	width: 8.5rem;
+	text-align: center;
+	margin-left: 3rem;
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.2);
 	color: #fff;
+	font-family: 'Tanha';
+	font-size: 1.2rem;
+	border-radius: 0.5rem;
+	filter: brightness(0.8);
+	transition: filter 0.3s ease;
+}
+.comments__box--reply a:hover {
+	filter: brightness(1);
 }
 /* ---------------------------------------- */
 .botblock {
@@ -707,6 +843,58 @@ body {
 	filter: brightness(1);
 }
 
+/* ------------- */
+.multiple-select {
+	width: 9rem;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+}
+
+.multiple-select summary {
+	padding: 5px 10px;
+	background-color: rgba(0, 0, 0, 0.1);
+	backdrop-filter: blur(0.3rem);
+	border-radius: 5px;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	color: #fff;
+	font: 1.2rem 'Lato';
+	letter-spacing: 0.2rem;
+}
+
+.multiple-select-dropdown {
+	position: absolute;
+	margin-top: 2px;
+	min-width: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 5px;
+}
+
+.multiple-select label {
+	margin: 0;
+	display: block;
+	backdrop-filter: blur(0.3rem);
+	border-left: 1px solid rgba(255, 255, 255, 0.2);
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.multiple-select label > input + .content {
+	padding: 5px 10px;
+	color: #fff;
+	font: 1.2rem 'Lato';
+
+	display: block;
+	cursor: pointer;
+}
+
+.multiple-select label + label {
+	/* border-top: 1px solid aqua; */
+}
+
+.multiple-select label > input:checked + .content {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+/* ----------------- */
 @media (max-width: 154rem) {
 	.midblockk {
 		width: 120rem;
