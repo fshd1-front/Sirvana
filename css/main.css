@@ -342,7 +342,7 @@ html {
 	font-family: 'Tanha';
 }
 .navbar__rightbox--link:last-child {
-	position: relative;	
+	position: relative;
 }
 #login-acc {
 	max-width: 18rem;
@@ -364,7 +364,7 @@ html {
 
 .open__bar {
 	width: 12rem;
-	height: 15rem;
+	height: 11rem;
 
 	visibility: hidden;
 	opacity: 0;
@@ -396,10 +396,10 @@ html {
 	visibility: visible;
 	opacity: 1;
 }
-.open__bar--block:hover > .hover__overlay{
+.open__bar--block:hover > .hover__overlay {
 	color: aqua;
 }
-.open__bar--block:nth-child(2) span{
+.open__bar--block:nth-child(2) span {
 	margin-right: 1rem;
 	font: 1rem sans-serif;
 	color: #fff;
@@ -411,7 +411,6 @@ html {
 	height: 2rem;
 	text-align: center;
 }
-
 
 /* burger menu */
 .hamburger {
