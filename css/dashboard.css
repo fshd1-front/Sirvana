@@ -162,7 +162,7 @@ body {
 	outline: none;
 	border: transparent;
 
-	font: 3.5rem 'Lato', sans-serif;
+	font: 3.5rem 'Lato',"Tanha", sans-serif;
 	color: #fff;
 }
 .editable {
@@ -628,6 +628,10 @@ body {
 	justify-content: flex-start;
 }
 
+.user-post {
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
 .scroll-box {
 	width: 100%;
 	padding: 1rem;
@@ -675,7 +679,7 @@ body {
 }
 
 .comments__box--top-name span {
-	font-family: 'Lato', sans-serif;
+	font-family: 'Tanha', sans-serif;
 	font-size: 1.8rem;
 	color: #fff;
 }
