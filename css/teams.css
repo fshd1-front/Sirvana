@@ -90,14 +90,12 @@ body {
   position: absolute;
   width: 60rem;
   z-index: 99;
-  overflow: hidden;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 0.5rem;
   background: rgba(255, 255, 255, 0.06);
   backdrop-filter: blur(1rem);
-  overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.26);
 }
 
@@ -230,6 +228,7 @@ textarea {
   width: 100%;
 
   margin-bottom: 2rem;
+  position: relative;
 }
 
 .find-player__search input[type="search"] {
@@ -254,10 +253,119 @@ textarea {
   outline: none;
   border: 1px solid aqua;
 }
+/* --------- uli1 */
+.uli1 {
+	position: absolute;
+	top: 90%;
+	/* max-width: 34.68rem; */
+	width: 100%;
+	max-height: 37rem;
+	background: rgba(0, 0, 0, 0.4);
+	backdrop-filter: blur(10rem);
+	border-radius: 0 0 0.5rem 0.5rem;
+	border: 0.5px solid #5a5c60;
+	border-top: none;
 
+	overflow-x: hidden;
+  z-index: 3;
+
+	display: flex;
+	flex-direction: column;
+}
+.uli {
+	width: 100%;
+	overflow: auto;
+	overflow-x: hidden;
+
+	border-bottom: 1px solid #5a5c60;
+}
+.uli1__watch {
+	height: 3.5rem;
+	padding: 0.3rem 0 0;
+
+	font-family: 'Tanha';
+	font-size: 1.5rem;
+	text-align: center;
+
+	background-color: #66fcf1;
+	border: transparent;
+	outline: none;
+	cursor: pointer;
+	filter: brightness(0.8);
+	transition: filter 0.3s ease;
+}
+.uli1__watch:link,
+.uli1__watch:visited {
+	background-color: #66fcf1;
+	color: #000;
+}
+.uli1__watch:hover {
+	filter: brightness(1);
+}
+
+.uli ul {
+	width: 100%;
+	height: 100%;
+
+	background: rgba(0, 0, 0, 0.8);
+}
+
+.uli ul li a{
+	padding: 2rem;
+
+	background: transparent;
+
+	height: 5rem;
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	list-style: none;
+}
+.uli ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.uli ul li p {
+	font-family: 'Lato', sans-serif;
+	color: #fff;
+	font-size: 1.5rem;
+}
+
+.uli ul li .p-image--row {
+	height: 3rem;
+	display: flex;
+	align-items: center;
+}
+
+.uli ul li .p-image--row img {
+	width: 100%;
+	height: 100%;
+}
+
+.uli ul li .p-image {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.class-p {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.class-p .p-pos {
+	margin-left: 3rem;
+}
+/* ---------- end of uli1 */
 .find-player__btns {
   display: flex;
   justify-content: space-around;
+
+  z-index: 1;
 }
 
 .find-player__btns .more-btn,
@@ -820,6 +928,6 @@ select:focus + .focus {
   margin-top: 10rem;
 }
 
-.active a {
+.active > a {
   color: aqua;
 }

@@ -232,6 +232,7 @@
 	padding: 1rem;
 
 	border: 2px solid rgba(255, 255, 255, 0.2);
+	border-radius: 0.5rem;
 }
 
 .description textarea {
@@ -257,6 +258,7 @@
 	padding: 1rem;
 
 	border: 2px solid rgba(255, 255, 255, 0.2);
+	border-radius: 0.5rem;
 }
 .tournaments p,
 .description p {
@@ -280,6 +282,8 @@
 
 	display: flex;
 	align-items: center;
+	border-radius: 0.5rem;
+	transition: all 0.2s ease;
 }
 .specific-tour:first-child {
 	margin-top: 0rem;
@@ -320,13 +324,15 @@
 .specific-tour:hover > span {
 	color: #fff;
 }
+.specific-tour:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+}
 /* ------------------------------- */
 .right-block {
 	width: 70%;
 	height: 50rem;
 
 	display: flex;
-	justify-content: flex-end;
 }
 
 .chat-box {
@@ -335,6 +341,7 @@
 	margin-right: 1rem;
 
 	border: 2px solid rgba(255, 255, 255, 0.2);
+	border-radius: 0.5rem;
 
 	display: flex;
 	flex-direction: column;
@@ -487,6 +494,7 @@
 	margin-bottom: 1rem;
 
 	border: 2px solid rgba(255, 255, 255, 0.2);
+	border-radius: 0.5rem;
 
 	display: flex;
 	flex-direction: column;
@@ -545,6 +553,8 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	transition: all 0.2s ease-out;
+	border-radius: 0.5rem;
 }
 
 .members-specific {
@@ -586,6 +596,10 @@
 
 .members__box--team:hover .members-specific > span {
 	color: #fff;
+}
+.members__box--team:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+
 }
 
 .members__box--team:first-child i {

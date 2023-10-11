@@ -862,6 +862,6 @@ input[type=number] {
   margin-top: 14  rem;
 }
 
-.active a {
+.active > a {
   color: aqua;
 }

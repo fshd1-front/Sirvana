@@ -19,6 +19,8 @@
 	height: 25rem;
 
 	border: 2px solid rgba(255, 255, 255, 0.4);
+	border-radius: 0.5rem;
+	overflow: hidden;
 }
 .info-header__image img {
 	width: 100%;
@@ -149,6 +151,7 @@
 	overflow: hidden;
 
 	border: 2px solid rgba(255, 255, 255, 0.2);
+	border-radius: 0.5rem;
 }
 
 .descrip textarea {
@@ -175,6 +178,7 @@
 	padding: 1rem;
 
 	border: 2px solid rgba(255, 255, 255, 0.2);
+	border-radius: 0.5rem;
 }
 .tournament-leader p,
 .descrip p {
@@ -194,11 +198,13 @@
 .leader {
 	width: 100%;
 	padding: 1rem 1rem;
-	margin-top: 0.7rem;
+	margin-top: 0.2rem;
 
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	border-radius: 0.5rem;
+	transition: all 0.2s ease;
 }
 .leader:first-child {
 	margin-top: 0rem;
@@ -227,6 +233,9 @@
 .leader:hover > span {
 	color: #fff;
 }
+.leader:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+}
 /* ------------------------------- */
 .right-block {
 	width: 70%;
@@ -243,6 +252,7 @@
 	padding: 1rem;
 
 	border: 2px solid rgba(255, 255, 255, 0.2);
+	border-radius: 0.5rem;
 
 	display: flex;
 	flex-direction: column;
@@ -374,6 +384,7 @@
 }
 .plus-svg:hover > svg {
 	color: aqua;
+	background-color: rgba(255, 255, 255, 0.2);
 }
 
 .details > svg {
@@ -425,6 +436,7 @@
 	margin-bottom: 1rem;
 
 	border: 2px solid rgba(255, 255, 255, 0.2);
+	border-radius: 0.5rem;
 
 	display: flex;
 	flex-direction: column;
@@ -486,11 +498,13 @@
 .members__box--team {
 	width: 100%;
 	padding: 1rem 1rem;
-	margin-bottom: 1rem;
+	margin-top: 1rem;
 
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	border-radius: 0.5rem;
+	transition: all 0.2s ease;
 }
 
 .members__box--team svg {
@@ -539,6 +553,9 @@
 
 .members__box--team:hover .members-specific > span {
 	color: #fff;
+}
+.members__box--team:hover {
+	background-color: rgba(255, 255, 255, 0.2);
 }
 /* ------------------------------------------ */
 

@@ -1,0 +1,229 @@
+.email,
+.password {
+	width: 100%;
+	height: 35%;
+	padding: 1rem;
+	margin-bottom: 1rem;
+
+	display: flex;
+	flex-direction: column;
+
+	background-color: rgba(0, 0, 0, 0.4);
+}
+.email p,
+.email-edit p,
+.password p,
+.password-edit p{
+	padding: 0 0 1rem 0;
+
+	font: 600 2rem 'Tanha';
+	color: #fff;
+}
+
+.email-content {
+	width: 100%;
+
+	display: flex;
+	justify-content: space-between;
+}
+.email-content span {
+	padding: 1rem;
+
+	font: 600 2rem 'Lato', sans-serif;
+	color: #c8c8c8;
+}
+.email-content svg {
+	width: 2.5rem;
+	margin-left: 4rem;
+	color: #c8c8c8;
+
+	cursor: pointer;
+	transition: color 0.3s ease-out;
+}
+.email-content svg:hover {
+	color: #fff;
+}
+
+/* ----------------------------- */
+.email-edit {
+	width: 100%;
+	height: 60%;
+	padding: 1rem;
+	opacity: 0;
+	visibility: hidden;
+
+	display: flex;
+	flex-direction: column;
+
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.email-edit__content.active,
+.password-edit__content.active {
+	animation: hidden 1s 1s;
+    animation-fill-mode: forwards;
+}
+.email-edit.active,
+.password-edit.active {
+    animation: editation 1s;
+    animation-fill-mode: forwards;
+}
+.title.active,
+.pass-title.active {
+    animation: hidden 1s 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes editation {
+	from {
+		height: 1%;
+	}
+
+	to {
+		height: 60%;
+        opacity: 1;
+        visibility: visible;
+	}
+}
+
+@keyframes hidden {
+	from {
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	to {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+.email-edit__content {
+	width: 100%;
+
+    opacity: 0;
+	visibility: hidden;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.title,
+.pass-title {
+    opacity: 0;
+	visibility: hidden;
+}
+
+.email-edit__content input,
+.password-edit__content input {
+	width: 55%;
+	padding: 0.8rem 1rem;
+	margin: 1rem;
+
+	font: 1.6rem 'Lato', sans-serif;
+	color: #fff;
+
+	background-color: rgba(0, 0, 0, 0.4);
+	outline: none;
+	border-radius: 0.5rem;
+	border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.edit-btn,
+.pass-edit-btn {
+	padding: 0.8rem 3rem;
+	margin-left: 3rem;
+
+	font: 1.4rem 'Tanha';
+
+	background-color: #c8c8c8;
+	border-radius: 0.5rem;
+	color: #fff;
+    cursor: default;
+
+}
+/* -------------------- */
+
+.password-edit {
+    width: 100%;
+	height: 60%;
+	padding: 1rem;
+	opacity: 0;
+	visibility: hidden;
+
+	display: flex;
+	flex-direction: column;
+
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.password-edit__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+	visibility: hidden;
+
+    overflow-y: auto;
+}
+
+.password-edit__content label {
+    padding-top: 1rem;
+    font: 1.3rem "Tanha";
+    color: #fff;
+}
+.password-edit__content span {
+    font: 1.2rem "Tanha";
+    color: red;
+}
+
+.pass-edit-btn {
+    width: 55%;
+    text-align: center;
+    margin-top: 2rem;
+    margin-right: 1rem;
+}
+
+/* ------------------ */
+.botblock {
+	width: 100%;
+	height: 15rem;
+	display: flex;
+	justify-content: center;
+}
+.botblockk {
+	width: 120rem;
+	height: 7rem;
+
+	padding: 0 1rem;
+
+	display: flex;
+	justify-content: flex-end;
+}
+.botblock a:first-child {
+	margin: 1rem 0 0 1rem;
+	padding: 0 5.7rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	color: #fff;
+	font-family: 'Tanha';
+	font-size: 2rem;
+
+	background-color: rgba(0, 0, 0, 0.7);
+	border-radius: 0.3rem;
+}
+.botblock a:first-child i {
+	color: greenyellow;
+	padding: 0 1rem 0 0.5rem;
+}
+
+.botblock a {
+	filter: brightness(0.8);
+	transition: filter 0.3s ease;
+}
+
+.botblock a:hover {
+	filter: brightness(1);
+}
+
+/* ------------- */
