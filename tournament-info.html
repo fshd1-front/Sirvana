@@ -5,7 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Tournament-info</title>
 
-		<link rel="shortcut icon" href="./img/shortcut icon.png" />
+		<link rel="shortcut icon" href="img/logo-lone.png" />
 		<!-- Site Icon -->
 		<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 		<!-- css links -->
@@ -19,10 +19,11 @@
 		<!-- Navbar -->
 		<div class="navbar" dir="ltr">
 			<div class="navbar__leftbox">
-				<div class="navbar__leftbox--logo">
-					<a href="index.html" class="navbar__leftbox--logo white-one">Sir</a>
-					<a href="index.html" class="navbar__leftbox--logo blue-one">Vana</a>
-				</div>
+				<a href="index.html" class="navbar__leftbox--logo">
+					<!-- <a href="dashboard.html" class="navbar__leftbox--logo white-one">Sir</a>
+					<a href="index.html" class="navbar__leftbox--logo blue-one">Vana</a> -->
+					<img src="img/Logo.png" alt="" />
+				</a>
 			</div>
 			<div class="navbar__rightbox">
 				<div class="navbar__rightbox--link">
@@ -41,21 +42,21 @@
 					<a id="login-acc">Mr__Bean</a>
 					<a><i class="bx bxs-log-in-circle"></i></a>
 					<div class="open__bar" dir="rtl">
-					  <div class="open__bar--block">
-						<i class="bx bxs-dashboard"></i>
-						<a href="dashboard.html" class="hover__overlay">داشبورد</a>
-					  </div>
-					  <div class="open__bar--block">
-						<i class="bx bxs-bell"></i>
-						<a href="dashboard-notif.html" class="hover__overlay">اعلان ها</a>
-						<span>9+</span>
-					  </div>
-					  <div class="open__bar--block">
-						<i class="bx bxs-exit"></i>
-						<a href="signup.html" class="hover__overlay">خروج</a>
-					  </div>
+						<div class="open__bar--block">
+							<i class="bx bxs-dashboard"></i>
+							<a href="dashboard.html" class="hover__overlay">داشبورد</a>
+						</div>
+						<div class="open__bar--block">
+							<i class="bx bxs-bell"></i>
+							<a href="dashboard-notif.html" class="hover__overlay">اعلان ها</a>
+							<span>9+</span>
+						</div>
+						<div class="open__bar--block">
+							<i class="bx bxs-exit"></i>
+							<a href="signup.html" class="hover__overlay">خروج</a>
+						</div>
 					</div>
-				  </div>
+				</div>
 			</div>
 			<div class="hamburger">
 				<span class="bar"></span>
@@ -85,6 +86,19 @@
 
 				<!-- informations -->
 				<div class="informations">
+					<div class="count">
+						<div class="modal-delete">
+							<div class="close-btn">
+								<p class="close-button">&times;</p>
+							</div>
+							<p>آیا مطمعن هستید ؟</p>
+							<div class="mid-note3"></div>
+							<div class="options">
+								<a>خیر</a>
+								<a>بله</a>
+							</div>
+						</div>
+					</div>
 					<div class="info-header">
 						<div class="info-header__image">
 							<img src="img/tourcards.png" alt="" />
@@ -98,13 +112,56 @@
 								<input type="text" value="Nariman Tournament" dir="ltr" disabled />
 								<div class="info-header__data--details">
 									<span>شروع تورنومنت :</span>
-									<span>10/10/2023</span>
+									<input type="datetime-local" />
+								</div>
+
+								<div class="bracketmax">
+									<div class="prize">
+										<span>جایزه :</span>
+										<input type="number" />
+									</div>
+									<div class="bracket">
+										<label for="bo1">
+											<input type="radio" id="bo1" name="drone" checked />
+											<span>bo1</span>
+										</label>
+										<label for="bo3">
+											<input type="radio" id="bo3" name="drone" />
+											<span>bo3</span>
+										</label>
+									</div>
 								</div>
 							</div>
 							<div class="mmr">
-								<img src="img/Ancient_medal.webp" alt="" />
+								<!-- <img src="img/Ancient_medal.webp" alt="" />
 								<span>تا</span>
-								<img src="img/Immortal_medal.webp" alt="" />
+								<img src="img/Immortal_medal.webp" alt="" /> -->
+
+								<p>محدوده رنک :</p>
+								<div class="menu">
+									<span>از</span>
+									<select>
+										<option selected>Herald</option>
+										<option>Guardian</option>
+										<option>Crusader</option>
+										<option>Archon</option>
+										<option>Legend</option>
+										<option>Ancient</option>
+										<option>Divine</option>
+										<option>Immortal</option>
+									</select>
+									<span>تا</span>
+									<select>
+										<option>Herald</option>
+										<option>Guardian</option>
+										<option>Crusader</option>
+										<option>Archon</option>
+										<option>Legend</option>
+										<option>Ancient</option>
+										<option>Divine</option>
+										<option selected>Immortal</option>
+									</select>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -114,7 +171,11 @@
 								<div class="members__box">
 									<div class="top-title">
 										<p>تیم های انتخابی:</p>
-										<p>16/<span>2</span></p>
+										<!-- <p>16/<span>2</span></p> -->
+										<div class="max">
+											<span>تعداد تیم ها :</span>
+											<input type="number" />
+										</div>
 									</div>
 									<div class="mid-note"></div>
 
@@ -124,7 +185,7 @@
 
 									<!-- nafarate team ************** -->
 									<div class="members">
-										<a class="members__box--team">
+										<div class="members__box--team">
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
 												fill="none"
@@ -141,11 +202,25 @@
 											</svg>
 											<div class="members-specific">
 												<img src="img/alliancelogo.png" alt="" />
-												<span dir="ltr">Night Assasins</span>
+												<a dir="ltr">Night Assasins</a>
 												<img src="img/Archon_medal.webp" alt="" />
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													fill="none"
+													viewBox="0 0 24 24"
+													stroke-width="1.5"
+													stroke="currentColor"
+													class="w-6 h-6 dh"
+												>
+													<path
+														stroke-linecap="round"
+														stroke-linejoin="round"
+														d="M6 18L18 6M6 6l12 12"
+													/>
+												</svg>
 											</div>
-										</a>
-										<a class="members__box--team">
+										</div>
+										<div class="members__box--team">
 											<svg
 												xmlns="http://www.w3.org/2000/svg"
 												fill="none"
@@ -162,10 +237,24 @@
 											</svg>
 											<div class="members-specific">
 												<img src="img/alliancelogo.png" alt="" />
-												<span dir="ltr">Night Assasins</span>
+												<a dir="ltr">Night Assasins</a>
 												<img src="img/Archon_medal.webp" alt="" />
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													fill="none"
+													viewBox="0 0 24 24"
+													stroke-width="1.5"
+													stroke="currentColor"
+													class="w-6 h-6 dh"
+												>
+													<path
+														stroke-linecap="round"
+														stroke-linejoin="round"
+														d="M6 18L18 6M6 6l12 12"
+													/>
+												</svg>
 											</div>
-										</a>
+										</div>
 									</div>
 								</div>
 								<div class="buttons">
@@ -228,7 +317,7 @@
 												viewBox="0 0 24 24"
 												stroke-width="1.5"
 												stroke="currentColor"
-												class="w-6 h-6"
+												class="w-6 h-6 fh"
 											>
 												<path
 													stroke-linecap="round"
@@ -237,9 +326,94 @@
 												/>
 											</svg>
 											<div class="timedate">
-												<input type="text" value="10/10/2023" dir="ltr" disabled />
-												<input type="text" value="21:00" dir="ltr" disabled />
+												<input type="datetime-local" />
 											</div>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												fill="none"
+												viewBox="0 0 24 24"
+												stroke-width="1.5"
+												stroke="currentColor"
+												class="w-6 h-6 gh"
+											>
+												<path
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													d="M6 18L18 6M6 6l12 12"
+												/>
+											</svg>
+										</div>
+									</div>
+									<div class="block1">
+										<div class="details">
+											<div class="teams-match">
+												<div class="team1">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														fill="none"
+														viewBox="0 0 24 24"
+														stroke-width="1.5"
+														stroke="currentColor"
+														class="w-6 h-6"
+													>
+														<path
+															stroke-linecap="round"
+															stroke-linejoin="round"
+															d="M12 4.5v15m7.5-7.5h-15"
+														/>
+													</svg>
+													<a href="team-info.html">تیم 1 : <span>Team Jinx</span></a>
+												</div>
+												<span class="vs">Vs</span>
+												<div class="team1">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														fill="none"
+														viewBox="0 0 24 24"
+														stroke-width="1.5"
+														stroke="currentColor"
+														class="w-6 h-6"
+													>
+														<path
+															stroke-linecap="round"
+															stroke-linejoin="round"
+															d="M12 4.5v15m7.5-7.5h-15"
+														/>
+													</svg>
+													<a href="team-info.html">تیم 2 : <span>Team Jinx</span></a>
+												</div>
+											</div>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												fill="none"
+												viewBox="0 0 24 24"
+												stroke-width="1.5"
+												stroke="currentColor"
+												class="w-6 h-6 fh"
+											>
+												<path
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18"
+												/>
+											</svg>
+											<div class="timedate">
+												<input type="datetime-local" />
+											</div>
+											<svg
+												xmlns="http://www.w3.org/2000/svg"
+												fill="none"
+												viewBox="0 0 24 24"
+												stroke-width="1.5"
+												stroke="currentColor"
+												class="w-6 h-6 gh"
+											>
+												<path
+													stroke-linecap="round"
+													stroke-linejoin="round"
+													d="M6 18L18 6M6 6l12 12"
+												/>
+											</svg>
 										</div>
 										<div class="plus-svg">
 											<svg
@@ -318,6 +492,6 @@
 		<!-- scripts -->
 		<script src="js/burger.js"></script>
 		<script src="js/login-acc.js"></script>
-
+		<script src="js/areusure.js"></script>
 	</body>
 </html>

@@ -813,3 +813,32 @@ select:focus + .focus {
 .active > a{
   color: aqua;
 }
+
+.center {
+  text-align: center;
+  margin-top: 7rem;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  color: #FFF;
+  float: left;
+  margin: 0 5px;
+  padding: 8px 16px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+  border: 1px solid #FFF;
+}
+
+.pagination a.active {
+  color: #000;
+  background-color: aqua;
+  border: 1px solid #0096FF;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: rgba(255, 255, 255, 0.2);
+}

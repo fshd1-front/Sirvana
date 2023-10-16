@@ -7,7 +7,7 @@
 
 		<!-- Site Icon -->
 		<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
-
+		<link rel="shortcut icon" href="img/logo-lone.png" />
 		<!-- Css Links -->
 		<link rel="stylesheet" href="css/main.css" />
 		<link rel="stylesheet" type="text/css" href="css/site.css" />
@@ -34,10 +34,11 @@
 			<!-- Navbar -->
 			<div class="navbar" dir="ltr">
 				<div class="navbar__leftbox">
-					<div class="navbar__leftbox--logo">
-						<a href="dashboard.html" class="navbar__leftbox--logo white-one">Sir</a>
-						<a href="index.html" class="navbar__leftbox--logo blue-one">Vana</a>
-					</div>
+					<a class="navbar__leftbox--logo">
+						<!-- <a href="dashboard.html" class="navbar__leftbox--logo white-one">Sir</a>
+						<a href="index.html" class="navbar__leftbox--logo blue-one">Vana</a> -->
+						<img src="img/Logo.png" alt="" />
+					</a>
 					<div class="navbar__leftbox--search" id="show" dir="rtl">
 						<i class="bx bx-search-alt"></i>
 						<input dir="rtl" type="search" placeholder="جستجوی تیم ، پلیر ، تورنومنت ..." />
@@ -296,7 +297,53 @@
 		<!-- online lft and lfp -->
 		<div class="lf-bg">
 			<div class="shadow-box4"></div>
-			<div class="shadow-box5"></div>
+			<div class="shadow-box5">
+				<div class="topbox">
+					<h1>" نیازمند پلیر آنلاین " چیست ؟</h1>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="w-6 h-6"
+						id="toptobotbtn"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"
+						/>
+					</svg>
+					<!-- <svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke-width="1.5"
+						stroke="currentColor"
+						class="w-6 h-6"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5"
+						/>
+					</svg> -->
+
+					<h1>" نیازمند تیم آنلاین " چیست ؟</h1>
+				</div>
+				<div class="botbox">
+					<p>
+						جهت صرفه جویی در وقت ، اگر تیم شما پلیر نیاز دارد میتوانید با تکمیل پارامترهای مورد نیاز
+						، پلیر مورد نظر خود را پیدا نمایید .
+					</p>
+					<div class="vert"></div>
+					<p>
+						جهت صرفه جویی در وقت ، اگر شما بدنبال تیم هستید میتوانید با تکمیل پارامترهای مورد نیاز ،
+						تیم مورد نظر خود را پیدا نمایید .
+					</p>
+				</div>
+			</div>
 			<div class="looking-for">
 				<div class="looking-for__player--box">
 					<div class="looking-for__player--title">
@@ -592,5 +639,6 @@
 		<script src="js/select-menu.js"></script>
 		<script src="js/transform.js"></script>
 		<script src="js/login-acc.js"></script>
+		<script src="js/toptobot.js"></script>
 	</body>
 </html>

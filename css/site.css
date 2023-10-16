@@ -620,10 +620,132 @@ html {
 		rgba(0, 0, 0, 0.8) 30%,
 		rgba(255, 255, 255, 0) 100%
 	);
+
+	display: flex;
+	flex-direction: column;
 }
 
+.topbox {
+	width: 125rem;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+}
+.topbox h1 {
+	width: 100%;
+	text-align: center;
+
+	font: bold 3rem 'Tanha';
+	color: #fff;
+}
+.topbox h1:first-child {
+	padding-left: 13rem;
+}
+
+.topbox svg {
+	width: 6rem;
+	margin-top: 4rem;
+	margin-left: 7.3rem;
+
+	color: #c8c8c8;
+	cursor: pointer;
+	transition: color 0.2s ease;
+	animation: toptobot 2s infinite;
+}
+.topbox svg:hover {
+	color: #fff;
+}
+
+@keyframes toptobot {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(1rem);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+.botbox {
+	width: 125rem;
+	height: 0;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-top: 2rem;
+
+	opacity: 0;
+	visibility: 0;
+
+	display: flex;
+	justify-content: space-between;
+	
+}
+.botbox.active {
+	/* height: 140rem; */
+	opacity: 1;
+	visibility: visible;
+	animation: editation 1s;
+    animation-fill-mode: forwards;
+}
+.botbox.unactive {
+	opacity: 0;
+	visibility: hidden;
+	animation: editation2 1s;
+    /* animation-fill-mode: forwards; */
+}
+@keyframes editation {
+	from {
+		height: 0;
+	}
+
+	to {
+		height: 35%;
+        opacity: 1;
+        visibility: visible;
+	}
+}
+@keyframes editation2 {
+	from {
+		height: 35%;
+		opacity: 1;
+        visibility: visible;
+	}
+
+	to {
+		height: 0;
+        opacity: 0;
+        visibility: hidden;
+	}
+}
+.botbox p {
+	width: 49rem;
+	height: 100%;
+	padding: 1rem 3rem;
+
+	color: #c8c8c8;
+	font: 1.8rem 'Tanha';
+	text-align: justify;
+	background-color: rgba(0, 0, 0, 0.2);
+}
+.botbox p:first-child {
+}
+.botbox p:last-child {
+}
+
+.vert {
+	width: 2px;
+	height: 90%;
+	margin: auto 0;
+
+	background-color: #c8c8c8;
+	border-radius: 1.5rem;
+}
+
+/*--------------------------- */
 .looking-for {
-	max-width: 130rem;
+	max-width: 125rem;
 	margin: 0 auto;
 	padding-top: 35rem;
 
@@ -638,7 +760,6 @@ html {
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: space-between;
-	margin: 0 3rem 0 0;
 }
 
 .looking-for__player--title p,
