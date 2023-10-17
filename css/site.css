@@ -49,6 +49,58 @@ html {
 	scroll-behavior: smooth;
 }
 
+.alert {
+	max-width: 120rem;
+
+	display: flex;
+	align-items: flex-start;
+	position: fixed;
+	top: 5%;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 99;
+	background: rgb(61, 255, 47);
+	border-radius: 1.5rem;
+}
+.alert > svg {
+	width: 2rem;
+	margin-right: 0.6rem;
+	margin-top: 0.5rem;
+	color: #333333;
+
+	background-color: rgb(61, 255, 47);
+	border-radius: 0 1.5rem 1.5rem 0;
+	cursor: pointer;
+	border-left: transparent;
+}
+.alert > svg:hover {
+	color: #000;
+}
+.alert-box {
+	padding: 1.5rem 1rem;
+
+	user-select: none;
+
+	display: flex;
+	flex-direction: column;
+}
+.alert-box__top {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+.alert-box__top svg {
+	width: 2rem;
+	margin-left: 0.6rem;
+	border-radius: 0.5rem;
+}
+.alert-box__top p {
+	font: bold 1.6rem 'Tanha';
+}
+.alert-box > p {
+	font: 1.4rem 'Tanha';
+}
+
 .scroll-down {
 	position: absolute;
 	bottom: 3%;
@@ -680,20 +732,19 @@ html {
 
 	display: flex;
 	justify-content: space-between;
-	
 }
 .botbox.active {
 	/* height: 140rem; */
 	opacity: 1;
 	visibility: visible;
 	animation: editation 1s;
-    animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
 }
 .botbox.unactive {
 	opacity: 0;
 	visibility: hidden;
 	animation: editation2 1s;
-    /* animation-fill-mode: forwards; */
+	/* animation-fill-mode: forwards; */
 }
 @keyframes editation {
 	from {
@@ -702,21 +753,21 @@ html {
 
 	to {
 		height: 35%;
-        opacity: 1;
-        visibility: visible;
+		opacity: 1;
+		visibility: visible;
 	}
 }
 @keyframes editation2 {
 	from {
 		height: 35%;
 		opacity: 1;
-        visibility: visible;
+		visibility: visible;
 	}
 
 	to {
 		height: 0;
-        opacity: 0;
-        visibility: hidden;
+		opacity: 0;
+		visibility: hidden;
 	}
 }
 .botbox p {
