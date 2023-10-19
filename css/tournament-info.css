@@ -310,12 +310,18 @@
 	justify-content: center;
 }
 
-.mmr img {
+.mmr2 {
+	display: flex;
+	align-items: center;
+}
+
+.mmr2 img {
 	width: 15rem;
 	height: 14rem;
 	margin: 0 1rem;
 }
-.mmr span {
+.mmr span,
+.mmr2 span {
 	font: 3rem 'Lato', 'Tanha', sans-serif;
 	color: #c8c8c8;
 }
