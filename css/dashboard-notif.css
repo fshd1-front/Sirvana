@@ -79,6 +79,21 @@ body {
 	height: 70rem;
 	position: relative;
 }
+.container2 .exit {
+	position: absolute;
+	top: 12%;
+	right: 20%;
+	width: 6rem;
+	height: 6rem;
+}
+.exit img {
+	width: 100%;
+	height: 100%;
+	transition: filter 0.3s ease;
+}
+.exit:hover > img {
+	filter: contrast(3);
+}
 /* --------------------- */
 .topblock {
 	width: 120rem;
