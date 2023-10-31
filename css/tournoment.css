@@ -859,7 +859,8 @@ input[type=number] {
   color: #fff;
   font-family: "Tanha";
   font-size: 3.4rem;
-  margin-top: 14  rem;
+  margin-top: 14rem;
+  margin-right: 37rem;
 }
 
 .active > a {

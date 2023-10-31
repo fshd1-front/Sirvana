@@ -334,6 +334,13 @@ body {
 	margin: 0 0.5rem 0 0;
 }
 
+.specific-tour span:last-child {
+	font-size: 1.4rem;
+	color: #fff;
+	font-family: "Lato", sans-serif;
+	margin-right: 3rem;
+}
+
 .specific-tour p,
 .specifics-tour p {
 	font-size: 1.3rem;
